@@ -5,10 +5,10 @@ import json
 result_number_max = 0 ##Número total de CRs WAD Approval -- não precisa da variável aqui provavelmente
 number_of_crs_max_of_page_all = 0 ##Número de CR já registradas -- não precisa da variável aqui provavelmente
 ##i = 100 ## Precisa para alterar a paginação -- não precisa da variável aqui provavelmente
-c = 0 ##-- não precisa da variável aqui provavelmente
+##c = 0 ##-- não precisa da variável aqui provavelmente
 
-login = input('Digite seu nome de usuário:')
-senha = input('Digite sua senha:')
+login = 'johnrf'
+senha = 'Etcsdc365$'
 
 
 '''------------------------------- Capturar todos os IDs das CRs ---------------------------------'''
@@ -28,7 +28,10 @@ def create_file_id_crs():
             ## Os for vão passar nas tags e atributos que são designados, para recuperar os IDs e número total de CRs, respectivamente
                 for link in links:
                     url_link = link.find('td', attrs={'class': 'issuekey'}).text ## Precisa ser text pro file aceitar
-                    file.write('{}'.format(url_link))
+                    ids_crs = url_link.strip()
+                    file.write(ids_crs)
+                    file.write('\n')
+
 
         ## Controla o erro de Atributo que ocorreu, mesmo sem eu saber o pq. Pq no fim das contas funcionou.
     except AttributeError as mens:
@@ -37,16 +40,15 @@ def create_file_id_crs():
 ''' ------------------------------------- CR individual ---------------------------------- '''
 def request_to_all_crs():
     with open('CR.txt', 'r', encoding="utf-8") as file:
-        for i in file:
-            CR = i[0:12]
-            if i != "":
-                response = requests.get('https://idart.mot.com/rest/api/2/issue/'+CR, auth=(login, senha)).json()
-                print(response)
-          ##  for CR in file:
-            ##    y = response['fields'][CR]
-              ##  if y is not None:
-                ##    print(y)
-                  ##  print("\n")
+        for contador in file:
+            CR = contador[0:12].strip('\n')
+            response = requests.get('https://idart.mot.com/rest/api/2/issue/'+CR, auth=(login, senha)).json()
+            data = response['fields'].keys()
+            for contador2 in data:
+                campos_CRs = response['fields'][contador2]
+                if campos_CRs is not None:
+                    print(campos_CRs)
+                    print("\n")
 '''
 try:
     while number_of_crs_max_of_page_all < result_number_max:
@@ -82,5 +84,7 @@ print(b)
 '''
 
 
-create_file_id_crs()
-##request_to_all_crs()
+##create_file_id_crs()
+request_to_all_crs()
+
+
