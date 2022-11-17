@@ -41,10 +41,11 @@ def create_file_id_crs():
 def request_to_all_crs():
     with open('CR.txt', 'r', encoding="utf-8") as file:
         for contador in file:
-            CR = contador[0:12].strip('\n')
+            CR = contador[0:12]
             response = requests.get('https://idart.mot.com/rest/api/2/issue/'+CR, auth=(login, senha)).json()
-            comments = response['fields']['comment']['comments'][0]['body']
-            print(comments)
+            comments = response['fields']['comment']['comments']
+            for count in comments:
+                print(count['body'])
             print("\n")
 
 '''
