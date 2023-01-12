@@ -5,60 +5,60 @@ from nltk.tokenize import word_tokenize
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# Abrindo os arquivos que serão usados como dataset
-features_file = pd.read_csv('features.csv')
+# Opening the files that will be used as dataset
+features_file = pd.read_csv('features_sem_comments.csv')
 test_case_file = pd.read_csv("TestsCases.csv")
 
 
-# Extraindo o valor das colunas dos arquivos
+# Extracting value from the columns of the files
 cabecalho_features = features_file.columns.values.tolist()
 cabecalho_test_case = test_case_file.columns.values.tolist()
 
 
-# Extraindo o valor das linhas dos arquivos
+# Extracting value from the lines of the files
 lista_features = features_file.values.tolist()
 lista_test_case = test_case_file.values.tolist()
 
 
-# Juntando os dois valores
+# Joining both values
 lista_features.insert(0, cabecalho_features)
 lista_test_case.insert(0, cabecalho_test_case)
 
 
-# Documentos a serem comparados
+# Converting variables to string
 doc1 = [str(x) for x in lista_features]
 doc2 = [str(x) for x in lista_test_case]
 
 
-# tokeniza e remove stopwords de cada elemento das listas
+# tokenizes and removes stopwords from each element in lists
 list1_tokens = [word_tokenize(sent) for sent in doc1]
 list2_tokens = [word_tokenize(sent) for sent in doc2]
 list1_tokens = [[word for word in sent if word.lower() not in stopwords.words('english') and word not in string.punctuation] for sent in list1_tokens]
 list2_tokens = [[word for word in sent if word.lower() not in stopwords.words('english') and word not in string.punctuation] for sent in list2_tokens]
 
 
-# Juntando de volta as lista de tokens para serem strings
+# Putting back the list of tokens to be strings
 list1_tokens = [" ".join(sent) for sent in list1_tokens]
 list2_tokens = [" ".join(sent) for sent in list2_tokens]
 
 
-# Converte o texto em vetores usando o TF-IDF
+# Convert text to vectors using TF-IDF
 tfidf = TfidfVectorizer()
 vectors = tfidf.fit_transform(list1_tokens + list2_tokens)
 
+# Create an empty dataframe to store the similarities
+similarities = pd.DataFrame()
 
-# Obtém as similaridades entre cada elemento da lista1 e cada elemento da lista2
+# Gets the similarities between each element of list1 and each element of list2
 for i, element1 in enumerate(list1_tokens):
     for j, element2 in enumerate(list2_tokens):
         similarity = cosine_similarity(vectors[i], vectors[len(list1_tokens) + j])
-        print(f'Similaridade entre {element1} e {element2}: {similarity[0][0]}')
+        similarity = similarity[0][0]
 
+        if similarity >= 0.4:
+            # Adiciona as frases comparadas e a similaridade calculada ao dataframe
+            similarities = similarities.append({'Features': element1[1:13], 'Test Case': element2[1:13], 'similarity': similarity}, ignore_index=True)
 
-        #Manter os resultados em um CSV
-        # if similarity >= 0.07:
-        #     results = [[element1, element2, similarity[0][0]] for i, element1 in enumerate(list1_tokens) for j, element2 in
-        #                enumerate(list2_tokens)]
-        #     df = pd.DataFrame(results, columns=['list1', 'list2', 'similarity'])
-        #
-        #     # salva o dataframe em um arquivo CSV
-        #     df.to_csv('similarity_results.csv', index=False)
+# salva o dataframe no arquivo xlsx
+similarities.to_excel("similaridade.xlsx", index=False)
+print("Similaridade salva com sucesso no arquivo similaridade.xlsx")
