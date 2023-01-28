@@ -64,6 +64,8 @@ similarities.to_excel("similaridade.xlsx", index=False)
 print("Similaridade salva com sucesso no arquivo similaridade.xlsx")
 
 
+# merge teste 2
+
 # testando
 #testando3
 #testando2
