@@ -65,3 +65,5 @@ print("Similaridade salva com sucesso no arquivo similaridade.xlsx")
 
 
 # testando
+
+#testando3
