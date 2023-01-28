@@ -1,90 +1,94 @@
 import requests
-from pprint import pprint
-from bs4 import BeautifulSoup
-import json
-result_number_max = 0 ##Número total de CRs WAD Approval -- não precisa da variável aqui provavelmente
-number_of_crs_max_of_page_all = 0 ##Número de CR já registradas -- não precisa da variável aqui provavelmente
-##i = 100 ## Precisa para alterar a paginação -- não precisa da variável aqui provavelmente
-##c = 0 ##-- não precisa da variável aqui provavelmente
+import nltk
+import pandas as pd
+import tkinter as tk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 
-login = 'johnrf'
-senha = 'Etcsdc365$'
+#ID da FEATURE e Test Case que serão usados no script
+#feature = "FEATURE-3957"
+#test_case = "MCA-3815769"
 
+class App:
+   def __init__(self):
+       self.root = tk.Tk()
+       self.root.title("Teste x Feature")
+       self.root.geometry("400x400")
 
-'''------------------------------- Capturar todos os IDs das CRs ---------------------------------'''
-def create_file_id_crs():
-    try:
-            ##  Faz uma requisção a URL com o filtro das CRs WAD Approval e armazena na variável 'response' como text
-            response = requests.get('https://idart.mot.com/issues/?jql=issuetype%20%3D%20Defect%20AND%20project%20%3D%20%22SW%20S%20RELEASE%22%20AND%20status%20%3D%20%22WAD%20APPROVAL%22', auth=(login, senha)).text
-            ##  Utiliza o bs4 com o html.parser para deixar a variável como um html e guarda em 'soup'
-            soup = BeautifulSoup(response, 'html.parser')
-            ##  A variável 'links' armazena os dados relacionados a 'tr' na classe 'issuerow' que tem no html do soup
-            links = soup.find_all('tr', attrs={'class': 'issuerow'})
-            ##  A variável 'number_of_crs_max' armazena os dados relacionados a 'div' na classe 'aui-item' que tem no html do soup
-            number_of_crs_max = soup.find_all('div', attrs={'class': 'aui-item'})
+       tk.Label(self.root, text="Core ID:").pack()
+       self.coreid = tk.Entry(self.root)
+       self.coreid.pack()
 
-            ## Abre/Cria o arquivo 'CR.txt' que vai deixar armazenado os IDs das CRs e o número total de CRs, sendo o último para comparar com o número da página atual e mandar ir na próxima pág
-            with open('CR.txt', 'w', encoding="utf-8") as file:
-            ## Os for vão passar nas tags e atributos que são designados, para recuperar os IDs e número total de CRs, respectivamente
-                for link in links:
-                    url_link = link.find('td', attrs={'class': 'issuekey'}).text ## Precisa ser text pro file aceitar
-                    ids_crs = url_link.strip()
-                    file.write(ids_crs)
-                    file.write('\n')
+       tk.Label(self.root, text="Senha :").pack()
+       self.password = tk.Entry(self.root, show="*")
+       self.password.pack()
 
+       tk.Label(self.root, text="Test case:").pack()
+       self.test_case = tk.Entry(self.root)
+       self.test_case.pack()
 
-        ## Controla o erro de Atributo que ocorreu, mesmo sem eu saber o pq. Pq no fim das contas funcionou.
-    except AttributeError as mens:
-        print('Deu esse erro no arquivo -', mens)
+       tk.Label(self.root, text="Feature:").pack()
+       self.feature = tk.Entry(self.root)
+       self.feature.pack()
 
-''' ------------------------------------- CR individual ---------------------------------- '''
-def request_to_all_crs():
-    with open('CR.txt', 'r', encoding="utf-8") as file:
-        for contador in file:
-            CR = contador[0:12].strip('\n')
-            response = requests.get('https://idart.mot.com/rest/api/2/issue/'+CR, auth=(login, senha)).json()
-            data = response['fields'].keys()
-            for contador2 in data:
-                campos_CRs = response['fields'][contador2]
-                if campos_CRs is not None:
-                    print(campos_CRs)
-                    print("\n")
-'''
-try:
-    while number_of_crs_max_of_page_all < result_number_max:
-        response = requests.get('https://idart.mot.com/issues/?jql=issuetype%20%3D%20Defect%20AND%20project%20%3D%20%22SW%20S%20RELEASE%22%20AND%20status%20%3D%20%22WAD%20APPROVAL%22&startIndex='+str(i), auth=(login, senha)).text
-        soup = BeautifulSoup(response, 'html.parser')
-        ##  A variável 'links' armazena os dados relacionados a 'tr' na classe 'issuerow' que tem no html do soup
-        links = soup.find_all('tr', attrs={'class': 'issuerow'})
-        ##  A variável 'number_of_crs_max' armazena os dados relacionados a 'div' na classe 'aui-item' que tem no html do soup
-        number_of_crs_max = soup.find_all('div', attrs={'class': 'aui-item'})
+       tk.Label(self.root, text="").pack()
 
-        ## Abre/Cria o arquivo 'CR.txt' que vai deixar armazenado os IDs das CRs e o número total de CRs, sendo o último para comparar com o número da página atual e mandar ir na próxima pág
-        with open('CR.txt', 'a', encoding="utf-8") as file:
-        ## Os for vão passar nas tags e atributos que são designados, para recuperar os IDs e número total de CRs, respectivamente
-            for link in links:
-                url_link = link.find('td', attrs={'class': 'issuekey'}).text ## Precisa ser text pro file aceitar
-                file.write(url_link)
-            for number_in_page in number_of_crs_max:
-                result_number_max = number_in_page.find('span', attrs={'results-count-total results-count-link'})
-                number_of_crs_max_of_page_all = number_in_page.find('span', attrs={'class': 'results-count-end'})
-        i = i + 100
-    ## Controla o erro de Atributo que ocorreu, mesmo sem eu saber o pq. Pq no fim das contas funcionou.
-except AttributeError as mens:
-    print('Deu esse erro no arquivo -', mens)
+       tk.Button(self.root, text="Mostrar Resposta", command=self.mostrar_resposta).pack()
 
+       tk.Label(self.root, text="").pack()
 
-'''
+       self.resposta = tk.Label(self.root, text="")
+       self.resposta.pack()
 
+   def mostrar_resposta(self):
 
-'''
-a = '?filter=-3&jql=status%20in%20(new%2C%20working%2C%20Closed)%20AND%20issuetype%20%3D%20Defect%20AND%20project%20%3D%20%22SW%20S%20RELEASE%22%20AND%20summary%20~%20%2290Hz%22'
-b = a.split('%20')
-print(b)
-'''
+       coreid = self.coreid.get()
+       password = self.password.get()
+       test_case = self.test_case.get()
+       feature = self.feature.get()
 
+       params = "fields=*all"
 
-##create_file_id_crs()
-request_to_all_crs()
+       # URLs base para verificação na API
+       url_feature = "https://idart.mot.com/rest/api/latest/issue/"
+       url_test_case = "https://dalek.mot.com/rest/api/latest/issue/"
 
+       # Request feito
+       request_feature = requests.get(url_feature + feature, auth=(coreid, password), params=params)
+       request_test_case = requests.get(url_test_case + test_case, auth=(coreid, password), params=params)
 
+       # Transformando o objeto em json para logo mais observar seus campos
+       url_feature_json = request_feature.json()
+       url_test_case_json = request_test_case.json()
+
+       # Campos do json que serão utilizados
+       summary_feature = url_feature_json['fields']['summary']
+       summary_test_case = url_test_case_json['fields']['summary']
+
+       # Documentos a serem comparados
+       doc1 = summary_feature
+       doc2 = summary_test_case
+
+       # Tokeniza e remove as stopwords dos documentos
+       tokens1 = [token for token in word_tokenize(doc1) if token not in stopwords.words("english")]
+       doc1 = " ".join(tokens1)
+
+       tokens2 = [token for token in word_tokenize(doc2) if token not in stopwords.words("english")]
+       doc2 = " ".join(tokens2)
+
+       # Transforma os documentos em vetores de características com o TfidfVectorizer
+       vectorizer = TfidfVectorizer()
+       vectors = vectorizer.fit_transform([doc1, doc2])
+
+       # Calcula a similaridade cosseno entre os dois documentos
+       similarity = cosine_similarity(vectors[0], vectors[1])
+
+       if similarity >= 0.07:
+           self.resposta.config(text="TC e feature podem estar relacionados: " + feature + ", " + test_case)
+       else:
+           self.resposta.config(text="TC e feature não estão relacionados: " + feature + ", " + test_case)
+
+app = App()
+app.root.mainloop()
