@@ -62,3 +62,6 @@ for i, element1 in enumerate(list1_tokens):
 # salva o dataframe no arquivo xlsx
 similarities.to_excel("similaridade.xlsx", index=False)
 print("Similaridade salva com sucesso no arquivo similaridade.xlsx")
+
+
+# testando
