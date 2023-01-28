@@ -63,6 +63,7 @@ for i, element1 in enumerate(list1_tokens):
 similarities.to_excel("similaridade.xlsx", index=False)
 print("Similaridade salva com sucesso no arquivo similaridade.xlsx")
 
+# merge teste
 
 # merge teste 2
 
