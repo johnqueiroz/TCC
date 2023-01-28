@@ -67,6 +67,9 @@ print("Similaridade salva com sucesso no arquivo similaridade.xlsx")
 
 #t
 
+#t
+
+# tt
 # merge teste 2
 
 # testando
