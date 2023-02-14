@@ -1,0 +1,2898 @@
+JIRA_FEATURE_ID_CF_12210,description,summary,Comments
+FEATURE-1160,,FEATURE-1160: Read SIM toolkit application name from the SIM card [34564],"RPADX-5475 Plan Created For:
+FEATURE-1160: Read SIM toolkit application name from the SIM card [34564]
+RPADX-5278 ADX S_MR
+We are changing the integration CWV to 30/jul/2021 because we are working on fixing the title reported at IKSWSRVC-24397"
+FEATURE-2072,,FEATURE-2072: Incoming call screen shall have higher precedence over USSD dialog [37163],We are changing Integrate CWV to 23/Jul/21 because there are Telephony commits was not integrated and the team needs more time to check with Telephony team these missed commits and validate the feature behavior on Android S.
+FEATURE-3033,,FEATURE-3033: Enable only editing of Class 3 APN Name field [39589],Applied the a12r1 label at creation when it should have been a12r0.  Fixing it.
+FEATURE-3617,,FEATURE-3617: Tethering (WI-FI Hotspot / USB Tethering / BT Tethering) Entitlement,"Applied the a12r1 label at creation when it should have been a12r0.  Fixing it.
+Only change made on last version's RPADX-4256 was IKSWR-1280, which is also dealt with by RPADX-4287 FEATURE-4628
+Porting feature test completed.
+Test CWV updated, due to CR IKSWS-1097.
+Test CWV updated. MS2 exception Plan."
+FEATURE-3632,,FEATURE-3632: Cell Broadcast (Geographical Information),Wa changed Integrate CWV to 23/Jul/21because there is a pending commit on Android R which was still not integrated (IKSWR-106117)
+FEATURE-3650,,FEATURE-3650: OMA CP Support,[~a20402] the Int CWV date is past due for this plan.  Can you update the Int Actual date if you have integrated it or the Int CWV date if it hasn't been updated yet?
+FEATURE-3789,,FEATURE-3789: Enable dual sim (DSDS) related use cases - CBS,"We are changing Integrate CWV to 30/Jul/21 because this plan depends on RPADX-5490 and RPADX-5494, which are with integrate CWV to 30/Jul/21
+
+ "
+FEATURE-3862,,FEATURE-3862: Support to IMS registration query API,Applied the a12r1 label at creation when it should have been a12r0.  Fixing it.
+FEATURE-3934,,FEATURE-3934: Contacts search should considered special characters (such as '*' and '#') during phone match digit process,
+FEATURE-3957,,FEATURE-3957: Handling of SIM card lock setting,"Hello [~pedrolpc], [~josegsp],
+
+IKSWS-1463 needs to be propagated to Android T, since it is part of FEATURE-3957. Could you please give a status of MSimSettings T bringup?
+
+Thanks in advance,
+
+Arthur
+
+ 
+
++[~ajconti], [~daoliv], [~thiagot]
+Hi [~ajwander],
+MSimSettings T bringup was completed today (06/30), the tests related to the IKSWS-1463 change can now be performed on Android T.
+Any questions regarding MSimSettings dependencies please contact us.
+
+Regards"
+FEATURE-3965,,FEATURE-3965: Send MMS when mobile data is disabled,"In order for us to test this feature on Live Network, we'd need brazilian entries on vendor.xml for CarrierConfig. However, none was found. We still need this to be added on Burton or other target device that contais BR entries.
+[~a22642] this is a test only plan.  Can you commit to it?
+
+[~renano] FYI"
+FEATURE-4134,,FEATURE-4134: AT&T Voice Services Support,"Applied the a12r1 label at creation when it should have been a12r0.  Fixing it.
+Porting feature test completed."
+FEATURE-4162,,FEATURE-4162: Handling of Custom APNs - AT&T ABS Requirement,"Already present on S 
+Applied the a12r1 label at creation when it should have been a12r0.  Fixing it.
+Feature test porting completed."
+FEATURE-4444,,FEATURE-4444: Add and Edit APN Name on USC Device,"After further discussions USC will use R2 as its baseline.  Thus removing the A12 R1 Need label.
+As there are no USC upgrades or NPI launches planned for A12 R0 or A12 R0, moving this plan to A12 R2.
+Austin has been ranged by USC and these features are now needed to be included in A12 R1 so adding the A12 R1 Need label.
+It's already on S: https://sse.am.mot.com/s_source/search?q=isFtr5717Enabled&defs=&refs=&path=&hist=&type=&project=mr-r-qsm2021
+This feature needs to be verified in USC carrier, but as of now we don’t have any ranged device with USC to validate it.  As a result marking as an ms2 exception.
+Updating to R1 as there are no USC upgrades off of R0 and no products are available for testing."
+FEATURE-4448,,FEATURE-4448: Integrated Visual Voice,"Dependency on Sprint third-party preload. Need to double check with SmithMicro(Sprint/TMO) if updated apk will be released for Android S. [~wch683] FYI...
+It was tested using a Denver with Orange Boost SIM card."
+FEATURE-4491,,FEATURE-4491: VZW Setup Wizard Features Consolidation,
+FEATURE-4562,,FEATURE-4562: Change the behavior of FEATURE-4028 to remove the SIM card selection option from the data setup dialog,
+FEATURE-4627,,FEATURE-4627: US Retail - Manual DM sync support for Verizon VoLTE provisioning aligned with Nexus,Verified on Denver Retail S software SRE32.28.
+FEATURE-4628,,"FEATURE-4628: US Retail - Enable Entitlement for AT&T, Sprint, Consumer Cellular (TMO MVNO & AT&T MVNO), Defense Mobile (AT&T MVNO) and disable for others","Feature test completed, considering AT&T (Retail NA) the main coverage.
+The other Plans covering MVNOs are in progress. 
+Test CWV updated.  The plan is ms2_exception."
+FEATURE-4645,,FEATURE-4645: [AW] Support Android Work on X-Line (w/multiuser),"Verified on build - motorola/burton_retail/burton:S/SPB32.34
+[~a22642] this is a test only plan.  Are you able to commit to it?
+
+[~tgb348] FYI"
+FEATURE-4646,,FEATURE-4646: [AW] Support Android Work on Droid Line products,"Applied the a12r1 label at creation when it should have been a12r0.  Fixing it.
+Hi [~a20760], 
+
+The Int CWV date is past due for this plan.  Can you either update it or the Int Actual date if you have already integrated it?"
+FEATURE-4692,,FEATURE-4692: Quick Panel for Dual SIM (select SIM for data),"All changes in SystemUI are merged now.
+Alright [~mvt647]
+Thanks!
+Assigning to [~wangyl17] since his team is already working on this feature on CR IKSWS-69803.
+Further details on the redesign needed can be found here: [DDS management via quick settings in Android 12 (FEATURE-4692 update) - Google Docs|https://docs.google.com/document/d/1MDeY7BgUiNN1O9B45hRhtrIrcmkBNBl1tY3fsWCzroA/edit]
+Hello [~josegsp]
+ Was this feature integrated?
+ Can you link Integration CR and update Integrate dates?
+
+Best Regards,
+Renan Oliveira
+Hi [~renano], this feature is in the scope of the S bringup, so we don't have a specific CR to cover the code.
+
+Thanks,
+
+Ana
+New work to be developed in IKSWS-3520
+RPADX-6010 Plan Created For: 
+FEATURE-4692: {color:#326ca6}Quick Panel for Dual SIM (select SIM for data){color} on Release: 
+RPADX-5277 ADX S_Rel1
+RPADX-6322 Plan Created For: 
+FEATURE-4692: {color:#326ca6}Quick Panel for Dual SIM (select SIM for data){color} on Release: 
+RPADX-5277 ADX S_Rel1
+The previous spec document implemented until R1 products:
+https://docs.google.com/document/d/1MDeY7BgUiNN1O9B45hRhtrIrcmkBNBl1tY3fsWCzroA/edit 
+
+New internet panel implemented in SystemUI app for R2 products onward:
+!systemui-internet-panel-001.png|width=240! !systemui-internet-panel-002.png|width=240!
+
+I've talked to [~roseane] and [~caioluiz] about this change in Google AOSP. 
+Please, reach me out anytime when implementing this feature in SystemUI app.
++[~dvx436]/ [~gabrieln]
+This feature was moved to SystemUI app: RPADX-6322.
+This feature was recently impacted by a change in Google AOSP.  The initial implementation was done in Settings but with the AOSP changes a rework is needed in System UI.
+This is an MS2 exception as their is new work being covered by RPADX-6010 this depends on.
+We need to maintain both feature versions in Settings and SystemUI apps: RPADX-6010
+[~dvx436] please commit to this plan.
+[~roseane], I've just checked some code in SystemUI app:
+https://sse.am.mot.com/s_source/xref/ms-r-qmsi_all/frameworks/base/packages/SystemUI/src/com/android/systemui/qs/tiles/dialog/InternetDialog.java
+https://sse.am.mot.com/s_source/xref/ms-r-qmsi_all/frameworks/base/packages/SystemUI/res/layout/internet_connectivity_dialog.xml
+
+The code implemented by Google in Settings app was a little restricted and we couldn't make some changes requested by CxD team, but it seems in SystemUI app there isn't any restriction/difficulty regarding UI/UX requests. We probably can have a better version of this feature now.
+[~roseane], [~rafaelml] are you able to commit to this plan?
+[~wangyl17] can you please commit to this plan?
+[~wangyl17] the CR linked to this plan has been closed?  Has the feature been integrated?  If yes can you please update the Integrate Actual date on the plan?
+
+[~renano] FYI
+h1. *Feature Analysis*
+ * 1. Test SIMs – Yes
+ * 2. Network – Live / WiFi - Yes (Mobile Data and WIfi)
+ * 3. Target/Reference Hardware Availability – A12R2
+ * 4. Any Clarifications From Dev Team – See below
+ * 5. Any Dependency <Other Feature/Component/Tool/etc...) – MotoSafe Portal, Third-party Financed Device solution apps - No
+ * 6. Risk level involved in test Development – Low
+ * 7. Expected total Number of cases – 19
+ * 8. Risk level involved in test execution – Low
+ * 9. Test Execution dependency in Percentile -- non_live  (Explanations are [here|https://docs.google.com/spreadsheets/d/1dC6mu8lAzS86kLsMdt5rr9orlW3qXp0A3-QcpQxwlYA/edit#gid=1083395672])
+
+h3. *Clarifications From Dev Team*
+ * Are the changes just visual on the Internet Slice (in relation to the actual solution for Android S)?
+ * Is there any impact on the Internet screen within Settings?
+ * The A12R2 device upgrades already have these changes, shouldn't it just be NPIs?
+ * Should both SIMs be listed in the Internet Slice?
+ * When clicking ""Done"" should the notifications curtain continue to be displayed or should it be closed?
+
+Hi [~caioluiz], could you help us clarifying above doubts?"
+FEATURE-4896,,FEATURE-4896: Modify Airplane setting description and Airplane Notifications,"Applied the a12r1 label at creation when it should have been a12r0.  Fixing it.
+Hi [~daoliv]
+
+As part of this feature, I see that you port some changes here - [https://sse.am.mot.com/r_source/xref/mr-r-qsm8350/frameworks/base/packages/SystemUI/src/com/android/systemui/qs/MotoConfirmationStubActivity.java#148]
+
+There is a fix associated with the same - please refer to details at [IKSWP-75774|http://idart.mot.com/browse/IKSWP-75774] and plan to add this fix along with the feature integration so that it does not get missed later.
+
+FYI  - [~a21143]
+[~daoliv] the Int CWV date is past due for this plan.  Can you update the Int Actual date if you have integrated it or the Int CWV date if it hasn't been updated yet? "
+FEATURE-5019,,FEATURE-5019: VZW : WiFi User Interface changes,"Applied the a12r1 label at creation when it should have been a12r0.  Fixing it.
+Avoid bad wifi connection feature will use AOSP solution on S as per IKSWS-36049. Major differences are switch text, switch summary and no dialog will be shown.
+
+ Please update compliance sheet [~a19591]
+[~jcamelo], [~mvt647] the Int CWV for this plan is past due.  Please update the CWV date or if it is integrated update the actual date please."
+FEATURE-5020,,FEATURE-5020: Caller ID Application for Android Devices,
+FEATURE-5067,,FEATURE-5067: FEATURE - 5067: VZW DemoMode support,"Adding adx_not_ready_for_test since apks we're using are from Android 11 and not Android 12
+
+[~a19591] FYI
+As agreed, please make basic tests using Android 11 version while we don't receive Android 12 compatible ones
+Depends on RPADX-5815 to be tested. Please hold tests until RPADX-5815 is integrated and Activated screen is present on SUW."
+FEATURE-5186,,FEATURE-5186: Pre-Activation Kill Switch (PAKS),"*Feature Test Analysis*
+ * 1. Test SIMs – No SIM  
+ * 2. Network – Live / WiFi
+ * 3. Target/Reference Hardware Availability – NPIs
+ *  4. Any Clarifications From Dev Team –
+ * 5. Any Dependency <Other Feature/Component/Tool/etc...) – Alcatraz, Paid APKs
+ * 6. Risk level involved in test Development – MEDIUM
+ * 7. Expected total Number of cases – 5
+ * 8. Risk level involved in test execution – MEDIUM
+Changing Integrate CWV, as we will need more time to review all the gerrits.
+Currently, PAKS app is not working because Checkin is not happening and the device ID is not generated. We checked that _DeviceManagement_ component is not included in the S build and also checked with [~a14614] (his team maintains ccc components) and they are still working on Checkin due to some permission restrictions in Android S. They are expecting to push our changes by 27 July. So we are changing *_Integrate CWV_* to 30/Jul/21 because the PAKS depends on the device ID to work correctly which is generated during Checkin. 
+RPADX-6065 Plan Created For: 
+FEATURE-5186: {color:#326ca6}Pre-Activation Kill Switch (PAKS){color} on Release: 
+RPADX-5277 ADX S_Rel1
+We are changing Integrate CWV to 23/Jul/21 because we waiting for NotifLib validation to complete the feature validation. 
+[~vhra] did NotifLib team confirmed their lib is ready? Are we on track for Friday? Thanks!"
+FEATURE-5260,,FEATURE-5260: Device Identification in Settings Menu,"For USC I can say we don't need this anymore. They have ranged Ellis and Tonga. 
+
+Device they have currently ranged Sofia, Sofia+, Guam and Borneo will not get S upgrade. 
+
+ 
+
++ [~nadeemp] - for TF.
+Verified on burton:S/SPB32.34/2363f:userdebug/intcfg,test-keys
+[~wch683] could you please confirm if we will still have any CDMA device on Android 12? Since this feature is only applicable to CDMA, I was wondering rather we need to drop it or keep supporting"
+FEATURE-5317,,FEATURE-5317: T-Mobile : Implement new Roaming TRD,[~malaguti] the Test CWV date for this plan is past due.  Can you update it please?
+FEATURE-5379,,FEATURE-5379: T-Mobile : Manual Network Selection Requirements,
+FEATURE-5409,,FEATURE-5409: Tracfone : APN Details,"Make TRACFONE.VZWENTP as default preloaded class 3 APN for all TF VZW SIMs (5G and non-5G)
+RPADX-6121 RRB Request Approved (Add) 
+RPADX-6126 Plan Created For: 
+FEATURE-5409:Tracfone : APN Details on Release:
+RPADX-5277:ADX S_Rel1"
+FEATURE-5563,,FEATURE-5563: AT&T & Cricket:<Hide Enhance LTE service option>,Feature test porting completed.
+FEATURE-5600,,FEATURE-5600: Comcast : Wi-Fi Calling,
+FEATURE-5745,,FEATURE-5745: Voyager : Carrier Video Calls when device closed,"All video call related functionality working fine. Issue reported was related to camera-engine. So removed that issue for feature completion.
+Moving this out to A12 R2 since Odyssey isn't getting upgraded until R2.
+[~jrdk47] the test CWV date is past due.  Could you please update it?
+[~wcw014] There were no target dates mentioned for CR fixes. Mainly Camera app is not working that is blocking video call features. I am not sure when above CRs will be resolved. Could you please follow up. I am moving dates
+
+ "
+FEATURE-5749,,"FEATURE-5749: VZW : DO mode updates , Permission changes for MVS, Security & Privacy app",Applied the a12r1 label at creation when it should have been a12r0.  Fixing it.
+FEATURE-5764,,FEATURE-5764: ATT Retail + MVNO Support : WFC Support,
+FEATURE-5899,,FEATURE-5899: VZW : CDMA-Less for Verizon devices starting 2020,"Applied the a12r1 label at creation when it should have been a12r0.  Fixing it.
+No Android S Verizon CDMA less Device so adding ms2 exception."
+FEATURE-5954,,FEATURE-5954: Tracfone : Enable VVM Support for TF TMO SIMs,"RPADX-5143 RRB Request Approved (Add) 
+RPADX-5154 Plan Created For: 
+FEATURE-5954:Tracfone : Enable VVM Support for TF TMO SIMs on Release:
+RPADX-4178:ADX R_Rel1
+Received the VVM Enabled Tracfone SIM from Ivy, Testing in Progress
+[~tgb348], I see this plan had a test CWV of today and doesn't have any open CRs.  Can you update the CWV date?"
+FEATURE-5991,,FEATURE-5991: T-Mobile - Low Battery Alert during Call,"Retail NA (TMO) scope is being covered by TP: https://kaiju.motorola.com/#/dalekReports/savedDalekReport/6710694297993216
+The feature is working fine for voice calls, however, since video call is still not integrated (ETA Sep-10th), I'm completing this plan and will check it on the full feature plan soon."
+FEATURE-6101,,FEATURE-6101: VISIBLE : Vo-WiFI solution for Visible devices,"[~a19591] has confirmed to use APKs of previous OS.
+[~wcw014]: dependency on VZW preloads. Need to wait for Vzw confirmation if new set of APKs will be released for ""S""
+
+[~a19591]: Pls check with Vzw and confirm back"
+FEATURE-6121,,FEATURE-6121: [Android Gesture enhancement] Using double press of power button to launch Google Assistant,
+FEATURE-6141,,FEATURE-6141: AT&T&Firstnet <Video Calling and UCE of 18384 18.3> NPI,"Feature test (porting) completed.
+Hi [~dth436],
+
+Could you inform me if this RPADX is ready to test?
+
+Tks!
+[~fabianaj]: Yes, this can be tested
+[~wcw014]: This should remain for A12.R1, as there is dependency on Summit"
+FEATURE-6144,,FEATURE-6144: AT&T&Cricket&Firstnet< Advance Messaging Service RCS> NPI,"Now RCS is enabled for ATT & TMo as FW team has integrated Summit apks.
+As of now till IKSWS-6090 & IKSWR-135012 get fixed, Test team need to follow the below workaround to test RCS
+
+1) carrier configuration doesn't work (stuck in searching): https://idart.mot.com/browse/IKSWS-6090
+Please sideload the carrier configuration to test it.
+{noformat}
+adb root
+adb disable-verity
+adb reboot
+
+adb root
+adb remount
+adb push ./rcs_config_sideload.xml /data/user_de/0/com.motorola.rcsConfigService/files/rcs_config_sideload.xml
+adb shell am broadcast -a com.motorola.carrierconfig.NEW_CONFIG_FILE_RECEIVED com.motorola.rcsConfigService
+adb shell sync
+adb reboot
+<test it>
+{noformat}
+
+2) Please run it on permissive mode for now.
+CR: https://idart.mot.com/browse/IKSWR-135012
+{noformat}
+adb root
+adb shell setenforce permissive
+{noformat}
+[~wcw014]: Dependency on Summit APKs"
+FEATURE-6192,,FEATURE-6192: USCC:< VoWiFi calling for NPI>," As per [~a19035]'s recent email on 11/17, Mayank responded that: ""USC has ranged Borneo and they will need WFC on the same during R upgrade""
+
+[~wcw014]: Please confirm if movement to Q3-2021 is intentional.
+ QC just finis vowifi compliance review. We still wait for QC response to provide feature FR number and QC SW delivery schedule.
+
+
+{noformat}
+
+
+From: Stephan Chen 
+Sent: Thursday, September 19, 2019 4:58 PM
+To: Subramanya Roddom Satish Roddom <satishroddom@motorola.com>; Tom long <FGCP188@motorola.com>; Pradeep S <PRADEEPS@motorola.com>; Weihua Chen <weihua@motorola.com>; Danish Siddiqui <dsiddiqu@qti.qualcomm.com>
+Cc: Ken Crisler <kcrisler@motorola.com>
+Subject: Re: [External] RE: MBN FR for USCC requirement
+
+Thanks Danish! Could you provide FR number for USCC Vowifi feature? Thanks!
+Get Outlook for Android
+
+
+
+On Tue, Sep 17, 2019 at 8:35 AM -0500, ""Danish Siddiqui"" <dsiddiqu@qti.qualcomm.com> wrote:
+Hi Stephen 
+The compliance would be updated on  04207344 by COB, 
+ 
+Many Thanks
+Best Regards
+Danish 
+ 
+From: Stephan Chen <stephanc@motorola.com> 
+Sent: Monday, September 16, 2019 9:36 PM
+To: Danish Siddiqui <dsiddiqu@qti.qualcomm.com>; Subramanya Roddom Satish Roddom <satishroddom@motorola.com>; Tom long <FGCP188@motorola.com>; Pradeep S <PRADEEPS@motorola.com>; Weihua Chen <weihua@motorola.com>
+Cc: Ken Crisler <kcrisler@motorola.com>
+Subject: RE: [External] RE: MBN FR for USCC requirement 
+ 
+Thanks Danish!
+ 
+For USCC compliance, I have QC IMS team input including all VoWifi related as attachment for reference. We hope QC team could follow this compliance and deliver QC SW to support USCC VoWifi for our 2020 NPI (sofia SM6125 AT4.3.1 and Gin SDM632 TA3.0) . Thanks so much!
+ 
+Thanks!
+Stephan
+ 
+From: Danish Siddiqui <dsiddiqu@qti.qualcomm.com> 
+Sent: Monday, September 16, 2019 10:41 AM
+To: Stephan Chen <stephanc@motorola.com>; Subramanya Roddom Satish Roddom <satishroddom@motorola.com>; Tom long <FGCP188@motorola.com>; Pradeep S <PRADEEPS@motorola.com>; Weihua Chen <weihua@motorola.com>
+Cc: Ken Crisler <kcrisler@motorola.com>
+Subject: RE: [External] RE: MBN FR for USCC requirement 
+ 
+Hi Stephen 
+I checked internally  it has to go in the compliance doc shared by USCC (we will update the relevant sections). Can you afford us time till tomorrow ? otherwise I would need to do it today as CSG POC was off today. Sorry for inconvenience. 
+Many Thanks
+Best Regards
+Danish 
+ 
+From: Stephan Chen <stephanc@motorola.com> 
+Sent: Saturday, September 14, 2019 12:11 AM
+To: Danish Siddiqui <dsiddiqu@qti.qualcomm.com>; Subramanya Roddom Satish Roddom <satishroddom@motorola.com>; Tom long <FGCP188@motorola.com>; Pradeep S <PRADEEPS@motorola.com>; Weihua Chen <weihua@motorola.com>; Pradeep S <PRADEEPS@motorola.com>; Pradeep S <PRADEEPS@motorola.com>
+Cc: Ken Crisler <kcrisler@motorola.com>
+Subject: RE: [External] RE: MBN FR for USCC requirement 
+ 
+Hi, Danish
+ 
+Do you get the review result of USCC VoWifi feature support for our 2020 NPI products? Thanks!
+ 
+Thanks!
+Stephan
+ 
+From: Danish Siddiqui <dsiddiqu@qti.qualcomm.com> 
+Sent: Tuesday, September 10, 2019 11:19 AM
+To: Subramanya Roddom Satish Roddom <satishroddom@motorola.com>; Stephan Chen <stephanc@motorola.com>; Tom long <FGCP188@motorola.com>; Pradeep S <PRADEEPS@motorola.com>; Weihua Chen <weihua@motorola.com>; Pradeep S <PRADEEPS@motorola.com>; Pradeep S <PRADEEPS@motorola.com>
+Cc: Ken Crisler <kcrisler@motorola.com>
+Subject: RE: [External] RE: MBN FR for USCC requirement 
+ 
+Satish, Moto team 
+We are compliant  with IMS 1.2.6 requirement with FR 53361 and CR 2461536.
+ 
+ 
+ 
+IMS 1.2.6	The device must do a silent redial on 1x for first-time SIP INVITE when it receives either no response within 12 seconds or a SIP response with an error code 380, 4xx (with the exception of 408,422,423,433,486,487), 5xx, and 6xx (with the exception of 603) during VoLTE voice call origination. After completion of 1x voice call, device must do a SIP REGISTER with the IMS network. 
+
+The 12 second timer must apply to first-time SIP INVITE only, and this must be different than Timer B.	01/10/19	Mandatory	Production
+Coming to Vo-WI-FI requirements on v19.1.0 these are marked for future delivery. Currently this is under review and we will share an update once review is completed. We will try our best to revert back by Friday , if any changes I will let you know.
+Many Thanks
+Best Regards
+Danish 
+
+{noformat}
+1. Code review is completed and the source code is integrated (https://gerrit.mot.com/#/c/1878202/)
+2. For this feature to be officially available in the borneo R builds there are 2 dependencies.
+* VoWiFi certification from NOKIA has to be done for which the activity is currently under progress.
+* Since this app will be added as binary apk, the LCCARPLOAD-1225 should be approved and the review is in progress.
+
+3. Currently NOKIA server has issues, once resolved I can share device with SIM with my own build which contains the apk for testing.
+* Please note this feature can only be tested on a particular borneo device with IMEI id 356891110030188  and a USCC Lab SIM with IMSI = 311225800003181.
+Adding [~a19035],
+
+Yes, we would like to move this feature to next NPI on Q4 2020.
+After further discussions USC will use R2 as its baseline.  Thus removing the A12 R1 Need label.
+Agree!
+Applied the a12r1 label at creation when it should have been a12r0.  Fixing it.
+As per Arthur latest comment on the CR # IKSWR-72560
+
+However, according to Noel's comment and this spreadsheet (2021NA config), Borneo Retail does not support WFC on USC.
+
+Need to wait for the Target device to validate this functionality.
+
+[~wcw014][~a22642] - FYI
+As per Mayank on 17-Nov-2020:
+Lets keep FEATURE-6192 and add delta from FEATURE-6967 to that.
+USC has ranged Borneo and they will need WFC on the same during R upgrade.
+
+17-Nov-2020: Noel shipped USC Test SIMs to India
+
+As per the Android R upgrade [plan|https://docs.google.com/spreadsheets/d/1TPO_iwj1OeXh06zsFlUPo3MkrxbbrqTd-zXZZ-U19Os/edit#gid=145684658], the R MS1 complete for BORNEO is planned for 2/5/21.
+
+For the feature development work *to start* we need the following *dependency* as well to be resolved.
+* We need to use the NOKIA IOT lab server and we are waiting on the PO of certificate to be complete. 
+* We are waiting for more info from USC carrier on when their production network will be ready for functional test. 
+As there are no USC upgrades or NPI launches planned for A12 R0 or A12 R0, moving this plan to A12 R2.
+As there is no core apps custom work I am dropping this plan.
+
+[~dth436] / [~clao] FYI
+As this wasn't implemented for P I am going to move the plan to Q NPIs.
+Austin has been ranged by USC and these features are now needed to be included in A12 R1 so adding the A12 R1 Need label.
+Based on Modem team's comment in CR https://idart.mot.com/browse/IKSWQ-3236, modem will not support USCC VoWiFi for Sofia/Gin.
+
+This is only considered to support Racer_5G which is still in discussion with QCOM.  FW will not enable it so far until modem get clear information from QCOM
+Current plan doesn't meet the Sofia FC date so adding the risk label.
+Currently USCC network is not yet ready and their requirement is still defined .
+They will have more details to clarify the requirement in upcoming weeks.   USCC has told us that they are planning update the requirement for additional details.
+Development is completed and tested with the NOKIA Lab Server with USCC Lab Sim.
+*Code review* is in progress :
+* https://gerrit.mot.com/#/c/1878202/ (source)
+* https://gerrit.mot.com/#/c/1878200/ (binary)
+* https://gerrit.mot.com/#/c/1879477/ (USC product make file)
+
+During a review of current plan backlogs in preperation for 2021 Q2 RQL it was determined this plan could move to Q3 or beyond.
+For test build, FW don't need to do the IMS configuration. Tester can enable VoWiFi via hidden menu. Hold this feature plan until it is planned for the product.
+From the requirement https://docs.google.com/spreadsheets/d/1CnkNUxphIdOKVK2nSKvsO1eoUrp5yWQauxY9CFDD5qc/edit?ts=5fda3676#gid=54230312, only one UI mentioned for VoWiFi
+
+{noformat}
+The device must allow the user to enable and disable Voice over Wi-Fi and other Wi-Fi features from the device settings.
+{noformat}
+
+Keep other parameters as AOSP default value.
+Gin has been renamed to Fiji
+Hi Kumar,
+Yes, I have been communicated to her and the team. 
+I believe she is working with her team now.
+Hi Kumar,  will you be willing to help us to generate a test build?
+Does the current baseline already have VoWiFi functionalities and just need the App team to support?
+
+I just want to know when we can get a test build to USC so that can verify on their network for VoWiFi calling.
+Hi [~kmjd67],
+The test cases are available on: [link|https://dalek.mot.com/issues/?jql=project%20%3D%20CCTEST%20AND%20issuetype%20%3D%20%22Test%20Case%22%20AND%20status%20%3D%20New%20AND%20component%20%3D%20%22USC_6192_VoWiFi_calling%20%22%20AND%20labels%20%3D%20cc_fid_6192]
+Only need the SME approval and test plan creation.
+[~fvmk68] FYI,
+I can't access QCOM SR 04118875, need [~a20454] help comment.
+Integration not done and no product to test.
+It is possible for [~a24148] to complete the development testing using the current TS.43 certification purchased from Nokia.
+
+Additional MotiveSmart license if needed only for IOT testing in Nokia labs
+No Target/Reference Product Identified.
+Nokia IoT Testing in Progress. Once Done, USCC needs to approve in the Production Server. 
+
+After Approval, we need to test the End to End testing of WFC functionality.
+Per IKSWQ-3236, QCOM has planned to support this feature and lack of ETA.
+
+FW will commit to enable USCC WFC assuming QCOM modem support it. This feature is only valid on Sofia for FW feature plan commit.
+Per agreement with [~a19035] and at the request of [~dth436] and [~w19976] moving this to Q1 2021 (R)
+
+[~wch683] FYI
+Per discussion at the 2021Q1 RQL meeting today it was agreed this should be moved to 2021Q2.
+RPADX-2994 RRB Request Approved (Add) 
+RPADX-2999 Plan Created For: 
+FEATURE-6192:USCC:< VoWiFi calling for NPI> on Release:
+RPADX-1939:ADX P_Pure+_Rel1
+RPADX-3000 Plan Created For: 
+FEATURE-6192: {color:#326ca6}USCC:< VoWiFi calling for NPI>{color} on Release: 
+RPADX-1939 ADX P_Pure+_Rel1
+Removing 2H2019 labels from Racer 5G and adding 1H2020
+Removing Sofia and Gin labels as [~clao] has communicated in FEATURE-6192 that these have been negotiated out of scope for these products.
+Thanks. Then I will hold this feature development until the requirement is updated.
+
+Put ""Integrate CWV"" as 06/01 temporarily.
+The PO order has been approved for VoWifi certification to access the NOKIA IOT lab. In addition to this NOKIA/USC has informed to purchase the *MotiveSmart license* worth $10k as well *which is still pending*. Waiting on the approval for the MotiveSmart license PO approval now. 
+The TS.43 implementation to support the VoWifi calling solution is now added by Google in Android S.
+
+So, as part of this plan following actions needs to be done.
+ * Check whether Google solution covers all the USC Wfc usecases.
+ * Will need to re-run the IOT cases with NOKIA with Google solution.
+
+cc: [~dth436]
+There is no conclusion with USC. 
+[~wcw014]: / [~a19035] / [~wch683]: Pls move this feature to Q2-2021.
+* Will still continue technical discussions with USC.
+This is needed for Sofia so adding Sofia label.
+This is not needed until 2020 NPIs however USC is requesting a test build on Oslo_M.  [~clao] to provide timeline for this request.
+This plan is expected to be in base for the 2020 Q3 ADX release.  As such marking plans expected to be in base with 2020Q2 label for easier tracking.
+USC Network Team and Motorola Modem Team are working on this issue along with QC. Expecting the Resolution ASAP.
+USC team confirmed that the development *cannot be done on their live network*. We should use the *NOKIA IOT lab server for the feature development*. 
+The development activity *has been blocked on the PO for accessing the NOKIA IOT lab*. Once the PO is done, will start on the feature development.
+
+Also, we need to use the *Borneo device with R build for the development* . The bring up of R on borneo is in progress and the *target date for MS1 complete is 2/5*
+USC team shared the production server details. I tried to connect to the production server using SofiaP device with USC sim, the GET method succeeded and got the aka challenge request, after the device processs the aka challenge and responds back with POST method, the USC server responded back with *500 Internal Server error*.
+
+Have emailed the USC team to help on this. Waiting for the response.
+Update Integrate CWV date
+Update the integration date 2021/2/3
+Update the integration date to 2021/2/15 as it is moved to 2021 Q2
+Updating the labels to remove Sofia and add Gin.  Sofia/Sofia+ are low probability for ranging by USC where Gin is high probability.
+Updating to R1 as there are no USC upgrades off of R0 and no products are available for testing.
+VoWiFi requirements for USCC are generic in nature and should be supported by default.
+
+App side responsibilities include:
+1. Enable / Disable VoWiFi device settings based on IMS Management Object parameter
+2. User ability to turn on / off VoWiFi settings
+3. Roaming preference setting
+
+*The above mentioned requirements are not mandatory to validate ePDG functionality.*
+
+There are no requirements for Emergency Address Management in attached USCC requirements doc.
+
+[~wcw014] / [~clao]: Pls drop this RPADX for App. I would like to avoid unnecessary tracking of the Planning CR that is not scoped for now.
+We are still pending the information from USCC.
+
+But currently we have proposed to USCC to defer VoWiFi to 2021 products.
+
+[~a19035] Pls help clarify which target product need this feature, and help share the latest requirement spec. Thanks.
+
+Move the date to 09/01 temporarily.
+[~a20454] Any update from QC on this?
+
+[~w19976] Mahmoud is pressuring us to have all features for Sofia committed by next Wed.  Please commit if possible.  ADX feature complete for Sofia is 10/30.  Remember we will need time for testing and bug fixes.
+[~a20454] Any update on schedule from QC?  [~w19976] Assume we need to wait for QC response before committing? 
+[~a20454] is still checking with QCOM if they can support USCC VoWiFi with CR IKSWQ-3236.  Once it is clear, I will commit this feature based on QCOM's time line.
+[~a24148], [~dth436] the Int CWV date for this plan is past due.  Please help to update it.  As you know we want to get this into mainline so that we can test and get it propagated to Q2 all before 3/12.
+[~clao] According to the comment in https://idart.mot.com/browse/RPADX-3028
+{noformat}
+Lao Charles added a comment - 05/Mar/20 4:08 PM
+USCC will do the provision via standard VoWiFI, they will provide us the link to point to enter the emergency service location.
+{noformat}
+
+I understand USCC would like to do WFC entitlement check with the emergency address link, could you help comment what is the detailed link address? Also in the old requirement, USCC ever mentioned below, may I understand it will be shown by USCC's web site after the link is launched?
+{noformat}
+The device must display U.S. Cellular’s Terms and Conditions to the customer as related to Voice calling over Wi-Fi.
+{noformat}
+
+In the old spec, it also mentioned below, as OMADM for VoWiFi not supported, do they have any update for those related requirements?
+{noformat}
+The device must show all VoLTE  and VoWiFi user interface controls and settings when the 3GPP IMS Management Object parameter Voice_Domain_Preference_E_UTRAN dictates that VoLTE functionality is enabled from the network.
+The device must allow the user to enable and disable Voice over W-Fi and other Wi-Fi features from the device settings when the 3GPP IMS Management Object parameter Media_Type_Restriction_Policy is set to enable Wireless Local Access Network (WLAN).
+The device must hide all Voice over Wi-Fi device settings when the 3GPP IMS Management Object parameter Media_Type_Restriction_Policy is set to disable Voice over Wi-Fi.
+{noformat}
+[~clao] Have the requirements been clarified?  Can we get an ETA from them?
+[~clao]: Please request Ming-shu for the test builds, as VoWiFi needs to be enabled in FW
+[~dth436] Borneo R upgrade should pick up Q3-2021 and hence the decision to move it there. 
+We should still keep working on our development so that we can discuss any issues. 
+[~dth436] There is an item from USCC VoWiFi requirement - https://docs.google.com/spreadsheets/d/1U36s4KUyYExC6gEtD2GucjkY4i6z7zNqjWH5kra31Gk/edit#gid=1868168186
+
+{noformat}
+The device must display U.S. Cellular’s Terms and Conditions to the customer as related to Voice calling over Wi-Fi.
+{noformat}
+
+Could you help comment if App team support it? 
+
+FYI  [~wcw014]  [~clao]
+[~dth436] we had dropped this Core Apps Custom plan for this feature as previously you had thought there was no work for it.  I have reopened the plan for you to use and moved it to Q1.
+
+[~w19976] FYI
+[~dth436], [~a24148] I believe the certification results came in early but there was one issue identified.  Can you clarify if that has been resolved and if we can get this feature integrated now?
+
+[~tgb348], [~a22642], [~w15621] FYI
+[~karinyo]: Did we develop the test cases for this feature?
+[~fvmk68]: FYI
+[~tgb348] USC WFC is not enabled yet for any product. As I mentioned before, I need PdM team help clarify with target product and latest requriement spec. 
+
+Pls help verify it after the code is integrated. 
+
+FYI [~a19035] [~wch683]
+[~w19976] / [~a20454] Do we have an update from QC yet on IKSWQ-3236?  Ming-Shu can you commit yet?
+[~w19976] / [~a20454] I am still waiting for an update...
+[~w19976] ADX FC is 10/30 for Sofia.  We need to improve the integration date.  Can we get prioritization with QC?
+
+[~kmjd67] FYI we will need to pull in the test dates as well.
+[~w19976] Are you able to commit to this?  It has the Sofia label.  We are to be FC for Sofia by 10/30.  Will need time for testing and bug fixing built into that.
+[~w19976] If this is integrated can you update the Int Actual date.  If it is not can you update the Int CWV date?
+[~w19976] can you update the target date for this plan please?
+
+[~tgb348] FYI
+[~wcw014] Per latest comment in https://idart.mot.com/browse/FEATURE-6192, USCC VoWiFi is only planned to support racer_5g product. Could you help remove other product label?  
+
+I move integrate date to 12/01 
+[~wcw014],
+
+The NOKIA IOT testing is completed and the *VoWifi certification is approved by USCC*. All the changes related to this Feature has been integrated in the *mainline* and *Q2* branch. Testing can now officially start. [Q2-build_link|https://artifacts.mot.com/artifactory/continuous_builds/borneo/RZB31.Q2_borneo-retail_userdebug_mr-2021-q2_r-qsm2020_test-keys_continuous/92/]
+
+Please note that there *is a dependency on Modem* to set the *WfcProvisioned to true by default* which isn't working on the USCC Lab SIM.  [~tnikhila] is checking if this issue is *reproducible on live SIM as well*. So, before starting the test, ensure that the *WfcProvisioned is set to true* by going to the hidden menu option.
+
+Steps to check if WfcProvisioned is set or not.
+1. From Dialer launch the hidden menu option by dialing **#***#4636#***#** 
+2. Go to Ims Setting > Wi-Fi Calling and check WfcProvisioned value.
+3. If WfcProvisioned is false, then *toggle the Wi-Fi Calling button once and check the WfcProvisioned* value changes to true.
+4. Now the device is ready for the test.
+
+*Please note, the above steps needs to executed on every device reboot.*
+
+cc: [~a22642], [~tgb348], [~wdr013], [~wch683], [~a19035], [~dth436]
+
+P.S : Attached the USCC approval email.
+[~wcw014]: Feature got integrated on 2/19.
+* However, the APK cannot be included in official builds till Nokia's certification is complete
+** This is as per USC's direction.
+** Not allowed to start WFC testing on live network till Nokia certifies.
+
+* Nokia certification process is in progress, ETA: 15-Mar
+[~wcw014]: It is not possible to commit to this feature for Q1-2021, given the poor response from USCC.
+* Will wait till 21-Aug before formal request to drop the feature
+
+Email to PdMs: (on 10-Aug-2020)
+Hi Noel / Mayank,
+
+As you notice, USCC takes about a month to respond to any query posted by Motorola.
+-- It is very difficult to prioritize USCC development, given their response times.
+-- With no information about availability of Lab / Production networks, it is not possible to commit VoWifi for USC
+-- Minimum needed for commitment for Q1-2021 Upper Platform
+21-Aug-2020: USC shall respond back with requested details
+During dev phase: Respond to any technical queries / support within 2 days of raising the same.
+If the above cannot be assured, pls drop the feature from Q1-2021
+
+Chronology of Mot-USCC communication:
+
+29-Apr-20: Shared initial list of queries with USCC
+
+11-May-20: Technical meeting with USCC, received first of responses for queries raised on Apr/29
+
+8-June-20: Partial response from USCC, reminded them to share req-resp examples for dev-network interactions
+
+23-Jul-20: USCC shared updated Requirements doc as per my comments and requested review of then same
+24-Jul-20: Shared my review comments back to USCC
+10-Aug-20: No response yet from USCC (sent reminder again)
+[~wcw014]: NO change needed from App side. [~a20746] already communicated to [~clao].
+* Please drop this Plan CR for App.
+[~wcw014]: based on comments from Charles, seems that this feature is deferred to 2021. Kindly remove Racer 5G label and Q2 label as well. +[~tgb348]
+[~yash1][~vish1] - Please verify the USC SIM with Gin NA Retail build, WFC should work. If not please raise a CR.
+[~a19035][~a22642][~wch683] - FYI
+added Mingshu in SR, currently still wait for QC response. SR already escalated to QC TAM.
+loop [~tnikhila], [~kishor] "
+FEATURE-6205,,FEATURE-6205: VZW : Verizon Cloud Integration and Customization,"Adding adx_not_ready_for_test since apks we're using are from Android 11 and not Android 12
+
+[~a19591] FYI
+As agreed, please make basic tests using Android 11 version while we don't receive Android 12 compatible ones"
+FEATURE-6206,,FEATURE-6206: VZW : Settings requirements integration and customization,"Applied the a12r1 label at creation when it should have been a12r0.  Fixing it.
+Hi [~aconti],
+ IKSWS-2341 related to this plan: RPADX-5712.
+The behavior in the CR IKSWS-2341 is as designed, and not an issue, will update in the CR comments.
+This feature implementation is dependent on Settings S upgrade. Since Settings retail MS2 completion is estimated by July 15th, this feature is also committed accordingly.
+This plan is used to implement only the feature - Vzw data usage units (FEATURE-4232) which is now consolidated into FEATURE-6206.
+Verified on Burton SPB32.34
+[~a22595] this CR IKSWS-2341 is related to this plan or RPADX-5711?
+
+[~daoliv] [~ggpiassa] FYI"
+FEATURE-6216,,FEATURE-6216: VZW : Voice over Wifi calling (WFC) requirements consolidation,"[~a19591] has confirmed to use APKs of previous OS.
+[~wcw014]: dependency on VZW preloads. Need to wait for Vzw confirmation if new set of APKs will be released for ""S""
+
+[~a19591]: Pls check with Vzw and confirm back"
+FEATURE-6224,,FEATURE-6224: [Voyager] AOSP Dialer support for CLI (LATAM/EMEA),"Moving this out to A12 R2 since Odyssey isn't getting upgraded until R2.
+Tests completed
+[~jrdk47] the test CWV date is past due.  Could you please update it?
+[~jrdk47] this plan has a Test Actual date.  Did you just forget to move it to the ""Complete"" state?
+[~wcw014] There were many open CRs and didnt see any resolved dates for them. I am moving test dates to jan-31. Could you please follow up with dev team about the open CRs
+[~wcw014] This is needed for the devices with CLI. As there are no devices planned for A12R2, we don't need these changes."
+FEATURE-6236,,FEATURE-6236: VZW : WiFi UI and WiFi MHSUI requirements update from Feb. 2019 specs,"All the issues at RPADX-4468 were dealt with at RPADX-4317 FEATURE-5019, so I believe this plan is not necessary for this version
+No need to drop this now. Let's consolidate this on next android release. To accomplish this consolidation we should request this on FEATURE-6236 CR? [~wcw014]
+[~a22642] I agree and I see what might have caused the label to be added.  I updated it to remove it.
+[~aconti] thanks for clarifying.  [~a19591] would help with the consolidation on T.
+
+ 
+[~jcamelo] are you indicating this plan should be dropped?
+
+[~a19591] FYI
+[~jcamelo], [~aconti], [~mvt647], the Int CWV for this plan is past due.  Please update the CWV date or if it is integrated update the actual date please.
+[~wcw014]: This RPADX has EMEA label, but features is for VZW. Could you please confirm.
+
++[~tgb348]"
+FEATURE-6239,,FEATURE-6239: VZW : Android requirements updates from Feb. 2019 spec,"Applied the a12r1 label at creation when it should have been a12r0.  Fixing it.
+Only pending item is
+
+VZ_REQ_ANDROID_10598638
+
+For the new 4G basic phone devices that have the same prepay and postpay model name and launched after 02/01/2019 (not SU update should not implement this change) , OEM must include new xml files in /etc/permissions or equivalent folder with below content in order to identity if the device is prepay
+<?xml version=""1.0"" encoding=""utf-8""?>
+<permissions>
+<feature name=""com.verizon.devicetype.prepay""/>
+</permissions>
+
+But this requirement is not applicable for smart phones. So we are good.
+[~wcw014] could you please move this plan to R1 since it depends on ro.carrier?"
+FEATURE-6445,,FEATURE-6445: VZW : Amazon Alexa enablement for Verizon,Applied the a12r1 label at creation when it should have been a12r0.  Fixing it.
+FEATURE-6478,,FEATURE-6478: T-Mobile - Visual Voicemail Reqs - Q2-2020,"All the code of the feature is in Dialer (""com.android.dialer""), and is dependent on Custom Dialer S upgrade.
+
+The feature will be committed after Custom Dialer S upgrade dates are available.
+Custom Dialer S upgrade Integration completion date is given as 8th August. This feature is dependent on Custom Dialer, hence integration is committed to a week after Custom Dialer is integrated.
+Hi [~wcw014], yes, we have completed the retest last Friday. Thanks.
+[~dth436] I think at this point it is ok to leave it as R1.  We can just use this data to plan A13.
+[~malaguti] can you update the Test CWV date please?
+[~malaguti] can you update the Test CWV date please?
+
+ 
+[~wcw014]: Can change release label to A12.R0 as there are no dependencies"
+FEATURE-6493,,FEATURE-6493: Support Device Lock using 3rd Party solution from PayJoy,"According to [~wjm097]'s comments, this Payjoy feature is only applicable to Saipan in Q2. We need to do configuration per product in addition to configuration based on Channel ID. After discussion together with CM, [~a18268] will need to rework on the configuration. So, I updated the integration date CWV to Feb 5.
+As decided with [~wjm097], [~a18268], [~wcw014] and [~brunoess], the feature is going to be integrated to Tahoe on Mainline / Userdebug for us to test it and complete the RPADX.
+
+Before, the feature was mistakingly integrated to Hanoi+ on Q1 stable line, however this is a Q2 feature, that's why we need another product on mainline for Q2 testing.
+Code is ready, but pending on the launchcal CR LCCARPLOAD-1187 approval to merge
+Feature test executed on Tahoe Mainline
+
+Tests to be executed on Saipan when HW is available with Q2 Common Stable Line build
+Given the current status with GTM and after discussion with [~wjm097] it has been agreed to move this to Q1 for consideration.
+Hi [~a18268]
+Can you please update Integrate CWV?
+Hi all, 
+
+According to [~wjm097], this feature will be available only for Saipan in Q2, since we are expecting to receive this device in our site only on Apr/01, I’m updating the Test CWV date of this feature.
+
+Best Regards,
+Brunna Arruda
+Not sure who put the dates 10/31 here, we even could not start this feature because
+1. we did not receive the R deliverables from Payjoy yet.
+2. This need Google approval, and we did not receive it yet.
+
+Please contacts with [~w15621] or [~wjm097]] for details
+Per discussion with [~w15621] and [~wjm097] moving this to Q2.
+RPADX-3898 RRB Request Approved (Add) 
+RPADX-4189 Plan Created For: 
+FEATURE-6493:Support Device Lock using 3rd Party solution from PayJoy on Release:
+RPADX-4178:ADX R_Rel1
+Required updated Integ date for providing Test CWV.
+Reviewed with Mayank and Ajit and this is needed for Q1.
+Since [~wjm097] suggest we build this on Capri+ for Q2, so currently it is only picked up for Capri+ user debug build.
+If you need, we can raise another commit to enable it for Capri build, not sure if there is any concern there, let me know if need that for Capri.
+
+Steps to test this feature
+
+*Preparation:*
+1. Apply the payjoy test account, you can send me email so that I can add you to the test group. After you get the account, login to https://payjoy.com/dashboard/#/, then go to https://payjoy.com/dashboard/#/update-device-manager, scroll down to the section *API Settings:*, copy the *api key* in the below box.
+2. Write down the phone's *IMEI*
+3. FDR the device, and then flash the test SW. 
+4. currently, this feature is only enabled for the channel *openmx*, so if the channel is not openmx, it will not have this feature. Check your phone's channel, if it is not, on a NS device, you can use the command to change it to openmx in *fastboot mode*
+fastboot oem config carrier openmx
+
+After this command, use below command to make sure it is indeed set
+fastboot oem config carrier.
+
+Also after phone is power up, you can check the channel by
+adb shell getprop ro.carrier
+
+*Testing Step*
+1. After flash the SW, before it is powered up, activate the payjoy on this device by below link. replace the *<IMEI>* and *<api-key>* with the actual one you got on above steps
+   https://api.payjoy.com/devicemanager/v1/device/claim?imei=<imei>&key=<api-key>
+2. Power up your device, and go through the set up steps, and connect to internet
+3. wait the payjoy app starts, and follow the screen instructions. 
+4. When the payjoy app compete the activation, there will be a code on the payjoy screen, something like ""DZQGGXB"" record this code, it is the device tag.
+5. Go to https://payjoy.com/dashboard/#/use-device-api, and input the tag in above step in the box, and hit the *Enter* button
+6. in the next screen, you can now set the expire date for the device, or deactivate the device, or remove the lock.
+
+
+The Payjoy release includes the change in 1) Bootable (kernel) 2) Frameworks 3) Application 4) makefile.  FW may take care of 2), 3) and 4), but 1) should be supported by Kernel.
+This is considered a first priority for 2021 Q1.
+We are still waiting for the new deliverable from Payjoy.  We ever integrated the old Payjoy packages received on early July on Voyager, and it worked fine, but Motorola had further comments on this package, and Payjoy need update the packages based on Motorola comments. For details see https://docs.google.com/spreadsheets/d/1LbgBdxKO0OArX_cbhesesFNOJXjvmFSkRp04b3DFRXA/edit#gid=1839454929.
+
+We have pushed Payjoy to give the expected date for the new package, but we did not get a commitment yet.
+Why can's the [plan and test be completed ona refernce device? this is how this feature has been tested so far. Then plan can be closed and once Saipan HW is available it would just need to be retested on it.
+
+Thanks
+[~renano], [~a22642] please see Louis comments asking why this can't be completed on a reference device.  Would be nice to not have this hanging open until April if possible.
+[~w0126c] Are there dependencies on this plan?  Are you able to commit to it?
+
+[~w15621] FYI
+[~w0126c] and [~a18268] this plan is now past due.  Can you update the CWV date please?  Remember feature complete is this Friday 7/31.
+[~wcw014]: Based on comments by Yong Jiang, team would be testing on Capri/Capri+ builds. Test dates have been pulled in. "
+FEATURE-6581,,FEATURE-6581: Motorola Live Wallpaper,"Verified on motorola/burton_vzw/burton:12/SPB32.40/e40596:userdebug/intcfg,test-keys nio_retail_userdebug_12_SRT32.2_aa79f_intcfg-test-keys_ret_US
+We are changing the _*integrate CWV date*_ to *2/Jul/21* due to IKSWSRVC-24152 which blocks the integration for the MotoLiveWapaper3 project on Android S because playstore.xml is not yet included by the base root manifest and the project is not included in the build system.
+We are changing _*integrate CWV date*_ to 09/Jul/21 due to IKSWSRVC-24152. We are waiting for the CM team to integrate a fix in the manifest project to allow playstore.xml to be recognized in the default manifest."
+FEATURE-6645,,FEATURE-6645: USCC:<VoLTE cannot be disable on 5G device> Q2 2020,"+[~w19976][~a17364][~a20402][~dvx436]
+Reqs -
+On the 5G device, the user cannot allow to disable VoLTE.
+a) Enable VoLTE out of box.
+b) Ignore the OMADM value for VoLTE node
+c) Add Pop-up if the user tries to toggle VoLTE off (Enhanced Calling)
+“Turning off Enhanced Calling will also turn off 5G mobile data.""
+
+I would understand a) and b) is met by default, and the new work is for c) Enhance Calling menu.  Jyothna/Ming-Shu, how about your opinions?  
+After discussion with [~a12764] and [~wch683] we agreed to move USC 5G plans to 2021 Q1.
+After further discussions USC will use R2 as its baseline.  Thus removing the A12 R1 Need label.
+After review today with Ajit and Mayank it was concluded that this plan should move to A12 R1 so the 2021Q3 label was removed and the a12r1 label was added.
+After review with Mayank and Ajit this can be moved to Q2.
+
+
+Austin has been ranged by USC and these features are now needed to be included in A12 R1 so adding the A12 R1 Need label.
+Config Error is showing, please update the test CWV date as 8/7
+Consider Kiev for now
+Consider Kiev for now 
+During a review of current plan backlogs in preperation for 2021 Q2 RQL it was determined this plan could move to Q3 or beyond.
+For a) and b), I am checking with modem team to finalize the design. FW and OMADM all have plan for it.
+
+For c), it is in this plan's scope, i.e. support a dialog to notify the end user.
+Hi Chris .. yes thats the story .. 
+We cannot test it on Odyssey as well as we are not offering Odyssey to USC .. 
+Kiev may be the next product .. 
+
+Hi [~a21143],
+
+This feature seems to be only applicable for USCC.
+Hence, no impact on VZW's Advanced Calling setting. CBS/Core Settings team shall handle this requirement.
+
+Reg. the requirement C, as Mingshu has mentioned, the dialog should be displayed. Pls confirm the below requirements -
+- I understand the dialog should be displayed even if the currently connected RAN is not 5G and irrespective of the currently set Preferred network type.
+- What is the expected behavior when a non-USCC SIM or a SIM without 5G feature is inserted? Is the dialog expected to be still displayed?
+
+Thanks,
+Hi [~a21143],  ""Advanced Calling"" setting is applicable only for VZW not for USCC. Hence, it is not right to implement this dialog in VZW's ""Advanced Calling"" setting. Thanks
+Hi [~tbagni], Just synced with Chris.
+The plan is to have everything done by Apr 30 including test so that we have everything from Q2 in base for Q3 FC on 4/30.
+
+Could you please finish the analysis and commit to this plan considering this date?
+
+Thanks!!
+I think it is a dialog pop up when user select turning on ""Enhanced 4G LTE"". 
+Per Mayank this won't bee needed for Racer 5G as USC and Tracfone ranging has been removed nor Odyssey.  Removing these labels and moving to Q4 2020 planning.
+
+-----------------
+Hi Chris,
+
+I further checked with GTM and they have currently shelved the plan to launch Odyssey BYOD with USC. So in that case lets move the USC features to Q4-2020.
+
+Regards,
+
+Mayank Gupta
+Per agreement with [~a12764] and [~wch683] since there is no way to test this right now due to the network not being ready we are moving this feature to Q1.
+Per feature review meeting on 8/10 this feature can be moved to A12 R2.
+RPADX-4021 RRB Request Approved (Add) 
+RPADX-4043 Plan Created For: 
+FEATURE-6645:USCC:<VoLTE cannot be disable on 5G device> Q2 2020 on Release:
+RPADX-3049:ADX Q_Rel1
+RPADX-4060 Plan Created For: 
+FEATURE-6645: {color:#326ca6}USCC:<VoLTE cannot be disable on 5G device> Q2 2020{color} on Release: 
+RPADX-3049 ADX Q_Rel1
+Racer_5G has been dropped for USC so removing the Racer_5G label.  Adding the Odyssey label.
+Right now we don't have any Target Product, Waiting for the Target Product & Build to update the Test Dates.
+Waiting for the Target/Reference Product to be Identified to validate this Feature.
+[~a19035][~wcw014][~a22642] - FYI
+[~a19035] Can you confirm that this feature can only be tested on Odyssey?  Seems 5G USC related and my understanding is the only 5G USC product on the roadmap right now is Odyssey...
+
+[~tgb348] FYI
+[~a20402], yes.  This is only apply to 5G device, for non 5G device we should keep the same as current implementation.
+[~a21143] Are you able to commit to this plan yet?
+[~a21143] Charles indicated that both [~a22977] and [~a20402] would have work for this plan.  So I assigned it to Dawny and added Dengfeng as the dev lead.  Wanted you to be in the loop.
+[~a21143] when we were reviewing Tom's plans today, Ming-Shu mentioned that a Core Apps plan was needed for settings.  Assigning to you.
+[~a21143]/[~wcw014] Our team can take this plan to work on *c)*, but before we can commit to it we need to know what's the due date for Q2
+
++[~mvt647]
+[~a22977] / [~a20402] Have you completed the development for this feature?  The Int CWV date is past due.
+
+[~a21143] / [~tgb348] FYI
+[~clao] Pls help answer above question. This is my understanding, pls correct me if it is wrong.
+
+I understand the dialog should be displayed even if the currently connected RAN is not 5G and irrespective of the currently set Preferred network type.
+[Mingshu] Yes, it is a common warning to let user know the impact on 5G when user turned on VoLTE
+
+What is the expected behavior when a non-USCC SIM or a SIM without 5G feature is inserted? Is the dialog expected to be still displayed?
+[Mingshu] Currently other carriers like VZW, TMO doesn't has this requirement. This feature should be configured for USCC only. 
+[~clao][~wcw014][~a22977] - Please share the Reference Device to validate this Feature Testing.
+
+[~a22642] - FYI
+[~clao][~wcw014][~a22977] [~mvt647]- Please share the Reference Device to validate this Feature Testing.
+
+[~a22642] - FYI
+[~tgb348]
+
+Please help review the Test results over here: https://kaiju.motorola.com/#/dalekReports/savedDalekReport/5691955428458496
+
+1 issue found: IKSWQ-125083 - com.android.settings App_Crash is observed when trying to switch the orientation mode.
+
+As per [~tbagni], the scope of this feature is to simply display the dialog when user tries to disable VoLTE (Enhanced Calling) while Preferred Network Mode is 5G - which we have done in the above test cases. For the the remaining pending cases we need active USC 5G device and sim.
+
+[~a22642], [~wcw014], Fyi.
+[~tgb348] there are no open CRs for this plan.  Please update the Test dates.
+[~wcw014] : Requires dependent plan RPADX-4060 to be committed before putting a test date. 
+[~tgb348]
+[~wcw014] AOSP has this feature in base on Android R.
+[~wcw014], I suppose this plan is for *b) Ignore the OMADM value for VoLTE node* in FEATURE-6645.  RPADX-4060 is for *c) Add Pop-up if the user tries to toggle VoLTE off (Enhanced Calling)* in FEATURE-6645. 
+[~wcw014], this was already integrated. We need test dates.
+[~a22642] - fyi, could you please update the test plan for this feature?
+Thanks.
+adding [~a19035],
+Hi [~w19976],
+The pop out is only apply for 5G device, in this case.  yes.
+If the non-USCC SIM or without 5G, we should not be displayed for the pop up.
+
+hi [~w19976][~a17364][~dth436] Jyothsna would you include this change as part of 'Advanced Calling' menu customize, to support the custom behavior ""Turning off Enhanced Calling will also turn off 5G mobile data"" ? it can be designed as no dialog by default, and enable the dialog by USCC mnc/mcc.
+i think this will be under mobile network settings menu.  +[~tbagni] and [~zhangmp1][~luogang2].  Note USCC is just taking retail build"
+FEATURE-6669,,FEATURE-6669: Update OOBE Setup to Comply with Data Privacy Regulation in Brazil,Changes are integrated to baseline
+FEATURE-6749,,FEATURE-6749: Desktop Mode,"Architechture & HLD reviewing.
+Plan to integrate to mainline on 8.31. still on going.
+In the Settings APP, on the desktop Grey out the sub-items under
+
+Settings > Display, except for Dark Theme
+
+The user should be able to access these settings if he runs the settings app on the phone (primary display)
+Settings > Security
+
+Grey out FPS/FOD enrollment UX / Fingerprint
+Grey out Face Unlock settings
+The user should be able to access these settings if he runs the settings app on the phone (primary display)
+
+RPADX-4134 RRB Request Approved (Add) 
+RPADX-4199 Plan Created For: 
+FEATURE-6749:Desktop Mode on Release:
+RPADX-4178:ADX R_Rel1
+RPADX-5047 Plan Created For: 
+FEATURE-6749: {color:#326ca6}Desktop Mode{color} on Release: 
+RPADX-4178 ADX R_Rel1
+Reviewed with Mayank and Ajit and this is needed for Q1.
+This is considered a first priority for 2021 Q1.
+This plan is created to implement the change described in FEATURE-7023 which was more of a defect than a new feature.  As a result, the decision was made to use the general desktop mode feature (FEATURE-6749) to implement it.
+[~a22677] / [~a22642] I see the Test CWV date for this is now past due.  It is also my understanding that there are still many CRs open for desktop mode.  Have you worked out a plan with [~caizy] and his team on what the criteria is to complete this plan?  Can you update the test date?
+[~dvx436] / [~a21143] this plan is past due and CS was planned for today.  Can you help to update the Int CWV date please?
+[~tgb348] these changes have been integrated.  Can you update the Test CWV date?
+
+[~a22642] FYI
+[~wcw014] : changes in review, will merge by 12/01
+updating test dates waiting for closure of CR's"
+FEATURE-6791,,FEATURE-6791: DSDS support for North America Carrier Requirements,"All the Failed CR's tracking in one RPADX-4924 and completing this plan. If any Fail, we will be tracking with the RPADX-4924 Plan.
+Blocked with CR, Waiting for CR Fix & CR-Retest.
+Check with Caio I think there is an option to set Primary SIM in UI.
+Created IKSWR-27175 to cover the DSDS support for NA carriers in Phone app and SprintWFC
+For all CI lets use primary SIM if available and that is carrier SIM .. else use secondary SIM
+Hi [~tgb348],
+
+    DSDS changes of TMO WFC and VZW WFC (for retail devices) have been integrated today. 
+
+Please Note: TMO WFC has a functional dependency on RPADX-4925. Once framework changes are integrated, the features can be verified.
+
+Hi [~w19976],
+ImsConfig.ACTION_IMS_CONFIG_CHANGED has been used in VZW MVNO WFC feature as well.
+Request you to cover it as part of this plan itself.
+Thanks
+Hi [~w19976],
+Pls pass subId even in ImsConfig.ACTION_IMS_CONFIG_CHANGED intent.
+This intent is used for VZW WFC feature.
+*Similar to PROVISION_STATE_CHANGED intent I am using the below extra for the subId.*
+public static final String EXTRA_SUBSCRIPTION_INDEX = ""android.telephony.extra.SUBSCRIPTION_INDEX"";
+
+*Pls let me know if you plan to use a different key.*
+Thanks,
+HotSwap SIMs are working fine. If any Fails we will track other RPADX plans. Completing this RPADX-4924/25 plans.
+IKSWR-27192, IKSWR-27906, IKSWR-27175 are already integrated since Feb/03/2021.
+No CR's blocked for this RPADX, Other DSDS RPADX blocked with CR, so completing this Plan. 
+No new Odyssey Retail build available after RPS31.89 that has this feature change integrated yet.
+
+Fyi [~tgb348].
+Okay, let us use the same KEY to support this intent
+Per DSDS's sync meeting on 1/6, this Q2 plan is only DSDS support for NA's retail product. We don't need to support DSDS's RCS in this plan. Pull in the integration date.
+
+[~xnk746] [~w0126c] Pls help support Telephony part. Thanks
+
+[~wcw014] Pls help create a Q3 plan for DSDS stock product. Thanks
+Per feature review meeting on 8/10 this feature can be moved to A12 R2.
+RPADX-4913 RRB Request Approved (Add) 
+RPADX-4923 Plan Created For: 
+FEATURE-6791:DSDS support for North America Carrier Requirements on Release:
+RPADX-4178:ADX R_Rel1
+RPADX-4924 Plan Created For: 
+FEATURE-6791: {color:#326ca6}DSDS support for North America Carrier Requirements{color} on Release: 
+RPADX-4178 ADX R_Rel1
+RPADX-4925 Plan Created For: 
+FEATURE-6791: {color:#326ca6}DSDS support for North America Carrier Requirements{color} on Release: 
+RPADX-4178 ADX R_Rel1
+RPADX-4926 Plan Created For: 
+FEATURE-6791: {color:#326ca6}DSDS support for North America Carrier Requirements{color} on Release: 
+RPADX-4178 ADX R_Rel1
+TMO WFC DSDS changes (IKSWR-25836) has a functional dependency on framework's RPADX-4925 for ""com.android.imsconnection.DISCONNECTED"" .
+Thanks [~a19035]. Do you know which one is primary SIM if both SIMs are from this carrier?
+Thanks [~w19976]
+This feature plan will cover the DSDS support for NA carriers in Telephony, IMS and Connectivity.
+
+FYI  [~w0126c] [~fgcp188]  
+This is the initial analysis based on ATT's DSDS requirement https://docs.google.com/spreadsheets/d/1K1ZCWwhG4Ir4douMFYJyV4KdjTYYqoT9OgMjUb3b5p0/edit#gid=0.
+
+This plan will cover the blow changes including:
+1. RCS   
+Summit support RCS on the DDS sim card. (Default Data Subscription)
+2. Connectivity 
+Rework on the intents with subId - ACTION_INETCONDITION_REPORT, CONNECTIVITY_ACTION_VZW
+3. IMS
+Rework on the intent with subId - com.android.imsconnection.DISCONNECTED
+4. Telephony
+Rework on the intent with subId - ACTION_PHONE_STATE_CHANGED     
+
+FYI  [~xnk746] [~w20090] [~w0126c] [~e7976c] [~fgcp188]
+Update from CoreApps Testing:
+1) We are wating the CRs to be integrated (IKSWR-27192, IKSWR-27906, IKSWR-27175) in order to continue tests on Capri (AT&T+TMO sim cards)
+
+2) For combinations between VZW+AT&T and VZW+TMO, we already request an eSIM line active on units that are available to use on Davros Chicago:
+DAVROS-8547 and DAVROS-8548. As soon as they have eSIM line activated we'll start the Sanity executions for VZW+ AT&T and VZW+TMO combinations.
+Update the completion date. 
+
+[~a17364] I will cover ImsConfig.ACTION_IMS_CONFIG_CHANGED in https://idart.mot.com/browse/RPADX-5162 plan as VZW WFC is required in stock device.
+User must always tell which SIM is the default for Voice, SMS and/or Data. 
+This is the case whenever there are 2 SIMs inserted, regardless whether from the same carrier or not.
+[~a19035], For OMADM NI, we know which SIM this wap push comes from. So we can use that SIM's IMEI to communicate with server. But for CI, which IMEI we should use if both of the SIMs are from the same carrier(ro.carrier)? If only one SIM is from this carrier(ro.carrier), I think we should use this SIM's IMEI.
+
+*Below are the CIs for different carriers:*
+1. ATTDM FOTA DM session
+2. USCDM CI for every power up.
+3. Sprint Update Profile, CIFUMO
+4. Boost CIFUMO and UICC unlock
+5. Verizon normal CI and checkin DI.
+[~a19035][~wcw014][~a20402][~a21143] - FYI (No new Odyssey Retail build available after RPS31.89 that has this feature change integrated yet.)
+[~a20402] the Int CWV date is past due for this plan.  Can you update the Int Actual date if you have integrated it or the Int CWV date if it hasn't been updated yet? 
+[~a20402] the Int CWV date is past due.  Can you update it please?
+[~dth436], [~a20746] I see the Int CWV date for this plan is now 2/12.  This is too late for Q2.  Did you move it out due to the dependency of RPADX-4925?
+[~tgb348] all the open CRs for this plan have now been closed.  Are you able to update the Test CWV?
+
+[~a22642] FYI
+[~tgb348] can you confirm this was tested based on the mainline?  If so I will go ahead and move this to A12 R1 since it has been included there.
+[~w19976] Could you please pull in the Integ date, since testing of this feature need more time, and many functional cases will depend on this Feature.  Integ date 1/20 is ok.
+
+[~wcw014][~a22642] - FYI
+[~w19976] the Int CWV date is past due for this plan.  If you have finished the integration please update the Integrate Actual date.  If you haven't integrated it yet please update the Int CWV date.
+[~wcw014]: Requested [~tbdc37] to join [~a20746] for development. This should help pull in the date.
+[~a20746]: Pls modify the Integ CWV.
+[~xnk746] FYI in case there are changes you need to make on this plan.
+
+[~w0126c]
+https://idart.mot.com/browse/IKSWR-41776 has been integrated.  [~a17364]"
+FEATURE-6792,,FEATURE-6792: Smart updates in the initial setup flow,"Changes integrated to baseline
+Hi all,
+ 
+The system updates menu on settings isn’t completely integrated and OTA team is still working on it. It’s not possible to complete the tests without verifying Smart Updates configurations after setup wizard and we need to wait this integration to complete the tests.
+ 
+Best regards,
+Brunna Arruda."
+FEATURE-6813,,FEATURE-6813: AT&T&Cricket&Firstnet: RCS Requirements (June 2020),"Blocked IKSWR-13874. AT&T has not own apk for RCS yet.
+Feature test completed.
+Feature test completed.
+
+According to CR IKSWR-17393: ""On group conversations, if the user tries to add your own number in the group, it won't be considered as RCS-capable, but his own number is removed from the participant list because it's duplicated (hence the group will remain as RCS group).""
+Now RCS is enabled for ATT & TMo as FW team has integrated Summit apks.
+As of now till IKSWS-6090 & IKSWR-135012 get fixed, Test team need to follow the below workaround to test RCS
+
+1) carrier configuration doesn't work (stuck in searching): https://idart.mot.com/browse/IKSWS-6090
+Please sideload the carrier configuration to test it.
+{noformat}
+adb root
+adb disable-verity
+adb reboot
+
+adb root
+adb remount
+adb push ./rcs_config_sideload.xml /data/user_de/0/com.motorola.rcsConfigService/files/rcs_config_sideload.xml
+adb shell am broadcast -a com.motorola.carrierconfig.NEW_CONFIG_FILE_RECEIVED com.motorola.rcsConfigService
+adb shell sync
+adb reboot
+<test it>
+{noformat}
+
+2) Please run it on permissive mode for now.
+CR: https://idart.mot.com/browse/IKSWR-135012
+{noformat}
+adb root
+adb shell setenforce permissive
+{noformat}
+RCS is not available on Nairobi Android R yet.
+Follow up is being done with [~adg115].
+
+FYI [~a22642] [~wcw014]
+RPADX-4572 RRB Request Approved (Add) 
+RPADX-4602 Plan Created For: 
+FEATURE-6813:AT&T&Cricket&Firstnet: RCS Requirements (June 2020) on Release:
+RPADX-4178:ADX R_Rel1
+Reviewed with Mayank, Nadeem and Ajit.  If Odyssey and Nairobi move to Q2 then this plan can move to Q2.  Otherwise needed in Q1.
+Test CWV updated based on the CR IKSWR-8478 target date.
+This can be considered a 2nd priority for Q1 2021.  It is still needed but can come later if resources dictate."
+FEATURE-6826,,FEATURE-6826: AT&T&Cricket&Firstnet: Real Time Text Requirements Update (June 2020),"Feature porting to R completed.
+RPADX-4568 RRB Request Approved (Add) 
+RPADX-4599 Plan Created For: 
+FEATURE-6826:AT&T&Cricket&Firstnet: Real Time Text Requirements Update (June 2020) on Release:
+RPADX-4178:ADX R_Rel1
+Refer to https://docs.google.com/spreadsheets/d/1v3JW6sQGZXLl-Bb4WCnZMYCOK48tVLfAHNBzY-l3UfU/edit#gid=809225328 for details about the exact changes
+Refer to the *Bold Text* in LTE-BTR-5-9866:
+RTT15's statement: ""When the device enters RTT mode, the microphone shall be unmuted (ON) by default""
+* For Voice to RTT upgrade case
+** If user MUTEs microphone in voice call and upgrades to RTT, 
+** Going with the literal statement of RTT15, microphone shall be ""unmuted""
+* *HOWEVER, microphone shall remain in MUTE state for the above use case*
+* The intention of the requirement is clear from the *Bold Text* in LTE-BTR-5-9866* and is the reason for the above statement
+
+*SUMMARY*: No specific change will be made for microphone behavior for Voice or RTT calls or upgrade / downgrade scenarios
+
+RTT15:
+{code}
+""The mute status for RTT calls and voice calls are independent from each other.
+
+When the device enters RTT mode, the microphone shall be unmuted (ON) by default.
+Users can mute and unmute the microphone while on RTT calls as in voice calls.
+
+Exception: During 911 calls, the microphone will remain unmuted (on). Users cannot
+mute the microphone""
+{code}
+
+As per   LTE-BTR-5-9866:
+*Test Purpose/Description:*
+Verify microphone is ON by default for an RTT call
+*Test Procedure*
+""Originate an RTT MO call to a MT device
+RTT call is set up
+Verify after call is set up that the microphone is ON by default (no user dependency to turn ON the microphone) and there is spoken audio heard by the MT device
+Turn the microphone OFF in the RTT UI (or mute the call)
+Verify that the microphone is OFF on the RTT MO device and there is no spoken audio heard by the MT device
+Disconnect from the call
+Manually reboot the device
+Originate an RTT MO call to a MT device
+RTT call is set up
+Verify after call is set up that the microphone is ON by default (with no user dependency on turning ON the microphone)""
+
+*Pass/Fail Criteria*
+""In order to Pass:
+An RTT call is both an audio and text call by default
+Microphone is ON by default (*no user dependency to turn ON the microphone*) after the RTT call is set up - the MT device will hear audio from the MO device without having to turn or press On the microphone ""
+Reviewed with Mayank, Nadeem and Ajit.  If Odyssey and Nairobi move to Q2 then this plan can move to Q2.  Otherwise needed in Q1.
+Waiting for fix integration of the CR IKSWR-10118 for on Nairo AT&T build R. Fix not available on the latest builds yet.
+
+"
+FEATURE-6827,,FEATURE-6827: AT&T&Cricket&Firstnet: Wi-Fi Calling Requirements Update (June 2020),"
+    AT&T's clarification has been requested on the following requirement:
+
+Reference: 18834_UXrequirements_2006 v3
+WFC3-B:
+When the user activates WFC from Setup & Transfer, the web sheet flow is presented without a
+frame (i.e., there is no header bar with a title and cancel button).
+
+[Moto]: How does user activate WFC from Setup & Transfer?
+* Will an intent be sent by Setup & Transfer that WFC App needs to handle to present the web sheet flow?
+* If yes, pls share the intent details.
+
+WFC web sheet flow can result in (i) Success (ii) In progress or (iii) Error
+-- [Moto Proposal] In all the 3 cases, WFC App will display the dialog before returning back to Setup & Transfer flow.
+-- However, WFC3-B states: ""If Service Activation is successful, the user is taken back to Setup & Transfer where a success message is displayed""
+-- [Moto Proposal] is different from WFC3-B, as the dialog will be displayed by WFC APP before returning back to Setup & Transfer flow
+
+
+    Please find the below response from AT&T regarding the clarification requested for WFC-3B.
+
+""After chatting further with my team, we found the root problem here.  The updates to the 18384 made the assumption that there is an existing S&T/WFC integration for Motorola devices.  This is not the case.  An existing relationship between the apps is a pre-requisite to WFC3-B.
+ I will have to circle back with Cathy to discuss how to handle. ""
+
+   Hence this feature is being committed without the WFC-3B requirement.
+
+   The requirements which shall be covered as part of FEATURE-6827 are as below.
+
+CDR-Wifi-1060  in 13340.pdf  (20.2 version)
+WFC4 and WFC-3A in 18384.pdf
+
+AT&T's response will define the feature scope.
+Commitment can happen only after AT&T's response.
+* AT&T's response is mandatory as there is interaction with Setup & Transfer App from AT&T.
+* No assumptions can be made till AT&T provides data on Setup & Transfer
+* Started technical discussion with AT&T and waiting for their response.
+Feature test blocked by CR IKSWR-11961.
+Feature test blocked by CR IKSWR-8471.
+Feature test completed successfully.
+RPADX-4569 RRB Request Approved (Add) 
+RPADX-4600 Plan Created For: 
+FEATURE-6827:AT&T&Cricket&Firstnet: Wi-Fi Calling Requirements Update (June 2020) on Release:
+RPADX-4178:ADX R_Rel1
+Reviewed with Mayank, Nadeem and Ajit.  If Odyssey and Nairobi move to Q2 then this plan can move to Q2.  Otherwise needed in Q1.
+Test CWV not planned yet, due to IKSWR-4191.
+
+FYI [~a22642], [~wcw014]
+Test CWV updated. Feature test is still blocked by CR IKSWR-11961.
+This can be considered a 2nd priority for Q1 2021.  It is still needed but can come later if resources dictate."
+FEATURE-6854,,FEATURE-6854: RCS UP1.0 - Enhancements from competitive analysis,"Feature integrated in https://artifacts.mot.com/artifactory/apps/MotoMessaging/MOTOMESSAGING-291030283/generated_files/
+RPADX-4636 RRB Request Approved (Add) 
+RPADX-4650 Plan Created For: 
+FEATURE-6854:RCS UP1.0 - Enhancements from competitive analysis on Release:
+RPADX-4178:ADX R_Rel1
+Reviewed with Mayank and Ajit and this is needed for Q1.
+This is considered a first priority for 2021 Q1."
+FEATURE-6855,,FEATURE-6855: Moto Dialer/Contacts - Widget improvements,"After review with Mayank and Ajit this can be moved to Q2.
+
+
+Hi [~wcw014]
+
+It is not about missed requirements nor test coverage. I'm sorry but I missed this CR, closing the RPADX without being assure of its criticality based on FEATURE-6855 comments about OS Upgrade restrictions.
+Hi [~wcw014],
+We found a critical issue (IKSWR-48466) during some BOTA validation for this feature. Could you please reopen this RPADX?
+Thank you so much!
+
+RPADX-4637 RRB Request Approved (Add) 
+RPADX-4651 Plan Created For: 
+FEATURE-6855:Moto Dialer/Contacts - Widget improvements on Release:
+RPADX-4178:ADX R_Rel1
+There's a dependency on Launcher that's under discussion.
+[~rafaelsc] after a plan is completed we don't typically reopen it as the test team can't easily track this.  
+
+I have some quesitons though.  Were these missed requirements or possibly test cases which should have been created but weren't?  I don't undertand how we can pass the test cases to be able to complete the plan and then find a critical issue later.
+
+[~mvt647], [~a22642], [~rafaelsc]
+[~wcw014], Launcher team already fixed the dependency. CoreApps patch was integrated on Feb/05/2021.
+[~wcw014], the fix for IKSWR-48466 is already integrated.
+ok.  Let's go ahead and reopen then.  [~josegsp] please update IKSWR-48466 to working with a target date.
+
+[~rafaelsc], [~a22642], [~mvt647] FYI"
+FEATURE-6862,,FEATURE-6862: T-Mobile - 5G - NR Icon changes & Roaming changes - Q1-2021,"Hi [~kjn846], 
+TmoConfig app  need to call CarrierConfigManager's overrideConfig to override carrier config KEY_5G_ICON_CONFIGURATION_STRING
+{code}
+https://sse.am.mot.com/r_source/xref/mr-r-qsm8250/frameworks/base/telephony/java/android/telephony/CarrierConfigManager.java#5121
+overrideConfig(int subscriptionId, @Nullable PersistableBundle overrideValues,
+            boolean persistent}
+{code}
+
+Per [~dvw873]'s request on FEATURE-6862, I created this CBS plan for: ""please create plan for CBS team as they need to parse TMO carrier config and set related configs to FW/Modem""
+Pushing the integration dates further as we have framework dependency. FYI [~a21143] [~josecmj]
+Pushing the integration dates, cause we just received the fwk methods.
+RPADX-4788 Plan Created For: 
+FEATURE-6862: {color:#326ca6}T-Mobile - 5G - NR Icon changes & Roaming changes - Q1-2021{color} on Release: 
+RPADX-4178 ADX R_Rel1
+Reviewed with Mayank and Ajit. If Odyssey moves to Q2 then this plan can move to Q2. Otherwise needed in Q1.
+
+
+Thanks [~dvw873].
+
+The TMO Config has the following in its xml which is parsed:
+		<IconPolicy5G>
+			<IconRefreshDelay_SCGtoMCG>30</IconRefreshDelay_SCGtoMCG> 
+			<IconRefreshDelay_IdletoConnect>30</IconRefreshDelay_IdletoConnect>
+			<SIB2for5GIcon>1</SIB2for5GIcon>   <!--set to 1 by default for 600MHz 5G Device -->
+		</IconPolicy5G>
+I do not get, how we can add these to KEY_5G_ICON_CONFIGURATION_STRING? Could you please help check
+The parser is already implemented, need to apply the confiurations.
+
+Just discussed with [~dvw873] and framework will provide apis for 
+<IconRefreshDelay_IdletoConnect>30</IconRefreshDelay_IdletoConnect>
+<SIB2for5GIcon>1</SIB2for5GIcon> <!--set to 1 by default for 600MHz 5G Device -->
+
+<IconRefreshDelay_SCGtoMCG>30</IconRefreshDelay_SCGtoMCG> -> is not supported yet, discussion is going on with Qualcomm.
+
+FYI [~josecmj] [~a21143]
+This can be considered a 2nd priority for Q1 2021.  It is still needed but can come later if resources dictate.
+[~dvw873] do you have the details of the framework API that the TmoConfig app needs to call? FYI [~josecmj]"
+FEATURE-6868,,FEATURE-6868: Moto Launcher - Support predefined and user created folders in app tray,"AT&T completed and no bugs pending.
+Retail completed and minor issue pending: IKSWR-59575
+
+T-Mobile: Pending with blocker CR IKSWR-59559
+
+MetroPCS: Pending because no HW+ Metro sim card available to test today.
+Again if you want to keep this plan open for all channels and variants then we need to keep this open for years together. 
+As it is working for ATT and Retail go ahead and close this plan .. there is no action from ADX dev and test anymore and the variant testing is up to GPD team.
+Checked that there is another requirement to show ""Moto"" folder in App Tray according to IKSWR-56366. After tested on latest Denver build, it was verified that it's missing ""Interactive wallpaper"" app inside Moto folder. To fix it it's necessary IKSWR-60534 integrated. We checked that its missing ""Target Date"" for integration. 
+
+We'll change ""Test CWV"" date based on this IKSWR-60534.
+
+Hey [~chenchen], The Int CWV for this plan was today but it seems there is still a CR in the new state.  Do you wknow when you will be able to integrate it?  Can you update the CWV date?
+
+[~rafaelsc] FYI
+Hey [~chenchen], it looks like all the gerrits for the linked CR have been merged now.  If there is nothing else pending can you mark the ""Integrate Actual"" date?
+Hi All,
+
+I am totally confused.
+All the changes for Denver ATT for the predefined folder have been verified. 
+I have added my comments earlier(12/Mar/21) as well that creating preloaded folder for other channels and other devices is not something which we should worry about. 
+This is part of GPD team which they will do and track it eventually. 
+
+Please mark the plan as complete. 
+
+Thanks
+Mayank
+
+
+
+Hi All,
+
+IMPORTANT: None of R upgrade products received the integration of this implementation IKSWR-49261. 
+
+I tested on Odyssey AT&T latest Mainline build RPS31.112 and this implementation is not there. So, I raised CR IKSWR-58418 with RNI_Blocker label.
+
+
+Hi [~wcw014],
+We will check if IKSWR-58418 is present in mainline builds as commented in the CR. If so, it won't be blocker.
+Regarding IKSWR-57190: Dev team was waiting our validation to approve the fix (a test build was provided in the CR comments and we validated). As a result, we found another CR: IKSWR-59559.
+Adding [~kaiocmb] and [~kaique] for more information.
+
+Thank you
+Hi [~wcw014], I tested the build provided on IKSWR-57190 and there is a blocker issue that I raised: IKSWR-59559. Therefore, not possible to pass the Test cases related to it and we can complete the Plan without this fix.
+Hi all!
+CM Team told that Denver Mainline builds will not be available anymore, only Q2 builds. We are seeing this Feature already integrated on Q2 for Denver (RRE31.Q2-10).
+
+Hi all,
+For ATT, this feature is working fine. For TMO, Metro PCS and Retail we still have these two CRs:
+
+- IKSWR-57245 - [Denver Retail] FEATURE-6868 The Google preloaded folder is not displayed on App Tray for Retail builds
+- IKSWR-57190 - [Denver TMO] FEATURE-6868 The Google and T-Mobile folders with PAI and preloaded apps are not displayed in App Tray
+
+Regarding tracking this feature for other carriers, should we close this RPADX by Mayank's comment above? 
+[~a22642] [~wcw014] FYI
+Is the ATT change working fine, if so we can close the plan, rest all changes will be managed via IKCONFP or JIRA CRs, similar to what we do for Homescreen folders
+
+[~wcw014] FYI
+
+Performed tests for T-Mobile with Q2 build Stable product line: RRE31.Q2-11-15 and the folders are properly displayed on App Tray, except for one specific device on Davros that does not display T-Mobile folder in App Tray. I raised a minor CR to investigate this case: IKSWR-63009.
+
+For MetroPCS we are not able to validate the apps delivered by AS/VPL on Metro by T-Mobile because device under test is not in USA. But, all preloaded apps are displayed properly inside Metro by T-Mobile folder. 
+
+For CoreApps perspective this change of FEATURE-6868 is validated on Retail, AT&T, T-Mobile and Metro by T-Mobile displaying preloaded folders on Homescreen and App Tray according to each carrier specifications/variances. 
+
+
+
+
+
+RPADX-4666 RRB Request Approved (Add) 
+RPADX-4685 Plan Created For: 
+FEATURE-6868:Moto Launcher - Support predefined and user created folders in app tray on Release:
+RPADX-4178:ADX R_Rel1
+RPADX-5240 RRB Request Approved (Add) 
+RPADX-5241 Plan Created For: 
+FEATURE-6868:Moto Launcher - Support predefined and user created folders in app tray on Release:
+RPADX-4178:ADX R_Rel1
+Reviewed with Mayank, Nadeem and Ajit.  If Odyssey and Nairobi move to Q2 then this plan can move to Q2.  Otherwise needed in Q1.
+See the attachment for how to have the predefined folders for TMO USKU
+
+TMO folder when TMO SIM inserted as first SIM during or post OOBE
+Metro by T-Mobile folder when Metro SIM inserted as first SIM during or post OOBE
+
+Metro folder - Mcafee for Metro(ADAPT download), VVM(Adapt Download), Scamshield for Metro(Adapt Download), Metro Play(preload), MetroZone(preload), MyMetro(preload)
+
+T-Mobile folder - MyT-Mobile (preload), T-Mobile Play(preload), Mcafee for TMO(PAI), VVM(PAI), Scamshield for TMO(PAI)
+Specification changed a lot as we can see on IKSWR-13354. We'll need to refactor all of our TCS. Changing Test CWV to 11/13 date due to this.
+Tested IKSWR-60962 using Dev build + input stub on DUT and the T-Mobile folder on Homescreen was removed according UX Deck: https://idart.mot.com/secure/attachment/2702544/Denver-USKU-Metro-TMO-UI-Deck-Mar-23.pdf
+
+Build: motorola/denver_global/denver:11/RRE31.Q2-11-13/eng.kaiocmb.210326.135048:userdebug/intcfg,test-keys
+
+We can double check the fix again as soon as Q2 builds for Denver become available. 
+
+The last Q2 build generated was at 11:12AM for Saipan. Untill now, we don't see more Q2 builds being generated.
+
+FYI, [~wcw014], [~a22642], [~a19035] 
+Tested on latest Q2 Denver build and it's not implemented for T-Mobile and Retail. I raised 2 CRs:
+TMO : IKSWR-57190
+Retail: IKSWR-57245
+
+We are trying to get access on Denver with Metro sim card to validate as well.
+
+Builds tested: RRE31.Q2-11-3  & RRE31.Q2-16
+
+The engineering CR is https://idart.mot.com/browse/IKSWR-13354
+This is considered a first priority for 2021 Q1.
+This was integrated into Q2 so updateing from a ""Q2 need"" to Q2.
+Yes we should have this implemented for TMO USKU as well .. 
+And for Retail too 
+[~a19035], Tests on AT&T are almost completed, I'm just waiting build to test IKSWR-54944 . Do you have updates about this feature will be integrated for TMO as well?
+[~a19035], could you please help to clarify CR IKSWR-15548 about Folder name should be mandatory?  Thanks.
+[~a22642], do you agree with that?
+
+[~chenchen] this plan is needed to support IKSWR-49261 which was not understood to be a requirement when this feature was initially implemented.  This is needed for Q2 products but needs to go to mainline and be tested first before [~w15621] will allow it to be cherry picked back to the Q2 branch.  That is why you will notice the plan was opened for Q3 but has the adx_2021q2_need label indicating the need for Q2.
+[~rafaelsc], [~a22642], [~brunoess] based on the comments on IKSWR-58418 is that considered a blocker for completing this plan?  It seems that IKSWR-57190 is in the ready state so hopefully once that gets integrated we can finish testing and complete the plan."
+FEATURE-6870,,FEATURE-6870: T-Mobile - Carrier Config changes - Q1-2021,"All the requirements are met.
+We're just awaiting QC to check if we are going to support the WFC tags.
+Following are the new requests as a part of this TRD:
+1. Overlay for device group for Metro - change needed
+2. New parser for EC/UP - already taken care
+3. New parser for VVM user string - this change was done before, but later TMO asked us to remove. Confirmed with [~a20746] and [~a19035] this change will be done for Q1 2021
+4. New parser for WFC threshold - if Qualcomm supports this, the change can be implemented. The value is hardcoded and currently there is no way to change it from AP side or even FSG/MBN. Dependency on Qcomm.
+
+FYI [~josecmj] [~a21143]
+
+
+RPADX-4668 RRB Request Approved (Add) 
+RPADX-4686 Plan Created For: 
+FEATURE-6870:T-Mobile - Carrier Config changes - Q1-2021 on Release:
+RPADX-4178:ADX R_Rel1
+Reviewed with Mayank and Ajit. If Odyssey moves to Q2 then this plan can move to Q2. Otherwise needed in Q1.
+
+
+This can be considered a 2nd priority for Q1 2021.  It is still needed but can come later if resources dictate."
+FEATURE-6875,,FEATURE-6875: T-Mobile - VVM Changes - Q1-2021,"Committing to this plan with the assumption that requirement scope gets defined with TMo by Sept/4
+GID-MTRREQ-484311: 
+-- Verified Native VVM functionality when TMO VVM app is installed. Native VVM app could show new voicemail notifications and download the new voicemails.
+-- Since TMO VVM app setup couldn't be completed, suppressing of TMO VVM app notifications is not verified.
+I'm completing this plan since we have two RPADX trackings the same issue, IKSWR-24334, for the NVVM feature. So, the CR IKSWR-24334 will be tracked by the RPADX-4904 (FEATURE-6974: T-Mobile - VVM Changes - Q2-2021).
+Moving Test CWV to 1/13 for IKSWR-24334.
+
+BR's
+Need to wait for Q1 build with IKSWR-24577 to retest IKSWR-31285. I'll keep monitoring this.
+
+BR's
+
+FYI, [~malaguti] / [~a22642] / [~brunoess]
+RPADX-4670 RRB Request Approved (Add) 
+RPADX-4688 Plan Created For: 
+FEATURE-6875:T-Mobile - VVM Changes - Q1-2021 on Release:
+RPADX-4178:ADX R_Rel1
+Requested TMO for clarifications on few requirements and waiting for response. Below are the points of mail communication:
+
+{noformat}
+From: Karthik K <A20746@motorola.com>
+Sent: 24 August 2020 18:40
+To: Mahdavifar, Zeinab <Zeinab.Mahdavifar@T-Mobile.com>; Mayank Gupta <mayank@motorola.com>
+Subject: RE: [External] NVVM: New Requirements for Coexistence and VM2T
+ 
+Hi Zeinab,
+ We have a few proposals regarding Refresh and Co-Existence VVM requirements. Can you please consider the same.
+
+1) GID-MTRREQ-484320: Manual Refresh
+
+  [Motorola 08/24] - Even in case of NW issue causing SMS outage, user's action of navigating to and from ""Voicemail"" tab will be frequent enough to trigger an automatic refresh.
+  We feel this automatic refresh should take care of the SMS outage scenario and propose to remove the additional REFRESH option. Please suggest.
+
+2) Reference: ""Native-VVM-Device-ImportNEW.pptx"" Slide #1: ""Device Import  Purpose and Requirements""
+
+  It is mentioned that ""No need to COPY content of files to local memory"" 
+  [Moto Proposal]: Import voicemails stored on ""“sdcard/smvvm/backup/files"" into CallLog DB. 
+
+  [Motorola 08/24] –  There is no capacity limit for CallLog database. It should be possible to write to the call log database till sufficient memory is available on the device. The call log database has “Call log” entries (received, outgoing, missed calls) along with the voicemails data.
+
+  Meanwhile sorry for the incorrect update that the voicemail entries in call log database would be migrated. In fact during our tests, it was observed that Google isn’t migrating the voicemails content when user switches from one device to another.
+
+  However we still propose to provide a unified experience to the user by storing the imported voicemails in call log database in a single Inbox view with UI to distinguish the migrated voicemails. Please suggest.
+
+3) GID-MTRREQ-484311: Coexistence with TMO VVM app 
+
+  [Motorola 08/24] –  We shall take care that no duplicate VMs are displayed to the user.
+  But as highlighted in (2), migration of voicemails is not supported by Google. Hence we shall not be compliant to the below requirement.
+  “GID-MTRREQ-484311- Device shall provide a mechanism to users to migrate VMmessages from older device to new device (if older device supported TMOVVM)”
+
+4) GID-MTRREQ-484311: Coexistence with TMO VVM app 
+   - Device shall suppress any other VVM-only client notification. (i.e T-Mobile VVMapp notification shall be suppressed, but DIGITS app VVMnotification shall not(since not a VVM-onlyclient)”
+
+  [Motorola 08/24] – Please confirm if the device has to take care of suppressing the VVM only client notifications or is it taken care as part of the T-Mobile VVM app / Digits app.
+  If the device needs to take care of suppressing the VVM only notifications, please inform the mechanism to identify and differentiate between VVM only notifications and DIGITS notification (which is not VVM only client).
+
+Regards,
+Karthik
+{noformat}
+Reviewed with Mayank and Ajit. If Odyssey moves to Q2 then this plan can move to Q2. Otherwise needed in Q1.
+
+
+TMO NVVM Q1 2020 Requirements clarifications summary:
+1) *GID-MTRREQ-484320: Manual Refresh*
+ -- ""Refresh"" option is made optional and decided not to be implemented.
+ -- The required functionality is already being achieved while accessing Voicemail UI.
+ 
+2) *GID-MTRREQ-484311: Coexistence with TMO VVM app*
+ -- ""Migration of voicemails from old device to new device"" is not app level requirement (Need not be implemented in Native Dialer as part of TMO Native VVM feature). This depends on device level migration supports ""voicemail migration"" along with call logs.
+
+3) *GID-MTRREQ-484311: Coexistence with TMO VVM app (reference to the doc - ""Native-VVM-Device-ImportNEW.pptx"")*
+ -- the voicemails from TMO VVM app (stored in the path /sdcard/smvvm/backup/file) will be copied to call log database, like regular downloaded voicemails.
+ -- The restored voicemails shall be shown in the Voicemail Inbox screen along with downloaded voicemails, with a visual identification indicating restored voicemails.
+ -- If a restored voicemail is deleted, both of its copies - from call logs and rom external storage path shall be deleted.
+ 
+4) *GID-MTRREQ-484311: Coexistence with TMO VVM app - Notifications*
+ -- Device shall take care of suppressing the notifications. The only notifications to suppress is MWI and TMO VVM app.
+ -- If the flag ""VVMEnabled"" from TMOConfig is ""TRUE"", then TMO VVM app notifications shall be suppressed by Native VVM. Else Native VVM shall not suppress the TMO VVM app notifications.
+ 
+The implementation of the requirements is ready and pushed to gerrit.
+Also review by VVM dev team is completed.
+Review by PIM-Dialer team is in progress.
+This can be considered a 2nd priority for Q1 2021.  It is still needed but can come later if resources dictate."
+FEATURE-6881,,FEATURE-6881: AT&T&Cricket&Firstnet: Displaying ICCID in About section (June 2020)," IKSWR-4377 is integrated and ICCID info is available on Q1 ATT builds 
+After review with Mayank, Nadeem, and Ajit this can be moved to Q2.
+
+
+Feature test completed.
+CR no blocker raised IKSWR-30643.
+Q1 new work.  
+
+The ICCID info is currently shown for VZW, TMO etc, so the understanding is that this is configurable.
++[~dvx436][~psteiger][~a22977]
+RPADX-4698 RRB Request Approved (Add) 
+RPADX-4706 Plan Created For: 
+FEATURE-6881:AT&T&Cricket&Firstnet: Displaying ICCID in About section (June 2020) on Release:
+RPADX-4178:ADX R_Rel1
+Set ""show_iccid_in_sim_status_bool"" as true in CarrierConfig
+The tests were performed using the Common Stable build Q1: RPS31.Q1-16."
+FEATURE-6914,,FEATURE-6914: Common IMS Config between Stock and Retail - Single Build target,"ATT - PTN approval not yet happened. We will track the IMS validation & Preload apps verifications with other RPADX plans. Completing this plan with these conditions.
+After review with Mayank and Ajit this can be moved to Q2.
+
+
+Checking with [~w0126c] if there are other generic FW or Telephony tasks need to cover.
+Denver would be the first product .. followed by Pioneer and Berlin
+For CarrierConfig and APN to support ""ro.carrier"", I will need at least 3 weeks of developing effort. Thanks.
+Pull in the integration date 1/20.
+RPADX-4765 RRB Request Approved (Add) 
+RPADX-4776 Plan Created For: 
+FEATURE-6914:Common IMS Config between Stock and Retail - Single Build target on Release:
+RPADX-4178:ADX R_Rel1
+This plan will cover below changes to support single build target b/w stock and retail device:
+1. CarrierConfg and APN support ""ro.carrier"" -- [~xnk746] IKSWR-24988
+2. IMS carrierconfig update based on #1's framework for NA carriers including:
+AT&T/Cricket/FirsetNet - RCS, WFC & IR.94 is off on Retail
+TMO/MetroPCS/Boost/Assurance - RCS is off on Retail
+Verizon - VT, RCS is off on Retail
+3. IMS device overlay should keep one common overlay for single build
+4. IMS/Connectivity resource overlay under CBS for retail/stock build should be covered by FEATURE-6925, i.e. RRO update to support single build will be transparent to IMS/Connectivity component and no efforts from us.  [~a21143] [~a22977] if need any support from FW, pls let me know.
+
+FYI [~fgcp188] [~w0126c]
+Update the actual integration date.
+We will be able to do CarrierConfig by ro.carrier like this : https://gerrit.mot.com/#/c/1821303/2/res/xml/vendor.xml
+It's a CarrierConfig injected in CarrierConfig ""moto_custom_config_string"".
+[~a19035][~nadeemp][~a21143][~a22977][~dth436] [~a22642] [~w19976]- FYI
+Single Target Build testing will be covering on Denver hardware with the below combinations:
+Channel_ID	carrier_SIMs
+TMO	        TMO (Stock)
+		        VZW (Non-Stock)
+		        ATT (Non-Stock)
+
+ATT		       ATT (Stock)
+		       VZW (Non-Stock)
+		       TMO (Non-Stock)
+
+Tracfone	       Tracfone (Stock)
+		       TMO (Non-Stock)
+		       VZW (Non-Stock)
+		       ATT (Non-Stock)
+
+RetailUS	       TMO (Non-Stock)
+		       VZW (Non-Stock)
+		       ATT (Non-Stock)
+
+Metro	       Metro (Stock)
+		       VZW (Non-Stock)
+		       ATT (Non-Stock)
+[~a22642] The 1/25 date for integrating this feature is close to the 1/29 FC date.  Confirm it is ok to meet the FC date with a 1/25 Int date.
+[~w19976] Could you please pull in the Integ date, since testing of this feature need more time, and many functional cases will depend on this Feature.  Integ date 1/20 is ok.
+
+[~wcw014][~a22642] - FYI
+
+[~w19976] the Int CWV date is past due for this plan.  If you have finished the integration please update the Integrate Actual date.  If you haven't integrated it yet please update the Int CWV date.
+[~wcw014] Denver is ranged for TMO, Metro, ATT, RetailUS and Tracfone. 
+But ATT & RetailUS(VZW) will get the SFN/PTN by end of January. We may not be able to test with live network for these carriers. 
+
+With only TMO carrier test we may not able to complete the feature. 
+
+[~a22642] - FYI
+
+
+[~wcw014] Do we plan to support single build target in Q2 or Q3? Pls help comment.
+yes we would like to get to a single build source for devices with enough storage since there is a cost in having all of the bloatware for each supported carriers presented on the same build.
+
+Currently Burton has less code source branch and a common MSI but each of the product partition are different. Meaning that we do not have a  build that we could be used as is for Vzw, ATT and TMO stock for example. Also CID would be common. So software wise it would be common.
+We will discuss the timing and the QSSI targeted product soon.
+"
+FEATURE-6919,,FEATURE-6919: Preloaded app enablement/disablement for Single Build Target,"ATT - PTN approval not yet happened. We will track the IMS validation & Preload apps verifications with other RPADX plans. Completing this plan with these conditions.
+Per discussion at the 2021Q1 RQL meeting today it was agreed this should be moved to 2021Q2.
+RPADX-4778 Plan Created For: 
+FEATURE-6919: {color:#326ca6}Preloaded app enablement/disablement for Single Build Target{color} on Release: 
+RPADX-4178 ADX R_Rel1
+[~a19035][~nadeemp][~a21143][~a22977][~dth436] [~a22642] - FYI
+Single Target Build testing will be covering on Denver hardware with the below combinations:
+Channel_ID	carrier_SIMs
+TMO	        TMO (Stock)
+		        VZW (Non-Stock)
+		        ATT (Non-Stock)
+
+ATT		       ATT (Stock)
+		       VZW (Non-Stock)
+		       TMO (Non-Stock)
+
+Tracfone	       Tracfone (Stock)
+		       TMO (Non-Stock)
+		       VZW (Non-Stock)
+		       ATT (Non-Stock)
+
+RetailUS	       TMO (Non-Stock)
+		       VZW (Non-Stock)
+		       ATT (Non-Stock)
+
+Metro	       Metro (Stock)
+		       VZW (Non-Stock)
+		       ATT (Non-Stock)"
+FEATURE-6924,,FEATURE-6924: WiFi - Show WiFi 6 icon when connected to AP supporting 802.11ax,"RPADX-4785 RRB Request Approved (Add) 
+RPADX-4795 Plan Created For: 
+FEATURE-6924:WiFi - Show WiFi 6 icon when connected to AP supporting 802.11ax on Release:
+RPADX-4178:ADX R_Rel1
+Reviewed with Mayank and Ajit and this is needed for Q1.
+This is considered a first priority for 2021 Q1.
+We have tested this feature on Racer Turbo (Burton) with retail build.
+[~w19811] [~a19035]
+What's the icon requirement for WiFi 6?"
+FEATURE-6928,,FEATURE-6928: Provide API to enable Moto Gametime to disable/re-enable system navigation for immersive gaming,"Open CRs are not related to framework but related to APP side So we were Ok to complete this RPADX as the feature is just to providing API to game and it works as expected.
+RPADX-4798 RRB Request Approved (Add) 
+RPADX-4841 Plan Created For: 
+FEATURE-6928:Provide API to enable Moto Gametime to disable/re-enable system navigation for immersive gaming on Release:
+RPADX-4178:ADX R_Rel1"
+FEATURE-6940,,FEATURE-6940: Sprint - Updated Requirements for VoLTE V 1.2-8,"Checking the spec, will give the integration date by this week
+From discussion with [~tbagni] we are set.
+1: Settings > Network & Internet > Voice Networks > Calling Preference
+Moving test date based on the CR Target date.
+RPADX-4836 RRB Request Approved (Add) 
+RPADX-4839 Plan Created For: 
+FEATURE-6940:Sprint - Updated Requirements for VoLTE V 1.2-8 on Release:
+RPADX-4178:ADX R_Rel1
+This plan will be used for *VLTE-00330*
+{noformat:title=VLTE-00330}
+UE shall give user option to set voice network preference manually.
+1. When Calling Preference is set to ""Wi-Fi preferred"" by user, UE shall work on Wi-Fi preferred mode (section 2.3.1), regardless of the network preference OMA nodes.
+2. When Calling Preference is set to ""Cellular preferred"" by user, UE shall work on cellular preferred mode (section 2.3.2), regardless of the network preference OMA nodes. 
+
+Note:""Calling Preference"" is under ""Wi-Fi calling"" menu item, details are described in 4G_Android10_UI_v7.3 and 5G_Android10_UI_v1.2 or the latest versions.
+{noformat}
+
+Since we still use ""Voice Networks"" UI for SprintWFC, ""Calling Preference"" will be under ""Voice Networks"" menu (_Settings > Network & Internet > Voice Networks > Calling Preference_)
++[~wch683]
+[~w19976] waiting for confirmation from [~wch683] and [~a22642] on the feature CR (FEATURE-6940).  Once I have their comments I will proceed as appropriate with this plan.
+[~wcw014]Pls check the analysis in the FEATURE-6940 and help close this plan as no additional efforts in FW. "
+FEATURE-6944,,FEATURE-6944: Charging - Update Lock and Unlocked Charging info screens,"As the cli toast feature not upmerged,systemUI is working on it now, update ETA.
+*ETA:* 11/04
+
+Thank you!
+Change the actual integration date to 11/4.
+RPADX-4835 RRB Request Approved (Add) 
+RPADX-4857 Plan Created For: 
+FEATURE-6944:Charging - Update Lock and Unlocked Charging info screens on Release:
+RPADX-4178:ADX R_Rel1
+This is considered a first priority for 2021 Q1.
+This is the Spec:
+https://docs.google.com/presentation/d/1wdsYHY_E9MNz96uwnU9G0kEAer5ZqYSA3Jtv5fSh_m0/edit#slide=id.g9b56a3111c_0_268
+
+ETA: 10/30
+[~wangyl17] you committed to this plan on 10/27 but listed the Commit Bsln date as 10/30.  I am assuming that was meant to be the Integration Bsln and CWV dates?  I updated this plan as such.  If you are planning a different integration date please update it."
+FEATURE-6950,,FEATURE-6950: ThinkShield Enterprise : FDR prevention in Android Recovery mode,"No pending issues on FDR feature on latest tahoe build.
+
+nio_retail_user_12_SRT32.76_d89e6-23cac_release-keys-cid50-retail_US
+This needs to be tested with a secure build (CID50) which isn't available yet so adding the MS2 Exception label.
+Updating Test CVW since the CR Integ. date was updated to today and fix will be submitted today EOD.
+
+Thanks,
+
+[~jrdk47] [~a22642] 
+
+ 
+
+ 
+[~rborroz]  Capri Plus have release keys CID50 builds and when we tested FDR prevention policy on that, it was not enforcing. We cross check CID parameter, Secure parameter and release keys build. But policy was not enfocing for FDR. Note: Power off policies were working. "
+FEATURE-6950,,FEATURE-6950: ThinkShield Enterprise :  FDR prevention in Android Recovery mode,"+ [~sunym2] to sync
+After a review from the architecture team, we have some rework to do and the integration must be postponed again.
+We have defined a new HAL (called Enterprise) and a new command (called misc-writer). It was decided that we should rename the HAL to FdrControl and the command should be incorporated to motobox.
+We will start on Monday (Dec 14th) this rework and check if we will not have SELinux issues moving to motobox.
+Feature design: https://docs.google.com/presentation/d/14sVkQ_umSeHl7vqBmqtOTTNmMfpwBuzg9XcafBKL46w/edit?usp=sharing
+Hi All
+Capri will code freeze on 12/21 and Capri+ on 12/28, may I know if this feature is mandatory or not for these 2 products? Thanks. 
+Hi All,
+
+Capri ,Capri+,Tahoe and Burton testing is done and here is the consolidated kaiju report:
+
+Report: https://kaiju.motorola.com/#/dalekReports/savedDalekReport/6131638577922048
+
+Thanks,
+Prasad
+
+Hi All,
+
+We have completed testing on Capri+ and we dont have any Blockers as of now as per the discussion and analysis from PDM.
+
+We still need to test feature on Capri,Burton and Tahoe and we will update/close the feature once done.
+
+Consolidated Kaiju link is here:https://kaiju.motorola.com/#/dalekReports/savedDalekReport/4663099501314048
+
+Thanks,
+Prasad
+
+
+Just to double confirm here, is this feature ready on Capri/Capri+? All tests show good? 
+RPADX-4851 RRB Request Approved (Add) 
+RPADX-4856 Plan Created For: 
+FEATURE-6950:ThinkShield Enterprise :  FDR prevention in Android Recovery mode on Release:
+RPADX-4178:ADX R_Rel1
+Thanks [~mvt647] we have moved Test CWV date accordingly, thanks
+The feature is integrated but the tests are not complete. Waiting for a CID50 build for testing (in Capri/Capri+)
+This is considered a first priority for 2021 Q1.
+We still have pending discussions regarding selinux, and a new HIDL interface will need to be developed.
+Team is working with SMEs to solve them as soon as possible. We need some more day to integrate the opened gerrits.
+
+[~w15621], [~wcw014] - fyi
+
+[~mvt647] Can we update the new Integration date so that we can plan the test dates, pls let us know the status.
+[~wangnn7] yes it is needed for Capri and Capri+.  It is on track for completion this week.
+
+[~mvt647], [~rborroz], [~w15621] FYI
+[~wcw014], The analysis is on-going. This is a late feature and we will try to commit to it by the end of next week.
+
+[~rborroz] - fyi
+[~wnm846] Capri is the most urgent products which will respin this weekends. May I know when the test can be finished on Capri so team can have a full picture for this feature? Thanks. 
+[~wnm846], integration date updated. Now that it is defined we will pursue misc partition implementation, we expect to conclude all activities by Dec/16."
+FEATURE-6958,,FEATURE-6958: [PAKS] Create a new PAKS lock screen to support Motosafe reversible lock,"Although the lock screen portion is already ported to S baseline, we still need to wait for RPADX-5506. Only then, we may consider the whole feature as ready for testing.
+Hi [~babm], I've updated the date per your request.
+Thanks,
+Ana
+Hi all,
+
+Updating the Test CWV due to the [CR|https://idart.mot.com/browse/IKSWR-45872] that is still impacting the execution. 
+
+[~wcw014], since I can't update the Test CWV due to the required ""Configuration Developed"" field, can you help updating this date for the Feb/12?
+
+Best Regards,
+Brunna Arruda.
+Hi all, after the analysis made by the test team, it turns out that:
+
+*SIM requirement:* Live SIM
+*Network availability:* Live
+*Target Reference hardware:* R NPIs
+*Any dependency:* Server - Moto Safe Portal
+*Estimated number of TCs:* 34
+*Complexity of the Feature Test:* High
+
+*Any pending queries from dev team:*
+
+* Is the only way of locking and unlocking via Server notification? 
+* Is there a way of locking/unlocking via commands (for final users)?
+* Will Quick Settings (Mobile Data & WiFI) be accessible? 
+* Will there be changes in the MotoSafe portal to cover this new feature?
+* Any carrier dependency?
+
+
+On behalf of ADX CESAR Team,
+Brunna Arruda.
+Integration CWV updated to 01/29 due to several reasons:
+
+1) Code review is taking longer than we expected
+2) Server team did not provide a test API so development team can't validate both scenarios (reversible and non-reversible lock)
+3) New requirement was requested yesterday, based on dev team analysis it is feasible and should be integrated with the feature
+
+[~caioluiz] and [~wcw014] dev and server team are actively working on these 3 items in order to integrate on 01/29. If we can't make it, we may need a couple more days, but we will still have time for 1 week of testing before Q2 FC (02/12).
+
+[~renano] when testing, please make sure you also test a previous released device since there were changes in the server and we need to make sure that the feature still works fine with the current version of PAKS.
+
++[~mvt647] FYI
+
+RPADX-4869 RRB Request Approved (Add) 
+RPADX-4882 Plan Created For: 
+FEATURE-6958:[PAKS] Create a new PAKS lock screen to support Motosafe reversible lock on Release:
+RPADX-4178:ADX R_Rel1
+We are OK with new APK requirements and locking mechanism, the only pending item is to get the commitment from server team to deliver their changes at least 2 weeks before FC. We are planning to have this confirmed by Friday. Thanks.
+We are committing this feature to Jan/22 as a best case scenario, given that the server part may not be ready by then.
+If that happen, we may need to move it to Q3. [~caioluiz] is aware of that.
+We are discussing the [proposed architecture|https://docs.google.com/presentation/d/1AJdo2CGUIBSjZutWs4u0SHzb8H8p01SQNONlfqNyxv8/edit#slide=id.g88f37348f9_1_2] with arch team and should be able to commit by the end of the week.
+[~petherjs]
+Can you please update Integrate CWV?
+Also, if possible, link Dev CRs here.
+
+Best Regards,
+Renan Oliveira
+[~renano] I have discussed IKSWS-5455 with [~a14614].  He indicates it has been fixed and can be verified now in user debug builds.  He says it will be another 4 days before it available in release key builds due to soak time.  Are you able to use the user debug build to finish testing and hopefully complete this plan?
+
+[~brunoess], [~a22642] FYI
+[~rodrigod], I strongly believe we will keep this in Q2, right?
+Should I update the CWV date to 01/29?
+[~rossanez], is the server part of this ready yet?  Do we have an ETA if not?  Can you update the Int CWV date?
+
+[~caioluiz] we will continue to evaluate if this can fit in Q2 or needs to move to Q3."
+FEATURE-6970,,"FEATURE-6970: T-Mobile - RCS Q2-2021 Changes - UP1.0, UP2.0 and EC","
+UP1.0
+Add
+3.3.20.32 Group chat icon GID-MTRREQ-516633
+[Gao, Bing] Summit CR https://jira.summit-tech.ca/browse/MAQ-1142
+
+3.5.2 Feature tags in the Contact header of Subscribe method GID-MTRREQ-513527 (Modem dependent)
+[Gao, Bing] QC SR 04973384
+
+Obsolete
+3.3.20.5 Conference Info Object support indication GID-MTRREQ-422919
+[Gao, Bing] Hi [~a19035], so the conference OBJUECT should still be supported but only no requirement for the header  ""a=accept-wrapped-types attribute the value application/conference-info+xml"", right?
+{noformat}
+3.3.21.5   Conference Info Object support indication (Mandatory) ID: GID-MTRREQ-422919 Only Applies to: High-Tier Smartphone, Mid-Tier Smartphone, Value Smartphone The device shall include in the SDP offer and answer the a=accept-wrapped-types attribute the value application/conference-info+xml  to indicate support for receiving participant information notification via conference information object
+{noformat}
+
+UP2.0
+Obsolete
+3.14.17 Aliasing and privacy management GID-MTRREQ-458790
+[Gao, Bing] App team to check it as well. CC: [~dth436][~a17364][~tbdc37][~a24148].
+{noformat}
+3.14.17   Aliasing and privacy management (Mandatory) ID: GID-MTRREQ-458790 Only Applies to: High-Tier Smartphone, Mid-Tier Smartphone, Value Smartphone The device shall support anonymization as specified in section 3.6.5.1 of RCC.07 v11.0. The device shall follow requirements in section 3.6.5.1.4.1 of RCC.07 v11.0 for sending Privacy Management Commands.
+{noformat}
+
+Obsolete
+3.14.18 Requesting privacy for a conversation with a chatbot GID-MTRREQ-513139
+[Gao, Bing] App team to check it as well. CC: [~dth436][~a17364][~tbdc37][~a24148].
+{noformat}
+3.14.18   Requesting privacy for a conversation with a chatbot (Mandatory) ID: GID-MTRREQ-513139 Only Applies to: High-Tier Smartphone, Mid-Tier Smartphone, Value Smartphone If the user wishes to request anonymization for a conversation with a chatbot, the device shall include a Privacy header with a value ""tk"" in the SIP INVITE request.
+{noformat}
+
+Obsolete
+3.14.19 Reset token handling GID-MTRREQ-513140
+[Gao, Bing] App team to check it as well. CC: [~dth436][~a17364][~tbdc37][~a24148].
+{noformat}
+3.14.19   Reset token handling (Mandatory) ID: GID-MTRREQ-513140 Only Applies to: High-Tier Smartphone, Mid-Tier Smartphone, Value Smartphone There shall be an option for the user to reset (delete) the token used for anonymization. When the token is deleted, the device shall send a SIP MESSAGE as specified in section 3.6.5.1.2.3 of RCC.07v11.0.
+ 
+If 200OK is received for this SIP MESSAGE, the device shall consider the token to be deleted and close any active SIP session as per section 3.6.5.1.2.3 of RCC.07v11.0.
+ 
+For other errors to this SIP message, please refer to section 3.6.5.1.2.3 of RCC.07v11.0.
+{noformat}
+
+Obsolete
+3.14.20 Linking a token to a MSISDN GID-MTRREQ-458791
+[Gao, Bing] App team to check it as well. CC: [~dth436][~a17364][~tbdc37][~a24148].
+{noformat}
+3.14.20   Linking a token to a MSISDN (Mandatory) ID: GID-MTRREQ-458791 Only Applies to: High-Tier Smartphone, Mid-Tier Smartphone, Value Smartphone The device shall support the procedure specified in section 3.6.5.1.4.2 of RCC.07 v11.0 to link a token to a MSISDN.
+{noformat}
+
+EC
+Add
+3.16.26 Hide EC contents when call is received from unsaved contact GID-MTRREQ-518208
+[Gao, Bing] App team to check it as well. CC: [~dth436][~a17364][~tbdc37][~a24148].
+{noformat}
+3.16.26   Hide EC contents when call is received from unsaved contact (Mandatory) ID: GID-MTRREQ-518208 Only Applies to: High-Tier Smartphone, Mid-Tier Smartphone, Value Smartphone The dev ice shall hide contents from unsaved contact. The dev ice shall have an option to enable showing contents from the unsaved contact. 
+{noformat}
+
+3.16.27 Hide EC content when device is locked GID-MTRREQ-518206
+[Gao, Bing] App requirement. CC: [~dth436][~a17364][~tbdc37][~a24148].
+{noformat}
+3.16.27   Hide EC content when device is locked (Mandatory) ID: GID-MTRREQ-518206 Only Applies to: High-Tier Smartphone, Mid-Tier Smartphone, Value Smartphone The dev ice shall not display the incoming EC call contents when the phone is locked. Only show the content when the user enables the show content when locked option is enabled.
+{noformat}
+
+3.16.28 Support SIP header ""Organization"" GID-MTRREQ-518207
+[Gao, Bing] Please [~a16450] to check it with QC as well.
+{noformat}
+3.16.28   Support SIP header ""Organization"" (Mandatory) ID: GID-MTRREQ-518207 Only Applies to: High-Tier Smartphone, Mid-Tier Smartphone, Value Smartphone The dev ice shall display received EC elements for incoming B2P call. B2P call shall be identified if sip.header contains ""Organization"" and verstat=True.
+ 
+Note: GID-MTRREQ-518208 shall not be applied for the business call.
+{noformat}
+
+
+Modified
+3.16.18 Display all received EC elements GID-MTRREQ-483129
+[Gao, Bing] App requirement. CC: [~dth436][~a17364][~tbdc37][~a24148].
+{noformat}
+3.16.18   Display all received EC elements (Mandatory) ID: GID-MTRREQ-483129 Only Applies to: High-Tier Smartphone, Mid-Tier Smartphone, Value Smartphone A dev ice receiv ing an EC with the call composer elements shall display all the available elements in the INV ITE.
+ 
+Note: Refer GID-MTRREQ-518208 and GID-MTRREQ-518206 for exceptions.
+{noformat}
+
+
+Hi [~a19035]
+
+Could you share RCS Q2-2021 and delta to me?
+
+thanks
+Gao, Bing
+
+Most of the new added requirements (see below) are about EC (Enriched Calling), but since EC was turned OFF recently, we'll not execute them now.
+
+Add:
+3.16.26 Hide EC contents when call is received from unsaved contact GID-MTRREQ-518208
+3.16.27 Hide EC content when device is locked GID-MTRREQ-518206
+
+So, this execution is for requirement that bring back the option to ""Remove photo"" from the OGC.
+
+Add:
+3.3.20.32 Group chat icon GID-MTRREQ-516633
+Obsolete
+3.3.20.5 Conference Info Object support indication GID-MTRREQ-422919
+[Gao, Bing] Hi Mayank Gupta, so the conference OBJUECT should still be supported but only no requirement for the header ""a=accept-wrapped-types attribute the value application/conference-info+xml"", right?
+[Mayank] AGREE
+RCS IP Messaging:
+* GID-MTRREQ-516633: Delete of icon for OGC shall be supported
+
+The other changes are related to Enriched Calling
+RPADX-4899 Plan Created For: 
+FEATURE-6970: {color:#326ca6}T-Mobile - RCS Q2-2021 Changes - UP1.0, UP2.0 and EC{color} on Release: 
+RPADX-4178 ADX R_Rel1"
+FEATURE-6992,,FEATURE-6992: ThinkShield Enterprise :  Develop  ThinkShield SDK framework,"Consolidated test report is here: https://kaiju.motorola.com/#/dalekReports/savedDalekReport/5881622022062080
+
+Testing is completed on Sofia+ phone .
+
+Testing on Burton and Denver is pending due to hardware availability.
+
+
+RPADX-4914 RRB Request Approved (Add) 
+RPADX-4927 Plan Created For: 
+FEATURE-6992:ThinkShield Enterprise :  Develop  ""ThinkShield SDK"" framework on Release:
+RPADX-4178:ADX R_Rel1
+Testing is completed on Sofia+ phone .
+
+Testing on Burton and Denver is pending due to hardware availability.
+The solution for the SDK is more complex than we have planned.
+[~rborroz] can you help to either update the Int CWV or Int Actual date depending on if this has been integrated?
+
+[~deborard] FYI
+[~rborroz] the Int CWV is again past due for this plan.  We need to get this integrated ASAP so we give time for testing and bug fixes prior to FC.  Please update the Int CWV or if you happened to have already iintegrated it update the Int Actual date.
+[~wcw014] CWV updated."
+FEATURE-6992,,FEATURE-6992: ThinkShield Enterprise : Develop ThinkShield SDK framework,
+FEATURE-6999,,FEATURE-6999: Spectrum : WIFI Calling,"[~a19591] has confirmed to use APKs of previous OS.
+[~wcw014]: dependency on VZW preloads. Need to wait for Vzw confirmation if new set of APKs will be released for ""S""
+
+[~a19591]: Pls check with Vzw and confirm back"
+FEATURE-7045,,FEATURE-7045: AT&T&Cricket&Firstnet&AT&T MVNOs (TracFone/CC): WFC Preference User Setting & Default (Nov 2020),"Confirmed with [~xnk746], for ATT network, domestic roaming is same as home network.
+Hi [~dth436] - thanks for the feedback.
+
+CDR-WiFi-1510 and CDR-WiFi-1750  are covered under FEATURE-7039. Modem SMEs are already tagged on it.
+
+
+The purpose of CDR-WiFi-1404 and WFC14is to offer user choice for WFC options as other carriers have for WFC
+- Please elaborate on this, why would the device force to display and set preference per location? 
+-- Please share the REQ_IDs for ""As there is only one setting for HOME and ROAMING"" - we can discuss with ATT if these are still needed considering the introductions of CDR-WiFi-1404 and WFC14. 
+
+[~a19035]
+Hi [~dth436], [~a20746]
+
+Here's the feedback from ATT SMEs,
+-  International roaming is always Wi-Fi preferred, that’s not changing. The new UX only applies to non-international roaming case where use to be cellular preferred, now with this optional UX, the user can select either cellular preferred or wi-fi preferred.
+- The next release of 18384 would address this via an update to WFC14 by adding a sub-text. Until then, let's move ahead with a placeholder text to convey _""that this setting applies only in the HOME network and for the INTERNATIONAL network the Wi-Fi Calling would be Wi-Fi Preferred ""_
+
+Let's move ahead with CDR-WiFi-1404 and WFC14 implementation considering the above info. 
+
+[~a19035] [~wcw014]
+Hi [~nadeemp]/ [~a19035],
+
+AT&T introduced a New Requirement that requests for WFC Preferenes: Cellular Preferred OR Wi-Fi Preferred.
+The related requirements are CDR-WiFi-1404 and WFC14.
+Both these requirements are Optional.
+Pls confirm if Motorola can decide to DROP these requirements.
+
+*Rationale (to drop):*
+Seemingly simple, WFC preferences can be quite confusing to user
+* As there is only one setting for HOME and ROAMING
+* Device will be forced to display the setting applicable to user's current location
+* The settings can display ""Cellular Preferred"" while in HOME network and can display ""Wi-Fi preferred"" while in ROAMing network, even though user did not make any change.
+
+2 other requirements mentioned as part of FEATURE-7045:
+CDR-WiFi-1510 and CDR-WiFi-1750 are related to Handover Threshold values
+These requirements shall be handled by modem.
+Hi [~w19976],
+
+     As requested by Kumar, please inform whether HOME + Domestic roaming shall be considered the same,
+
+     If they are considered as different, kindly confirm whether the below approach can be followed.
+
+ MotoExtTelephonyManager.getServiceStateVoiceRoamingType(ServiceState ss)   -   To detect whether its Home or Domestic or International Voice roaming.
+
+     If Roaming type is  ROAMING_TYPE_DOMESTIC, set the WiFi calling mode using below API.    
+ImsMmTelManager.setVoWiFiRoamingModeSetting(int mode)
+
+    Else in all other cases, set the WiFi calling mode using below API  (for Home network).
+ImsMmTelManager.setVoWiFiModeSetting(int mode)
+
+    Please confirm.
+
+Thanks,
+    Karthik
+Hi [~w19976],
+
+    Can you please inform if any changes are required in the framework to support the requirements mentioned in the above comment.
+
+Thanks,
+    Karthik
+Hi [~w19976],
+
+    Even though the default value of ""editable_wfc_mode_bool"" is TRUE, the value has been set to FALSE for AT&T  in CarrierConfig/res/xml/vendor.xml.
+
+ For example,
+https://sse.am.mot.com/r_source/xref/mr-r-6125/packages/apps/CarrierConfig/res/xml/vendor.xml#2060 
+
+    Please get the necessary changes to reset it to TRUE for AT&T, Cricket, FirstNet, Tracfone-ATT, Consumer Cellular - ATT and Liberty LLA carriers.
+
+    Request you to resolve IKSWR-24169 by 12/09 as our changes are dependent on this carrier config flag.
+
+Thanks,
+   Karthik
+Hi [~w19976],
+
+    Thanks for the response.
+
+     No change is required for the ""editable_wfc_roaming_mode_bool"" config as the WiFi calling mode in Roaming is not editable, its always ""Wi-Fi preferred"".
+
+Regards,
+   Karthik
+Hi [~w19976], 
+  
+     Thanks for the confirmation.
+
+     Now with the WiFi calling mode being made editable for Home (and domestic roaming) network, can you please inform if there is any change required in the framework.
+
+     Also we have below modifications in the 20.3 version.
+
+<CDR-WiFi-1510> Thresholds for Handover
+Summary: The device shall have the following set of threshold values for handover:
+• Tout-ran: RAN signal strength value that a Cellular preferred service or idle mode should handover to Wi-Fi. Recommended value for LTE RAN is -108dBm
+
+Please Note: -114 dBm updated to -108 dBm
+
+<CDR-WiFi-1012> Supported SIM cards for Wi-Fi Calling
+When a Normal 0 false false false EN-US X-NONE X-NONE LLA SIM card
+(313/790) is put in the device
+• ePDG address set to: epdg.epc.mnc790.mcc313.pub.3gppnetwork.org
+
+       
+     Kindly inform if changes are required in the framework and any RPADX CR to be created for tracking.
+
+Thanks,
+    Karthik
+
++ [~a20623]
+Note to Test team:
+
+   The AT&T WiFi calling application changes have a dependency on framework CR IKSWR-24169.
+
+    Please verify the feature once IKSWR-24169 is integrated.
+Okay, I will use that CR to change the ""editable_wfc_mode_bool"" as TRUE for all ATT and MVNO carriers.
+AT&T, Cricket, FirstNet, Tracfone-ATT, Consumer Cellular - ATT and Liberty LLA carriers.
+RPADX-5026 RRB Request Approved (Add) 
+RPADX-5042 Plan Created For: 
+FEATURE-7045:AT&T&Cricket&Firstnet&AT&T MVNOs (TracFone/CC): WFC Preference User Setting & Default (Nov 2020) on Release:
+RPADX-4178:ADX R_Rel1
+Test CWV updated. Feature test already blocked by CR IKSWR-36300.
+Thanks, [~dth436] for additional info. Following up w ATT SME, will update here soon. 
+The following requirements will be handled as part of Plan:
+* CDR-WiFi-1404 and WFC14: WFC Preference setting
+* <CDR-WiFi-1570> Notification of Wi-Fi Calling capability When Wi-Fi Calling Toggle is Off as the dbm level has been modified for notification also
+Note: The dBm level in v20.3 is specified as -114dBm but ATT SME confirmed it should be -108dBm
+* CDR-WiFi-1012: SES URL for:
+When a Normal 0 false false false EN-US X-NONE X-NONE LLA SIM card
+(313/790) is put in the device
+• SES URL set to: https://ses-pr.mobilecore.lla.com
+• ePDG address set to: epdg.epc.mnc790.mcc313.pub.3gppnetwork.org
+
+[~nadeemp]: Pls update FEATURE-7045 with the following info:
+<CDR-WiFi-1570> Notification of Wi-Fi Calling capability When Wi-Fi Calling Toggle is Off as the dbm level has been modified for notification also
+Note: The dBm level in v20.3 is specified as -114dBm but ATT SME confirmed it should be -108dBm
+[~a20746] For ATT's WFC mode editable, there are two parameters in the carrierconfig
+editable_wfc_mode_bool, the default value is TRUE
+editable_wfc_roaming_mode_bool  the default value is FALSE.
+May I understand we need to change editable_wfc_roaming_mode_bool to TRUE for ATT?
+
+Pls see my comments for these requirements
+{noformat}
+<CDR-WiFi-1510> Thresholds for Handover
+Summary: The device shall have the following set of threshold values for handover:
+• Tout-ran: RAN signal strength value that a Cellular preferred service or idle mode should handover to Wi-Fi. Recommended value for LTE RAN is -108dBm
+
+Please Note: -114 dBm updated to -108 dBm
+{noformat}
+Pls ask WiSL team or modem team help check it as threshold is controlled by them
+
+{noformat}
+<CDR-WiFi-1012> Supported SIM cards for Wi-Fi Calling
+When a Normal 0 false false false EN-US X-NONE X-NONE LLA SIM card
+(313/790) is put in the device
+• ePDG address set to: epdg.epc.mnc790.mcc313.pub.3gppnetwork.org
+{noformat}
+We have a feature plan to support LLA(RPADX-5045),  this item also need modem team help confirm.
+
+cc  [~a20623]
+[~dth436] The current FW WFC mode default configuration for ATT is as below:
+WFC mode in home network - ""Cellular Preferred""
+WFC mode in roaming network - ""WiFi Preferred""
+WFC mode in home network - ""Not editable""
+[~nadeemp] / [~a19035] / [~a20746] / [~w19976]
+Refer to:
+{code}
+<CDR-WiFi-1404> Wi-Fi Calling Service Preference
+Summary: The device may provide a setting for the user to choose between cellular
+preferred or Wi-Fi preferred. If the setting is provided, the default selection shall be cellular
+preferred
+
+<CDR-WiFi-1560> Wi-Fi Preferred for International Roaming
+Summary: The device shall set all in scope services to Wi-Fi Preferred while roaming internationally
+{code}
+As per the above 2 requirements, 
+* while in HOME, WFC setting = Cellular preferred
+* while roaming internationally, WFC setting = Wi-Fi preferred
+These default values are set by FW / Modem and not controlled by App.
+[~w19976]: pls confirm
+
+As the default values are different for Home and Roaming and there is only one user facing WFC setting,
+* The same setting got to reflect the value based on user current location
+* As the default values are different, user would see a different setting based on his location - Home / Roaming
+
+This is the confusion that I referred to in my previous comment.
+
+[~nadeemp]: If this requirement can be dropped for Motorola - then it is fine.
+
+Otherwise, pls request AT&T to clarify:
+As per CDR-WiFi-1404 and CDR-WiFi-1560, default Network Preference will be
+* Cellular Preferred in HOME network
+* Wi-Fi Preferred in International roaming
+
+As there is only one setting: ""Wi-Fi Calling"" -> ""Network preference""
+Motorola proposes to use this setting for HOME only
+* ""Network preference"" for International roaming shall always remain ""Wi-Fi preferred"" and does not get impacted by the change user makes in ""Wi-Fi Calling"" -> ""Network preference""
+Pls confirm
+
+[~a19035] / [~a20746]
+
+[~wcw014]: AT&T response is needed to commit to this feature
+[~w19976]: Refer to your comment: 
+https://idart.mot.com/browse/RPADX-5042?focusedCommentId=10013751&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-10013751
+
+As per confirmation received from AT&T, it is needed to make WFC more editable for AT&T (in HOME)
+* Editing is not needed for International Roaming
+* As AT&T mentioned that editing of ""WFC Preference"" is not needed for International Roaming, 
+** Domestic Roaming shall be treated same as HOME.
+[~w19976]: Pls confirm that HOME + Domestic shall be considered the same
+
+[~a20746]"
+FEATURE-7047,,FEATURE-7047: AT&T&Cricket&Firstnet: RTT Roaming (Nov 2020),"Feature test completed successfully.
+The tests were performed using the Common Stable build Q1: RPS31.Q1-16.
+RPADX-5027 RRB Request Approved (Add) 
+RPADX-5043 Plan Created For: 
+FEATURE-7047:AT&T&Cricket&Firstnet: RTT Roaming (Nov 2020) on Release:
+RPADX-4178:ADX R_Rel1"
+FEATURE-7058,,FEATURE-7058: Vibration of call indications,"RPADX-5054 RRB Request Approved (Add) 
+RPADX-5096 Plan Created For: 
+FEATURE-7058:Vibration of call indications on Release:
+RPADX-4178:ADX R_Rel1
+The UX doc:https://docs.google.com/presentation/d/1_IABPdEIfq8YY2GzvZoWNDljlPXatk848n588oKXhgo/edit#slide=id.gac4905d0a4_0_0
+[~a14859], In setting App part, would you like to share the plan?  How we can get the setting value in service/telecom ? 
+[~zhangmp1]
+
+Mingping, [~dvx436] will be responsible for the Settings part and can comment on this."
+FEATURE-7060,,FEATURE-7060: Enable AOSP assisted dialing,"Build used on Feature Test: RPS31.Q1-14. 
+Build used on latest retest: RPS31.Q1-25.
+Odyssey Build used on Feature Test: RPS31.Q1-14.
+Odyssey Build used on latest retest: RPS31.Q1-25.
+RPADX-5057 RRB Request Approved (Add) 
+RPADX-5065 Plan Created For: 
+FEATURE-7060:Enable AOSP assisted dialing on Release:
+RPADX-4178:ADX R_Rel1
+RPADX-5110 Plan Created For: 
+FEATURE-7060: {color:#326ca6}Enable AOSP assisted dialing{color} on Release: 
+RPADX-4178 ADX R_Rel1
+The customization changes are integrated as part of  IKSWR-23109 in *mainline branch* (https://gerrit.mot.com/#/c/1837093/ and https://gerrit.mot.com/#/c/1836985/).
+
+The changes will be integrated to *mr-2021-q1* branch once the *SLT approval* is done for (https://gerrit.mot.com/#/c/1837896/ and https://gerrit.mot.com/#/c/1837897/)
+Waiting for the Dialer team to add the integ date in [plan|https://docs.google.com/spreadsheets/d/12_ivHiUC9Q6hDo4VRRs1HtukvhrmLDEGMVmL41EpvX0/edit#gid=721419554]. Once the date is available will update the feature integ date for this plan cr.
+[~dth436], PIM part is already integrated. Core Customizations team need to verify is there's any pending effort for VT and RTT. If not, I guess you can mark this one as completed.
+[~dth436], there is a CR IKSWR-23109 for your team to enable AOSP assisted dialing for VZW video calls. So we think some changes or fixes may need in your team. Could you have a check? Thanks!
+[~wcw014]: Assisted Dialing is handled by PIM Team. Pls assign to [~a4949c] or [~josegsp]"
+FEATURE-7061,,FEATURE-7061: VZW : VoLTE Device UI requirements updates Oct 2020,"Hi [~w19976],
+In this VZW release, VZW has removed the ""Advanced Calling"" setting (nothing but VoLTE setting). Hence we have removed ""Advanced Calling"" related customizations.
+
+As part of FW can you pls take care of the below -
+1) Make VoLTE setting hidden (hide_enhanced_4g_lte_bool)
+2) For any Q->R (Q2 onwards) upgrade case FW should reset VoLTE user value as true. This is to handle the case if user had turned off VoLTE through ""Advanced Calling"" setting.
+Thanks,
+Jyothsna
+Hi [~w19976], Thanks for the confirmation. On PdMs request the feature is integrated to Q2 itself. Pls make sure that the FW change gets integrated in Q2 time frame itself. Thanks
+Per agreement of [~dth436] in the RRB this can be accomodated in Q2.
+RPADX-5058 RRB Request Approved (Add) 
+RPADX-5066 Plan Created For: 
+FEATURE-7061:VZW : VoLTE Device UI requirements updates Oct 2020 on Release:
+RPADX-4178:ADX R_Rel1
+Sure, FW will support it.
+[~a17364], IKSWR-41389 was created for the FW change.
+
+For the second request: 
+2) For any Q->R (Q2 onwards) upgrade case FW should reset VoLTE user value as true. This is to handle the case if user had turned off VoLTE through ""Advanced Calling"" setting.
+
+it's already in baseline. See https://sse.am.mot.com/r_source/xref/mr-r-qsm2020/frameworks/opt/net/ims/src/java/com/android/ims/ImsManager.java#385.
+
+The VoLTE user setting will be true as default value if it's hidden or uneditable. And VZW's default VoLTE setting is true now.
+[~tgb348] Please refer to https://docs.google.com/presentation/d/1THJyK-cojUzahGAa71sEEA8qtIxFs3ZPEm6mmrWlaok/edit#slide=id.gb38982fe1f_0_5 for the agreement we received from Verizon for UI updates."
+FEATURE-7062,,FEATURE-7062: ThinkShield Enterprise : Develop OEMConfig app for Motorola ThinkShield,"I believe this plan for OEM Config app can be dropped, as this app will be updated via Play Store, following a different schedule.
+[~w15621], do you agree?
+I think that is ok [~mvt647].  I will add the ms2 exception label.  [~w15621] if you have concerns please let us know.
+Thanks [~mvt647], updated
+Thanks, [~wcw014].
+
+[~wnm846], as we've discussed above, we will work on the OEM validation after MS2 is done. So please, could you review the test date?
+
+Thanks.
+Well this is a software development but the App part is more like an experience since it is not preloaded on the phone. EMM will fetch the app via Playstore Enterprise. I am ok to drop the plan as long as we have a way to track this work which has now been completed and has test plans executed by the test team
+
+ 
+
+ 
+[~rborroz], I am starting to look at the R0 plans that have Integrate dates that are towards the end of August.  Is this plan on track to be integrated by 8/27? 
+[~w15621], I totally agree with your comment.
+I believe that in order to track this work and have test plans executed by the test team, we could consider this a plan out of the scope of MS2 work, and then I can postpone the date to mid-end Aug, what do you think?"
+FEATURE-7062,"The MVP of the OEMConfig must provide the FDR prevention policy through the configuration management interface as defined in https://docs.partner.android.com/gms/building/enterprise/oemconfig
+
+The MVP is an app that is not ready for production. It still needs UI/UX definition, localization, and LC verifications.",FEATURE-7062: ThinkShield Enterprise :  Develop  OEMConfig app for Motorola ThinkSheild ,"
+Consolidatde test report is here: https://kaiju.motorola.com/#/dalekReports/savedDalekReport/6664992607961088
+
+Testing is completed on Sofia+ .
+
+Testing on Burton and Denver is pending due to hardware availability.
+Consolidatde test report is here: https://kaiju.motorola.com/#/dalekReports/savedDalekReport/6664992607961088
+
+Testing is completed on Sofia+ phone with one issue being raised ,hence one TC is failing.
+
+Testing on Burton and Denver is pending due to hardware availability.
+RPADX-5059 RRB Request Approved (Add) 
+RPADX-5067 Plan Created For: 
+FEATURE-7062:ThinkShield Enterprise :  Develop  OEMConfig app for Motorola ThinkSheild  on Release:
+RPADX-4178:ADX R_Rel1
+Test CWV is updated to new date (19,Feb) due to CR IKSWR-49029 which is blocking the feature
+
+Test CWV is updated to new date (22 Feb) due to CR IKSWR-49458  which is blocking the feature
+The OEMConfig MVP is ready and is used to test the SDK (RPADX-4927).
+
+The solution for the SDK is more complex than we have planned.
+[~rborroz] the Int CWV is past due again for this plan. We need to get this integrated ASAP so we give time for testing and bug fixes prior to FC. Please update the Int CWV or if you happened to have already iintegrated it update the Int Actual date.
+[~rborroz], The Int CWV date is past due for this plan.  Please update either the Int CWV or the Integrate Actual date please.
+
+[~deborard] FYI
+[~wcw014] CWV updated.
+[~wnm846] it seems this plan is going to be past the test CWV date again.  I don't see any open CRs so can you check to see if you can complete it?
+[~wnm846], [~a22642] has testing finished for this plan?  The test CWV is past due.
+
+[~mvt647] [~rborroz] FYI"
+FEATURE-7073,,FEATURE-7073: Motomessaging with DayNight theme,"Changing Test CWV to Jan,27 due to Integration date changed.
+Feature Test finished. 
+Find the results [here|https://kaiju.motorola.com/#/dalekReports/savedDalekReport/6176381030629376].
+
+Tested on:
+*Sofia Plus TMO* - build: motorola/sofiap_t/sofiap:11/RPR31.103/14089:userdebug/intcfg,test-keys
+*Odyssey AT&T* - build: motorola/smith_a/smith:11/RPS31.81/7f11c:userdebug/intcfg,test-keys
+
+Thanks!
+I postponed the integration date to 20/Jan.
+This feature makes changes to RCS too, and is important for the changes to also be reviewed by their team. Due to holiday on India this week, we might need a few more days to review.
+RPADX-5093 RRB Request Approved (Add) 
+RPADX-5095 Plan Created For: 
+FEATURE-7073:Motomessaging with DayNight theme on Release:
+RPADX-4178:ADX R_Rel1
+[~vferne] the Int CWV date is past due for this plan.  If you have finished the integration please update the Integrate Actual date.  If you haven't integrated it yet please update the Int CWV date.
+
+[~mvt647] FYI
+[~wcw014], it was missing the update on Integrate Actual. Thanks!"
+FEATURE-7089,ETA: Feb 15,FEATURE-7089: VZW : RCS updates on EAB sync and Video calls ( Oct 2020 specs ),"Attached email from VZW for the discussion of ""unknown"" meaning.
+
+Failed CRs are tracked in RPADX-5132. Completing this Plan.
+HI, App team,
+
+I got the test apk Contacts.apk and EABApplication.apk from Shazli, and I saw the app got the availability properly. So I will submit my gerrit https://gerrit.mot.com/#/c/1870520/ once it gets reviewed.
+02-05 11:31:07.679 13430 14013 E EABVideoCallActivity: called requestAvailability for number : +14085150931 returned response : -20
+
+02-05 11:31:07.684 13430 13430 D EABVideoCallActivity: Availability response success. Launching VIDEO call. availability=ONLINE
+
+02-05 11:31:07.684 13430 13430 D EABVideoCallActivity:  dataInfo :  contactNumber=...*31 volteStatus=1 ipVoiceCallSate=1 ipVoiceCallServiceNumber=...*31 ipVoiceCallTimestamp=1612553467667 ipVideoCallSate=1 ipVideoCallServiceNumber=...*31 ipVideoCallTimestamp=1612553467667
+
+
+Please notify test team to test once it passed your unit test.
+
+Thanks
+Gao, Bing
+
+Hi [~a19591],
+
+We need commit the feature https://idart.mot.com/browse/RPADX-5131/ https://idart.mot.com/browse/FEATURE-7089.
+
+Could you confirm the following:
+1>	The items which need feedback, especially for how to differentiate the “unknown” and offline. We need the answer to finish the code.
+2>	Could you confirm when the lab for CV will be ready or not? We will assume all the list/periodically CV will get waiver.
+
+Hi [~dth436],
+
+I plan to finish the code this week (except the unknown status). And I will merge it to main line and Q2. Could you help to let me know when the App code will be ready?
+
+Thanks
+Gao, Bing
+
+Hi [~dth436][~a17364][~a24148][~tbdc37][~hrgn76],
+
+1>	The only change is that I will remove the PresencePolling.apk. 
+---- Please app team test it by remove it from phone after remount. I am making a build to test it.
+
+2>	“unknown” status
+Framework supported it already, app team didn’t use it previously. Please apply it on app code:
+
+2.1>  it is local error if requestAvailability return code is not ResultCode.SUCCESS, treated it as “unknown”.
+
+2.2> IRcsPresenceListener
+   onSuccess --- can wait intent for the caps
+   onError
+          SUBSCRIBE_NOT_FOUND, not RCS capable, VOLTE_DISABLED
+           others: ""unknown"" (SUBSCRIBE_FORBIDDEN means 403 which indicate the phone itself had not caps).
+           
+   onFinish: for capability polling, you can ignore it.
+
+   onTimeout: for capablity polling, you can ignore it or treat it as ""unknown""
+
+2.3> intent ACTION_PRESENCE_CHANGED
+please refer RcsPresence.java on how to use it.
+ get RcsPresenceInfo by the following statement:
+* ArrayList<RcsPresenceInfo> rcsPresenceInfoList = intent.getParcelableArrayListExtra(
+*           RcsPresence.EXTRA_PRESENCE_INFO_LIST);
+*
+RcsPresenceInfo included VOLTE_ENABLED, VOLTE_DISABLED, VOLTE_UNKNOWN. so we supported unknown status already. But app treated VOLTE_UNKNOWN and VOLTE_DISABLED as same previously. App need change it now.
+
+Note: the Availability will not need DB any more. Please remove EAB DB related code. And got information with the above API. 
+
+thanks
+Gao, Bing
+
+Hi [~wcw014],
+
+I can change it to the same date as RPADX-5132 since I can't merge it alone which will break the baseline. Let's see the date for RPADX-5132 then update it.
+
+thanks
+Gao, Bing
+
+I do not see FWK impact. This plan need drop.
+
+Tom
+My understanding is that this feature is for Q2, 2021, so any product release using Q2, 2021 will have this feature. Do we have Guam NA/Borneo VZW build? 
+Per agreement in RRB this is being moved to Q2.
+RPADX-5111 RRB Request Approved (Add) 
+RPADX-5131 Plan Created For: 
+FEATURE-7089:VZW : RCS updates on EAB sync and Video calls ( Oct 2020 specs ) on Release:
+RPADX-4178:ADX R_Rel1
+Thanks [~tbdc37].
+
+However, I had a new build and tested it today, I still didn’t see the VT icon. After I “adb installed” the apks you shared to me then I can see it. I saw app got the caps by intent properly. So I merged my coded.
+
+I used SofiaP for the testing. You can verify it on the official build with https://gerrit.mot.com/#/c/1870520/ to see if there are any app issue or not.
+
+Thanks
+Gao, Bing
+
+Thanks [~wcw014].
+
+So let's keep BsIn.
+
+And let's put CWV on Feb 15. My gerrit can be ready by today. But need app change then merge them at the same time. And need co-testing.
+
+thanks
+Gao, Bing
+
+Thanks [~wcw014].
+
+Sorry: what is the means of 
+Commit Bsln:	28/Jan/21
+Commit CWV:	28/Jan/21
+
+Thanks
+Gao ,Bing
+
+[~a19591] Could you please confirm this Feature-7089 is applicable for only 2021Q2 NPI Products or 2021Q2 Upgrade products (GuamNA/Borneo) as well? 
+
+[~wcw014][~a22642] - FYI
+[~tgb348] IKSWR-49056 is not linked to RPADX-5132 but is linked here and still open.  Should it be unlinked here and linked there?
+
+[~a22642] FYI
+[~w20090]
+
+Commit dates are dates when you commit to do the work.  Sometimes developers want to evaluate the feature before committing and will put a baseline (Bsln) and current working view (CWV) date for when they plan to commit.  The Bsln date should not change but the CWV date could depending on if you are able to actually commit by the date you provide.  Similarly the Int Bsln and the Int CWV dates are the dates for integration.  The Bsln date again shouldn't change but if you are able to pull in or need to move out the current working view date then sometime the CWV date will change.  So I am looking for you to put the Int Bsln and Int CWV dates.  
+
+Chris
+[~w20090] 
+
+I updated the Design and Int dates for you.  The design dates aren't often used.  Just if a developer wants to track the time it takes them to design the changes.
+
+2/15 is too late.  2/12 is the FC date for Q2.  That needs to include testing and bug fixes.  If your change can be made today go ahead and put 1/29 for the Int CWV and if you push the changes put 1/29 for the Int Actual.  RPADX-5132 is created to track the App changes.  The test team knows not to test until both have been pushed.  
+
+Chris
+[~w20090] updating the int CWV date to match the core apps plan integrate date of 2/9 based on your previous comments.  
+
+[~dth436]
+[~w20090], you committed to this plan but you didn't update the Int Bsln and Int CWV dates for when you plan to integrate it.  Please update these dates.
+framework gerrits: https://gerrit.mot.com/#/c/1870520/.
+"
+FEATURE-7089,,FEATURE-7089: VZW : RCS updates on EAB sync and Video calls ( Oct 2020 specs ),"IKSWR-54609 is localization CR and is needed as part of IKSWR-51021.
+Incorrect CRs linked to the plan, these are unlinked:
+1. IKSWR-48872
+2. IKSWR-48883
+3. IKSWR-48944
+
+[~wcw014]: This feature was requested on Q1 and it was mandatory to have only the correct CRs linked. A good reason to not include incorrect links at any time.
+Per agreement in RRB this is being moved to Q2.
+RPADX-5132 Plan Created For: 
+FEATURE-7089: {color:#326ca6}VZW : RCS updates on EAB sync and Video calls ( Oct 2020 specs ){color} on Release: 
+RPADX-4178 ADX R_Rel1
+Requirements that impact Video calling:
+* VZ_REQ_RCS_3922
+* VZ_REQ_RCS_32001
+
+Change Summary:
+*When user attempts to make a Video call:*
+* If the received availability response indicates that the contact is offline (or if the availability fetch returns a SIP 4xx or 5xx error response) OR Is not Video capable
+** App shall initiate a Voice call
+* If the Availability response is Video capable OR Unknown
+** App shall initiate a Video call
+
+Things needed for commitment:
+* New FWK interface is needed to know the actual Availability response.
+* Commitment will be made after FWK confirms the new interfaces
+Things needed for commitment:
+* New FWK interface is needed to know the actual Availability response.
+* Commitment will be made after FWK confirms the new interfaces
+[~dth436] haven't you worked out the FWK interface now with [~w20090]?  Please commit to this plan.  [~w20090] indicates that his change has to come at ths same time as your change.  So his Int CWV date will be updated to be the same as yours.  We are running critically short on days to get content integrated and tested for Q2 so please help to commit and provide an Int CWV date.
+
+[~w15621], [~a22642] FYI
+[~wcw014] / [~a22642] / [~w20090]: App plan is committed."
+FEATURE-7097,,FEATURE-7097: VZW : Support BoomCloud360 Audio solution on Motorola phones,"+[~a19591]  Nairobi and Racer Turbo point build created for testing,  patches are merging to main and Q1 branch.
+There are patch pending on https://idart.mot.com/browse/LCCARPLOAD-1221. 
+
+Following products will use existing solution where both Moto  Audio and VSS will co-exist
+- Nariobi R upgrade
+- Racer Turbo MR (on top of R upgrade)
+
+
+For NPIs starting from Kiev-mmw proposal is to keep only VSS solution. We can track that under a separate ADX plan once solution is finalised.. This will not be applicable on any 4G products so N/A on Borneo or older devices. VSS (Verizon Smart Sound) is applicable only for 5G devices
+Intent action to launch manage audio settings page with provider selected
+
+Intent action:   com.motorola.extensions.settings.intent.action.MANAGE_AUDIO_EFFECTS
+             Intent Extra :  com.motorola.extensions.settings.intent.extra.PROVIDER , Value  1 - BoomCloud,  Value 2 - MotoAudio
+New work CR ETA is 5/21, Test date updated
+RPADX-5128 RRB Request Approved (Add) 
+RPADX-5161 Plan Created For: 
+FEATURE-7097:VZW : Support BoomCloud360 Audio solution on Motorola phones on Release:
+RPADX-4178:ADX R_Rel1
+SettingUI layout work for MR product case - 
+https://docs.google.com/presentation/d/1IogHo7oXLUYCkbykMjEpWswoQaE89sbIFAYTok8l1Q0/edit?ts=601c751f#slide=id.gbc2e0fe560_0_1
+
+The MotoWave work is tracking by
+https://idart.mot.com/browse/IKMOTSOUND-4317
+
+The requirement for this feature is getting updated, so New Implementation & Testing will be Delayed.
+
+[~a19591] Please link the updated UI & New work CR here.
+
+[~wcw014][~a22642] - FYI
+Updating the labels to reflect that this was integrated and tested on 2021Q2.
+VZW had requested to change the UI as per the latest spec here
+
+https://docs.google.com/presentation/d/1IogHo7oXLUYCkbykMjEpWswoQaE89sbIFAYTok8l1Q0/edit#slide=id.gd9dc916b4d_0_83
+
+
+This engineering work CR includes
+1. Update the UI as the spec
+2. Also provide a provider URI to BoomCloud
+        a) Query API : so that BoomCloud can query to check moto audio is enabled or not to show their UI to enable MotoAudio
+        b) Update api : so that Boom cloud can disable moto audio
+
+[~a19591], [~a21143]: Please confirm if this is applicable only for Nairobi and Burton MR upgrade?
+What about products like Borneo NA, which have AudioFX preloaded and not Waves, are they also expected to update to BoomCloud audio solution via R upgrade?
++[~ffsouza], [~wcw014], [~tgb348]
+[~a19591][~dvx436][~a21143] On Kievv mmW mainline build (RRV31.7) testing blocked with CR # IKSWR-69793
+
+[~wcw014][~a22642] - FYI
+[~a21143], [~jcamelo] this plan is now past due.  The three linked CRs are still open.  Can you provide an update on when this will be integrated?
+[~a21143][~jcamelo][~a19591] - Boomcloud feature test Status,
+
+Burton Q1 Build (RPB31.Q1-19-58-9) Blocked with CR # IKSWR-70922- [Burton-VZW] VSS notification is not shown for upgrade scenario-> issue is duplicated and closed as ""Third Party App Issue"". Waiting for the Fix from BC.
+
+Kievv Q2 Build (RRV31.Q2-35)  & Mainline (Q3) Build (RRV31.7) --> Blocked with CR # IKSWR-71465 & IKSWR-69278 
+
+[~wcw014][~a22642]- FYI
+[~a21143][~jcamelo][~a19591] - Boomcloud feature test Status,
+
+On Burton Q1 Build (RPB31.Q1-19-58-7) Feature is available and Quick verification Done, working
+
+On Kievv Q2 Build (RRV31.Q2-33) Feature is not integrated.
+
+On Kievv Mainline (Q3) Build (RRV31.6) Feature is Available & Testing in Progress.
+
+[~wcw014][~a22642][~sumgnas] - FYI
+[~a22642], [~tgb348] can you update the test date to maybe next Friday so that we have an updated date?
+[~tgb348] Kievv will code freeze today 5/10, could you please share the latest test status? The block CRs mentioned above have been addressed. 
+
++[~dingyq2]  [~douglasz]
+[~tgb348] the test CWV for this is past due.  What is needed yet to complete the plan?
+latest build: RRV31.Q2-36-14-8 with APK version on DUT: 1.8.6 and 5.1.5 Verified working fine."
+FEATURE-7115,,FEATURE-7115: ThinkShield Firewall Domain Filter,"All tests were pass and requirements were updated.
+Development tracking: IKSWSRVC-23648
+Follow the documentation of Firewall Security policy : [https://docs.google.com/document/d/1zYSPMYtTac6zVTHURPLHAZ-K8IlJVsnQG-4T-Jkjncg/edit?usp=sharing]
+Hi Pandu, its reflected on https://idart.mot.com/browse/FEATURE-7115 and Requirements Document: [https://docs.google.com/presentation/d/1YFH02uHfN0JuNoNZ6ZrHuRoPQOPe-YTzGKl2HbwMcc0/edit#slide=id.gb560f851de_0_316] 
+Per the comments in this plan I am moving this to A12 R1.
+RPADX-5209 RRB Request Approved (Add) 
+RPADX-5228 Plan Created For: 
+FEATURE-7115:ThinkShield Firewall Domain Filter on Release:
+RPADX-4178:ADX R_Rel1
+This plan has 2021Q3 CS1 priority and has had the adx_cs1 label added.
+Under discussion about the impact and how to implement it. Not ready to commit.
+Yes, Chris, as we don't have a feasible architecture yet, this was the agreement. Thanks.
+[~a22642], [~jrdk47], the feature was integrated on Oct 18th, 2021.
+
+Here is the guideline to test the feature via TestDPC: [https://docs.google.com/document/d/1zYSPMYtTac6zVTHURPLHAZ-K8IlJVsnQG-4T-Jkjncg/edit#] 
+[~deborard] : Could you please confirm the updated requirements and also pls share RPADX for postponed requirements. So that we can complete this feature
+[~deborard], can you confirm this feature is no longer possible to this quarterly? 
+We did not find a solution architecture appropriate to our devices and we need more time to investigate how to implement this feature.
+[~mvt647], [~deborard], [~a12764] Are we all in agreement it is ok to move this to A12 R1?
+
+[~rborroz], [~w15621], [~wnm846], [~a22642] FYI
+[~rborroz] and [~deborard] : This feature is working fine but we have assumed the following as per [~ghayden] ,
+ * If websites were cached and user tried to block the policies, they will not enforced until user clears data and cache of chrome
+ * Allow list postponed to next release. Please confirm do we have any new RPADX CR
+ * As per requirement document, we need to support wildcard character * but not now. 
+
+Could you please confirm. So that we will update test cases and execute them and complete the feature.
+[~wcw014] this feature is no longer for 2021Q3. We are not able to implement it for this timeframe.
+https://artifacts.mot.com/artifactory/apps/MotoOemConfig/OEMCONFIG-BR-01000070/"
+FEATURE-7119,,FEATURE-7119: ThinkShield Allow/Disallow Power Off,"Tested with Secure Builds Release CID50 on capri+
+This needs to be tested with a secure build (CID50) which isn't available yet so adding the MS2 Exception label.
+[|https://idart.mot.com/secure/AddComment!default.jspa?id=4860120]"
+FEATURE-7122,,FEATURE-7122: Support 5G + 5G UX & UI,"For  framework telephony:
+When DDS is set in one SIM, the preferred network mode on the other SIM remains as 5G. This is different from 5G+4G, as in that case when you set the data SIM for one SIM, the other one must be limited to 4G .
+
+
+From CoreApps Testing, we are waiting decision about which product we can test this FEATURE-7122 since Ibiza is a Q1 target product and this Feature is for Q2 as well.
+
+For Q2, the only product that support 5G +5G (both slots) is Saipan which there is no prototype available to test.
+
+I'm going to keep Test CWV to Feb,12 but if necessary I'll update according to the decision of product/build to test it.
+
+FYI Nagavali Jatavallabhula, Christopher Wolfe, Luiz Leal Chagas do Nascimento Caio, Zhang Mingping
+From CoreApps Testing, we are waiting decision about which product we can test this FEATURE-7122 since Ibiza is a Q1 target product and this Feature is for Q2 as well.
+
+For Q2, the only product that support 5G +5G (both slots) is Saipan which there is no prototype available to test. 
+
+I'm going to keep Test CWV to Feb,12 but if necessary I'll update according to the decision of product/build to test it.
+
+FYI [~a22642], [~wcw014], [~caioluiz], [~zhangmp1]
+Hi!
+Per Yuki's comment above, I'm completing this RPADX. No issues found using Ibiza's point release. Follow bellow the results: 
+
+All [4/4 tests|https://dalek.mot.com/browse/COREAPPS-414187] passed for testing on Ibiza continuous build:
+{panel}
+|HW Revision: |DVT1|
+|Build ID:| RRF31.Q1-50|
+|Product Name:| ibiza_retail|
+|Serial Number:| N1ZR190252|
+|Carrier:| retbr|
+|Fingerprint:| motorola/ibiza_retail/ibiza:11/RRF31.Q1-50/7ce24:userdebug/intcfg,test-keys|
+SIMs:
+||ID||MDN||Carrier||
+|183|19 9-9554-8431|Claro|
+|194|19 99212-2801|Claro|
+{panel}
+
+[~a22642] FYI
+In MobileNetworkSeting:
+If support the 5G +5G:   5G network mode becomes available for both SIMs 
+RPADX-5173 RRB Request Approved (Add) 
+RPADX-5176 Plan Created For: 
+FEATURE-7122:Support 5G + 5G UX & UI on Release:
+RPADX-4178:ADX R_Rel1
+RPADX-5177 Plan Created For: 
+FEATURE-7122: {color:#326ca6}Support 5G + 5G UX & UI{color} on Release: 
+RPADX-4178 ADX R_Rel1
+[~wcw014], we already performed the Tests on point release build for Ibiza Q1:
+motorola/ibiza_retail/ibiza:11/RRF31.Q1-50/7ce24:userdebug/intcfg,test-keys
+
+No issues were found.
+
+For Q2 Saipan product we'll be able to test only on March,31 because we have a estimate date to receive the unit here in Brazil only on March,29.
+
+Saipan is the only Q2 product that support 5G+5G (both slots).
+[~wcw014]，thanks for you help update
+And the feautre is integrated now, thanks
+[~yukiakr] do we have an update on a configuration to test this with yet?
+[~zhangmp1] since you have provided Int CWV dates I have moved forward to committing to this plan for you."
+FEATURE-7126,,FEATURE-7126: Motorola VITAL software updates @ out of box  device setup,"Assuming the implementation is adding the New screen during the SUW similar to OTA. But still, we don't have the final UI flow. 
+[~a23056][~a19591] Please share the final UI flow.
+Changes submitted for review, waiting for review to complete to integrate the changes to baseline
+https://gerrit.mot.com/#/c/1965740/
+https://gerrit.mot.com/#/c/1965760/
+Hi [~a19591]
+
+Did we get final conclusion on whether we need to move privacy screen ahead ?
+Also in case we want to have OTA screens just after  wifi/data  connected screen, this flow is common for both common and also for Android Enterprise flow. so in case we have change here, then it would be triggered for Android Enterprise flows as well 
+
+Also lets try to lockdown the flow as well to commit the feature ? 
+we need the above things to be locked down to have exact dates to commit?
+
+Hi [~vinayb]
+Can your team also have a plan created to track this feature? we need this feature for Q3 as marked over here, we need plan to link it for better visibility and tracking for Pdm and test as well.
+
+Hi [~a19591]
+
+Do you have any update from Google on the enterprise flow for the concerns raised earlier? we need to lock the flow to make appropriate changes.
+
+Since the flow is not  locked down, updating the integ date to 05/30 , since we have dependency on OTA team as well (integ date of 05/28)
+
+Hi [~wcw014]
+As discussed earlier we might need to add exception for this feature.  FYI
+Hi [~tgb348]
+
+Both Setup and OTA changes are integrated to Q3 baseline, 
+
+Setup Q3:
+https://gerrit.mot.com/#/c/1965760/
+
+OTA:
+https://gerrit.mot.com/#/c/1967906/
+
+Changes are integrated to 
+For Berlin ROW: RRG31.Q3-7-BERLIN-SHA1
+For BerlinNA: RRM31.Q3-7-BERLNA-SHA1
+
+we can start testing for this feature, 
+Also we need to execute all Enterprise cases related to setup flow as well as this is having impact to enterprise flow as well.
+We need to make sure Privacy screen is shown and only one time in enterprise flow for all AER provisioning methods.
+
+Hi [~tgb348]
+
+IKSWR-92965  seems to be an issue with bota, and the issue is not reproduced with latest bota being used, since OTA team is not ready with vital update server changes to test it bota package is uploaded as vital update and the same is being tested.
+
+Ideally this feature is not having any lower layer changes,
+We need to cover most case scenarios in our testing along with Enterprise usecases as well.
+
++[~sumgnas] Pls co-ordinate with OTA test team for any configuration , +[~jbharath] Pls help [~sumgnas] if any help needed related to test setup of vital update
+
++[~vinayb][~ysravant] FYI
+Hi [~wcw014] we have not received yet from CxD, no tentative date yet from suhas or CxD ,so putting a tentative date for commit CWV
+
+Hi [~a19591] can you pls let us know when we can have the details from CxD?  
+
+[~a21143]  FYI
+RPADX-5179 RRB Request Approved (Add) 
+RPADX-5182 Plan Created For: 
+FEATURE-7126:Motorola VITAL software updates @ out of box  device setup on Release:
+RPADX-4178:ADX R_Rel1
+Setup changes are integrated to Q3 common and mainline.
+Tested on Builds / Phones,Tested on Builds / Phones,
+
+Berlin row RRG31.Q3-18 Retin (JIO-SIM)
+
+Berlin na RRM31.Q3-18 Retus  (VZW-SIM)
+
+Burton VZW RPB31.q3-24 VZW (VZW-SIM)
+This plan has 2021Q3 CS1 priority and has had the adx_cs1 label added.
+Updating TestCWV due to pending CRs.
+We are waiting for the initial UX deck from CxD and the initial requirements to take care as part of this phase, based on that we would be able to commit the plan with dates.
+[~a19591] lets determine if this can be pursued in Q3, if the open items (reqs) can not be clarified.
+[~a19591] to commit the test Date, please share the CxD flow. 
+
+[~wcw014][~a22642] - FYI
+[~a19591][~a23056] - Please confirm which flow we are implementing. 
+Proposed out of box flow
+Language
+Activations
+Moto Privacy (moved to early stage)
+Wi-fi selection
+Moto VITAL updates (optional) New
+Device reboot (mandatory with VITAL) New
+Google updates
+Rest of the Setup flow
+
+Please confirm which flow we are implementing
+
+[~wcw014][~a22642] - FYI
+
+[~a19591][~a23056] Please confirm the final moto implemented setup flow for this feature.
+
+[~wcw014][~a22642][~sumgnas] - FYI
+[~a23056] have you gotten the CXD details that you were waiting for?  If yes could commit to the plan please?  If you haven't yet could you put a Commit CWV date so we know when you will be able to commit by?
+
+[~a21143] FYI
+[~a23056] who are you following up with from CXD?  I am guessing since you haven't committed yet that you don't have what you need.  Can you move the commit CWV date out?
+
+[~bert] and [~a19591] if you know who is providing the CXD input please help to loop them in here.
+
+[~a21143] FYI
+all the flows as per link provided in feature, onlly enterprise flow is being discussed with Google
+h5. Raised the CR for Touch isue, CR is in Kernal/BSP team. Looks like there are lower layer changes for this CR/Feature.
+h5. IKSWR-92965   [burton-VZW] device struck on the Phone activation screen and unable to navigate set up wizard post vital update.
+
+So we need to validate on each and every device. 
+
+QC & MTK Devices
+
+ROW, NA & Carrier Devices."
+FEATURE-7126,,FEATURE-7126: Motorola VITAL software updates @ out of box device setup,"Changes are integrated to baseline
+
+Hi [~dth436]
+This feature is already tested and marked as  test complete as well,Removing the label adx_not_ready_for_test
+OTA team is blocked on Burton because of https://idart.mot.com/browse/IKSWS-4199
+Waiting for OTA team to support for generation of packages to be tested so adding adx_not_ready_for_test label till the dependency is being met
+
++[~vinayb] FYi (OTA team)
++[~tgb348]  FYI
+[~a23056]: IKSWS-4199 is in Fixed state. Pls check and confirm if the feature can now be tested.
+If yes, pls remove adx_not_ready_for_test label. "
+FEATURE-7128,,FEATURE-7128: ThinkShield: WiFi Security,ThinkShield: WiFi Security MS2 is done 100/100
+FEATURE-7130,,FEATURE-7130: Add grip suppression for Game,"All tests related to Grip suppression were passed.
+RPADX-5186 RRB Request Approved (Add) 
+RPADX-5196 Plan Created For: 
+FEATURE-7130:Add grip suppression for Game on Release:
+RPADX-4178:ADX R_Rel1
+The feature was tested with Q2 build 
+""motorola/nio_retail/nio:11/RRT31.Q2-12/0e5df:userdebug/intcfg,test-keys""
+
+and there were no issues related to grip suppression feature.
+This plan has 2021Q3 CS1 priority and has had the adx_cs1 label added."
+FEATURE-7139,,FEATURE-7139: [QVD] Android 11 (R) onboarding,"12/Feb/21
+Hi [~jrdk47], the patch is still under review.
+RPADX-5204 RRB Request Approved (Add) 
+RPADX-5205 Plan Created For: 
+FEATURE-7139:[QVD] Android 11 (R) onboarding on Release:
+RPADX-4178:ADX R_Rel1
+Tested on RPS31.Q1-40-15 and later builds. It works fine.
+[~rafaelml] : Could you please update integ dates so that we can put test dates and complete testing on platform builds.
+[~rafaelml] Could you please update integ actual dates also. So we can complete the testing on integrated builds
+[~rafaelml] Could you please update the integ actual date also. As we finished testing, we can complete the feature.
+"
+FEATURE-7143,,FEATURE-7143: ThinkShield: NFC Control,MS2 plan pass 100/100
+FEATURE-7146,,FEATURE-7146: GIF Maker - For Stylus bubble and Quick settings,"Denver daily build containing  the latest fwk hooks: RRE31.Q2-11-18-DENVER-SHA1
+
+https://jenkins.mot.com/job/RRE31.Q2-11_denver-global_userdebug_mr-2021-q2-stable1_r-qsm2021_test-keys_daily/19/
+Development CRs are being tracked through the Jira filter:
+https://idart.mot.com/issues/?filter=217580
+Feature is merged on mainline and enabled only on Denver product, however since Denver is building from mr-2021-q2-stable1, it does not have the feature yet. In a normal situation we would push the feature to quarter(or product) branch for testing and bug fix, but as this is coming very late (close to LE entries) we prefer to have it tested before merging into product.
+
+So test team needs to:
+
+1) Flash Denver with tomorrow daily build with latest FW hooks ([~rossanez] could you please confirm next daily has [our tag update|https://gerrit.mot.com/#/c/1914703/] and post the build here?).
+
+2)Sideload [latest APK version from jenkins|https://artifacts.mot.com/artifactory/apps/MotoScreenshotEditor/MOTOSCREENSHOTEDITOR-BR-100210331/app/build/outputs/apk/debug/] (TAG 100210331).
+
+[~a22677], please reach out to [~rossanez] if you have any questions on this setup or about the feature implementation or requirements. In order to have the opportunity to ship it on Denver, we would need to make a go/no-go decision by 04/07, dev team will be following up the tests and prioritizing the issues. If feature is good by then, we can, in conjunction with SPM, update the TAG on Denver to latest version.
+
+
+Thanks.
++[~mvt647] +[~w15621] +[~valeriac] +[~carlosf]
+
+
+
+
+Moving the dates to next week - waiting for fixes as tagged 
+RPADX-5221 RRB Request Approved (Add) 
+RPADX-5234 Plan Created For: 
+FEATURE-7146:GIF Maker - For Stylus bubble and Quick settings on Release:
+RPADX-4178:ADX R_Rel1
+This plan has 2021Q3 CS1 priority and has had the adx_cs1 label added.
+Update Integrate CWV date due to Framework hooks integration delay.
+FYI [~a22642] [~a22677]
+[~rodrigod] Thanks for the update, sure you can fix them adding to your backlog. 
+
+We need to execute another round of cycle, with all these fixes available together, which we plan to start by 15th and close by COB 16th and then link the final test plan here 
+
+
+[~w15621], we agreed with PdM and Denver SPM to integrate the feature on Denver and fix the 2 remaining CRs (IKSWR-65397 and IKSWR-67136) on the Playstore upgrade, since they are not critical.
+
+[~a22677], I see the test CWV is tomorrow, are there any pending tests? Also, in case of these 2 remaining CRs, how do you prefer to handle them? We will add them to our app backlog and fix it in the upcoming weeks before starting the launch call process. We can either unlink them to have the plan closed, or wait for closing the plan.
+
+Thanks!
++[~valeriac]
++[~mvt647]"
+FEATURE-7157,,FEATURE-7157: AT&T&Cricket&Firstnet: Airplane Mode Enable UI/UX Pop-up (Requirement Recapture),"RPADX-5226 RRB Request Approved (Add) 
+RPADX-5238 Plan Created For: 
+FEATURE-7157:AT&T&Cricket&Firstnet: Airplane Mode Enable UI/UX Pop-up (Requirement Recapture) on Release:
+RPADX-4178:ADX R_Rel1
+This has been integrated into the Q2 branch so updating the labels to reflect that.
+[~dth436], [~nadeemp] confirmed he would like it in Q1 and Q2.  Adding the labels now.
+
+[~w15621], [~a22642] FYI
+[~wcw014]: As per Nadeem's comment in Feature CR, the changes are needed in Q1 and Q2.
+https://idart.mot.com/browse/FEATURE-7157?focusedCommentId=10310158&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-10310158
+
+* Pls add q1need and q2need labels."
+FEATURE-7210,,"FEATURE-7210: [Ready For 2.0] - Wireless Desktop, Remote Control UX and Ready For Enterprise","RPADX-5958 Plan Created For: 
+FEATURE-7210: {color:#326ca6}[Ready For 2.0] - Wireless Desktop, Remote Control UX and Ready For Enterprise{color} on Release: 
+RPADX-5278 ADX S_MR
+ThinkShield code is working and was validated via PC connection. Ready for is not fully functional yet, so the connection to TV scenario was not validated.
+[~wnm846], please consider this before start testing this feature.
+[Ready For 2.0] M[Ready For 2.0]MS2 is completed testing on motorola/nio_retail/nio:12/SRT32.2/ca039:userdebug/intcfg,test-keys"
+FEATURE-7222,,FEATURE-7222: AER Feature Flag - Android 11,"FEATURE-7222: AER Feature Flag - Android 11 MS2 done 100/100
+[~a22642] are you able to commit to this test only plan?
+
+[~wnm846] FYI
+completed on Aug12,2021 on tahoe motorola/nio_retail/nio:12/SRT32.2/ca039:userdebug/intcfg,test-keys"
+FEATURE-7234,,FEATURE-7234: NA MTK Chipset - Support Telephony OEM APIs for 4G North America products for MTK Chipset,"4G OEMAPI：https://docs.google.com/spreadsheets/d/1QWkIcr_uqqgQSUmLTk5E4nwS5EjBGoitdjDJOyEkpiY/edit#gid=1648158862
+4G OEMAPI status：
+        Set/getVoiceDomainSetting is still waiting for the  MTK Release.  Other APIs all are integrated by  cr：IKSWR-69621
+  
+Adding adx_mtk label for tracking purposes.
+Dependent on MTK HW to complete testing.  Updating the labels to reflect it is needed for 2021q3 but not for the first launch products.
+Feature test blocked by CR: 
+ * 1 TC Blocked AT&T: IKSWR-106070 
+RPADX-5403 RRB Request Approved (Add) 
+RPADX-5409 Plan Created For: 
+FEATURE-7234:NA MTK Chipset - Support Telephony OEM APIs for 4G North America products for MTK Chipset on Release:
+RPADX-4178:ADX R_Rel1
+Test CWV updated due to the Ellis AT&T PTN
+Test CWV updated, due to CR IKSWR-99820 .
+Test CWV updated. The behavior remains. New CR raised IKSWR-123451.
+The CR IKSWR-106070 was unlinked, due to the CR (IKSWR-99820) that blocks your plan was reopened.
+
+Test CWV updated.
+
+FYI [~a22642] [~brunoess] [~tgb348]
+Update states:
+
+4G OEMAPI status：All completed
+Set/getVoiceDomainSetting has merged https://gerrit.mot.com/#/c/1948035/, IKSWR-78705 
+Other APIs all are integrated by cr：IKSWR-69621
+Updating Test CWV:
+
+RPADX-5409/FEATURE-7234:
+ * 1 TC Blocked AT&T: IKSWR-99820
+ * 1 TC Failed Boost: IKSWR-99161
+Updating the label to be 2021Q3 (instead of Q3 need) since this was integrated and tested on Q3.
+[~brunoess] can you update the test date please?
+[~brunoess],hi, would you like to share the test plan? did you get the Ellis HW?  thanks a lot
+[~zhangmp1] Set/getVoiceDomainSetting API has merged https://gerrit.mot.com/#/c/1948035/"
+FEATURE-7259,,FEATURE-7259: T-Mobile - RCS UP1.0 & UP2.0  - Q4-2021 changes,"According to the email chain (RE: [External] RE: RCS Test Package Q4'21 release date), it seems that R&S has not received the Q42021 requirements from TMO, and [~santosh] is checking with TMO. Currently, R&S is updated with the Q32021 requirements, executed by the CV team ([~kgh367]).
+
+Since ADX has already executed an RCS sanity to guarantee that nothing has broken after this integration, we're completing this plan, and any further issues will be tracked by defect CRs.
+
++[~a22642]
+HI [~wcw014],
+
+It is done once merged https://idart.mot.com/browse/IKSWS-7811. Tested and waiting for review.
+
+thanks
+Gao, Bing
+
+OK. 
+
+Hi [~a19035],  
+
+as per https://idart.mot.com/browse/FEATURE-7259. looks we only need https://idart.mot.com/browse/IKSWR-78445?
+
+If that is the case then we had done it already. https://idart.mot.com/browse/IKSWR-78445 had been closed already.
+
+Thanks
+Gao, Bing
+
+RPADX-5450 RRB Request Approved (Add) 
+RPADX-5458 Plan Created For: 
+FEATURE-7259:T-Mobile - RCS UP1.0 & UP2.0  - Q4-2021 changes on Release:
+RPADX-5277:ADX S_Rel1
+We run an RCS Sanity last week on the ST v21 and it passed 100%, so none of the changes from this feature impact on current behavior. The Kaiju report is https://kaiju.motorola.com/#/dalekReports/savedDalekReport/6692619941052416
+
+We are waiting for the feedback from [~kgh367] to check if they tested the mentioned requirements.
+
++[~brunoess], [~a22642], [~wcw014]
+[~w20090] if the work is done can you commit to this plan and mark it as integrated so the test team knows it is ready to be tested?
+
+[~fgcp188], [~a19035], [~malaguti], [~brunoess], [~a22642] FYI
+[~w20090] please ask [~a19035] to get delta requirement change list. If the change is minor, please do not use new work to ask ST, we can use defect CR to ask ST implement it.
+[~w20090] you had several process issues with this CR.  If you watched the upper platform training video I would hope you would have understood these.
+ # You should not complete a plan.  The test team should do that.
+ # When you integrate your changes you should mark the integrate actual date and populate the configuration developed field.
+ # When you committed to the plan you should have populated the Commit dates (Bsln, CWV, and Actual).
+
+I have tried to fix these for you.  I reopened the plan.  I populated the commit dates based on the CR transition.  I populated the integrate actual date based on your comment that you merged on 9/18.  And I updated the configuration developed to be ro.carrier based on that was the requested configuration.  If any of these values are incorrect then please update them.
+
+[~malaguti], [~brunoess] I believe these are ready for you to test.
+
+[~fgcp188], [~w15621] FYI"
+FEATURE-7262,,FEATURE-7262: VZW Retail (OD) : Enable Wi-Fi Calling (WFC),"[~a19591] has confirmed to use APKs of previous OS.
+[~wcw014]: dependency on VZW preloads. Need to wait for Vzw confirmation if new set of APKs will be released for ""S""
+
+ 
+
+[~a19591]: Pls check with Vzw and confirm back"
+FEATURE-7357,,FEATURE-7357: ThinkShield: SIM PIN lock,"Development tracking: IKSWSRVC-24721
+IKSWSRVC-25314 integrated.
+RPADX-5987 RRB Request Approved (Add) 
+RPADX-5991 Plan Created For: 
+FEATURE-7357:ThinkShield: SIM PIN lock on Release:
+RPADX-5277:ADX S_Rel1
+There is an open CR IKSWSRVC-25314 so we were moving test dates."
+FEATURE-7363,,FEATURE-7363: ThinkShield: Wallpaper Set,"No open issues and all test results were pass.
+RPADX-5996 RRB Request Approved (Add) 
+RPADX-6015 Plan Created For: 
+FEATURE-7363:ThinkShield: Wallpaper Set on Release:
+RPADX-5277:ADX S_Rel1
+SW dev CR for tracking: IKSWSRVC-25058
+[~jrdk47], [~a22642] FYI
+
+Feature test guideline: [https://docs.google.com/document/d/1UPzwZHAq5Of8247IRwNAM6L6y5SnH3atCBtQM_ZLUEc/edit#heading=h.mywxg9wlzpx8]
+
+ 
+[~jrdk47], the supported types are JPG, PNG, WEBP, BMP and GIF (only the first frame; animation is not supported). The test guideline doc is updated with this information as well: [https://docs.google.com/document/d/1UPzwZHAq5Of8247IRwNAM6L6y5SnH3atCBtQM_ZLUEc/edit]
+[~rborroz] Could you please confirm what all image formats support for wall paper. I can see only this information but not mentioned about different image formats.
+ * Image formats supported must be informed on feature info box"
+FEATURE-7364,,FEATURE-7364: ThinkShield: App Shortcut,"Enterprise team has decided this should move to A12 R2.
+RPADX-5997 RRB Request Approved (Add) 
+RPADX-6016 Plan Created For: 
+FEATURE-7364:ThinkShield: App Shortcut on Release:
+RPADX-5277:ADX S_Rel1"
+FEATURE-7365,,FEATURE-7365: ThinkShield: Bookmark Shortcut,"Dev tracking: IKSWSRVC-26112
+Enterprise team has decided this should move to A12 R2.
+Hi [~wcw014], ThinkShield team could develop this feature ""ThinkShield: Bookmark Shortcut"" https://idart.mot.com/browse/FEATURE-7365 together with ""ThinkShield: App Shortcut"" https://idart.mot.com/browse/FEATURE-7364 
+
+Can you please push this plan back to A12.R2?
+
+[~mvt647], [~rborroz], [~w15621], [~a12764] FYI
+Ok for me [~wcw014]
+Per [~deborard]'s request moving this back to A12 R2.
+RPADX-5998 RRB Request Approved (Add) 
+RPADX-6017 Plan Created For: 
+FEATURE-7365:ThinkShield: Bookmark Shortcut on Release:
+RPADX-5277:ADX S_Rel1
+[~deborard] confirmed this should be moved to A12 R3 in chat."
+FEATURE-7467,,FEATURE-7467: ThinkShield: BT Profiles Control,"Dev tracking: IKSWSRVC-25634 
+RPADX-6192 RRB Request Approved (Add) 
+RPADX-6217 Plan Created For: 
+FEATURE-7467:ThinkShield: BT Profiles Control on Release:
+RPADX-5277:ADX S_Rel1
+all tests were passed"
+FEATURE-7468,,FEATURE-7468: ThinkShield: APN Set,"All tests were passed and there were no outstanding issues.
+Dev tracking: IKSWSRVC-25638 
+Hi [~jrdk47],
+
+The document for testing the APN set feature: https://docs.google.com/document/d/1iTFbNX8l5kEzfoA05mfg_fVkqhDSH-8aiHLQ0fntCZU
+RPADX-6193 RRB Request Approved (Add) 
+RPADX-6218 Plan Created For: 
+FEATURE-7468:ThinkShield: APN Set on Release:
+RPADX-5277:ADX S_Rel1
+[~aquino] [~rborroz] : Could you please provide the Oemconfig fields documents to be used for testing the APN set. 
+
+ 
+
+We didnt find them in our existing document."
+FEATURE-7469,,FEATURE-7469: ThinkShield: Device Key Remapping ,"RPADX-6194 RRB Request Approved (Add) 
+RPADX-6219 Plan Created For: 
+FEATURE-7469:ThinkShield: Device Key Remapping  on Release:
+RPADX-5277:ADX S_Rel1
+[~jrdk47], how to test document: https://docs.google.com/document/d/16JiN4j_5v1nP8et9fgpQEc5OrbLcMucaD8d-0ejvojw
+[~rborroz] Could you please provide  documentation for testing this feature. 
+that mototalk test cases are being followed up with that team"
+FEATURE-7470,,FEATURE-7470: ThinkShield: SIM Slot Control,"RPADX-6195 RRB Request Approved (Add) 
+RPADX-6221 Plan Created For: 
+FEATURE-7470:ThinkShield: SIM Slot Control on Release:
+RPADX-5277:ADX S_Rel1
+There were no more new issues.
+[~aquino]  As Rodrigo is on vacation. Could you please clarify the following questions related to this feature.
+ # Req document shows there are 2 Options. Which Options we are implementing?
+ # If device having only 1 sim, this policy should not work. SIM slot should be always enabled irrespective of the settings
+ # If device supports 1 physical SIM and 1 eSIM, will this policy works ? If so, will it be same way as 2SIM slots. Odyssey supports 1 eSIM and 1pSIM which is targetted for A12R2 
+ # Odyssey also supports eSIM and pSIM switch, if this policy implemented, what will be behavior on this feature [ FEATURE-6540:
+[Odyssey Launch] Single SIM - eSIM or pSIM user switchable solution] 
+[~jrdk47],
+
+About the first two questions:
+ # The first option has been implemented. Scenarios where the policy is applied: if the slot 1 is empty and the slot 2 is not empty, the policy should not work; if both slots are not empty; the policy should work, disabling the slot 2.
+ # If the device has only one slot, the policy should not work.
+
+On the following link, there is details about the tests done during the development of this feature: [https://docs.google.com/spreadsheets/d/1WPqD4uy8X0tX0DM2DfZEdxyNcN-r4XitqDsGad-SbCk/view#gid=1981105755]
+
+
+
+[~jrdk47], [~deborard],
+
+About the last two questions related to eSIM, I don´t know how the policy should work.
+
+
+ [~dajlopes] is the tech lead responsible for the development of this feature (he will be back to office January, 18th).
+The team members that developed this feature will return to office January, 3rd.
+[~rborroz] Is this feature already integrated? 
+
+As per requirement document, there were 2 options present to implement. Which Option we have implemented? Also I saw there were multiple linked CR still open under story IKSWSRVC-25636
+[~rborroz]  [~deborard]
+
+Could you please clarify the following questions related to this feature.
+ # Req document shows there are 2 Options. Which Options we are implementing?
+ # If device having only 1 sim, this policy should not work. SIM slot should be always enabled irrespective of the settings
+ # If device supports 1 physical SIM and 1 eSIM, will this policy works ? If so, will it be same way as 2SIM slots. Odyssey supports 1 eSIM and 1pSIM which is targetted for A12R2 
+ # Odyssey also supports eSIM and pSIM switch, if this policy implemented, what will be behavior on this feature [ FEATURE-6540:
+[Odyssey Launch] Single SIM - eSIM or pSIM user switchable solution] "

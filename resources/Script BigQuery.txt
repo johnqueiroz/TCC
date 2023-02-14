@@ -1,0 +1,15 @@
+SELECT 
+DISTINCT(FEATURES.issue_key), 
+FEATURES.description, 
+FEATURES.summary,
+STRING_AGG(DISTINCT COMMENTS.COMMENT, '\n') AS Comments
+FROM `jira-142717.idart.idart_data` AS RPADXS
+LEFT JOIN `jira-142717.idart.idart_labels` AS LABELS ON RPADXS.issue_key = LABELS.ISSUE_KEY
+INNER JOIN `jira-142717.idart.idart_data` AS FEATURES ON RPADXS.JIRA_FEATURE_ID_CF_12210 = FEATURES.issue_key
+LEFT JOIN `jira-142717.idart.idart_comments`AS COMMENTS ON FEATURES.issue_key = COMMENTS.ISSUE_KEY
+WHERE
+RPADXS.COLLECTION_ID_CF_13528 IN ('RPADX-6286', 'RPADX-6285', 'RPADX-5278', 'RPADX-5277', 'RPADX-4179	', 'RPADX-4178')
+AND LABELS.LABEL = 'common_validation_covered'
+AND FEATURES.issue_status != 'Closed'
+GROUP BY FEATURES.issue_key, FEATURES.description, FEATURES.summary
+ORDER BY FEATURES.issue_key
